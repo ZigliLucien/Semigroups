@@ -1,0 +1,394 @@
+[
+  {
+    "source": "Working_Manuscript/AMAT-1.tex",
+    "source_section": 1,
+    "topic": "The Generalized Road Coloring Problem",
+    "block": "blocks/legacy-1-01.tex",
+    "home": "1",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-2.tex",
+    "source_section": 1,
+    "topic": "Introduction to Semigroup Theory",
+    "block": "blocks/legacy-2-01.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-2.tex",
+    "source_section": 2,
+    "topic": "Completely Simple Semigroups",
+    "block": "blocks/legacy-2-02.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-2.tex",
+    "source_section": 3,
+    "topic": "The Rees-Sushkewitch Theorem",
+    "block": "blocks/legacy-2-03.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-2.tex",
+    "source_section": 4,
+    "topic": "The Semigroup $\\F_X$",
+    "block": "blocks/legacy-2-04.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 1,
+    "topic": "Random Walks on Semigroups",
+    "block": "blocks/legacy-3-01.tex",
+    "home": "3",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 2,
+    "topic": "Convergence of Convolution Powers",
+    "block": "blocks/legacy-3-02.tex",
+    "home": "3",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 3,
+    "topic": "Weak Convergence of Probability Measures",
+    "block": "blocks/legacy-3-03.tex",
+    "home": "A",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 4,
+    "topic": "Some Initial Results of Convergence",
+    "block": "blocks/legacy-3-04.tex",
+    "home": "A",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 5,
+    "topic": "Convolution Powers",
+    "block": "blocks/legacy-3-05.tex",
+    "home": "A",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-3.tex",
+    "source_section": 6,
+    "topic": "Semigroup Algebras",
+    "block": "blocks/legacy-3-06.tex",
+    "home": "3",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 1,
+    "topic": "Introduction",
+    "block": "blocks/legacy-4-01.tex",
+    "home": "D",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 2,
+    "topic": "Finite Semigroups and the Road Coloring Problem",
+    "block": "blocks/legacy-4-02.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 3,
+    "topic": "The Kernel of a Coloring Semigroup",
+    "block": "blocks/legacy-4-03.tex",
+    "home": "2",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 4,
+    "topic": "Semigroup Proofs of Selected Results",
+    "block": "blocks/legacy-4-04.tex",
+    "home": "D",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 5,
+    "topic": "Main Result",
+    "block": "blocks/legacy-4-05.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 6,
+    "topic": "A technique to complete the solution to the generalized road coloring conjecture",
+    "block": "blocks/legacy-4-06.tex",
+    "home": "D",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 7,
+    "topic": "Conclusion",
+    "block": "blocks/legacy-4-07.tex",
+    "home": "D",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 8,
+    "topic": "Completely Simple Semigroups, Lie Algebras, and the Road Coloring Problem",
+    "block": "blocks/legacy-4-08.tex",
+    "home": "12",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-4.tex",
+    "source_section": 9,
+    "topic": "Solvability and right groups",
+    "block": "blocks/legacy-4-09.tex",
+    "home": "12",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 1,
+    "topic": "Introduction",
+    "block": "blocks/legacy-5-01.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 2,
+    "topic": "The matrix $\\Delta$",
+    "block": "blocks/legacy-5-02.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 3,
+    "topic": "The matrix $\\Delta$ annihilates only rank one kernels",
+    "block": "blocks/legacy-5-03.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 4,
+    "topic": "Special rank one matrices in Vec($S$)",
+    "block": "blocks/legacy-5-04.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 5,
+    "topic": "The Rank Condition",
+    "block": "blocks/legacy-5-05.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-5.tex",
+    "source_section": 6,
+    "topic": "Coloring and recoloring",
+    "block": "blocks/legacy-5-06.tex",
+    "home": "6",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 1,
+    "topic": "Basic Terminology and Notations",
+    "block": "blocks/legacy-6-01.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 2,
+    "topic": "Norms",
+    "block": "blocks/legacy-6-02.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 3,
+    "topic": "$\\mathbf M$ and $\\mathbf N$",
+    "block": "blocks/legacy-6-03.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 4,
+    "topic": "Basic data and properties",
+    "block": "blocks/legacy-6-04.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 5,
+    "topic": "Equipartitioning",
+    "block": "blocks/legacy-6-05.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 6,
+    "topic": "Ranking",
+    "block": "blocks/legacy-6-06.tex",
+    "home": "7",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 7,
+    "topic": "Divisibility",
+    "block": "blocks/legacy-6-07.tex",
+    "home": "7",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 8,
+    "topic": "Applications",
+    "block": "blocks/legacy-6-08.tex",
+    "home": "7",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-6.tex",
+    "source_section": 9,
+    "topic": "Algebra generated by $\\mathbf M$ and $\\mathbf N$",
+    "block": "blocks/legacy-6-09.tex",
+    "home": "5",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-7.tex",
+    "source_section": 1,
+    "topic": "Zeon algebra and structure of the kernel",
+    "block": "blocks/legacy-7-01.tex",
+    "home": "8",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-7.tex",
+    "source_section": 2,
+    "topic": "Levels",
+    "block": "blocks/legacy-7-02.tex",
+    "home": "8",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-7.tex",
+    "source_section": 3,
+    "topic": "Distributions",
+    "block": "blocks/legacy-7-03.tex",
+    "home": "8",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-7.tex",
+    "source_section": 4,
+    "topic": "Absorbing states",
+    "block": "blocks/legacy-7-04.tex",
+    "home": "8",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 1,
+    "topic": "Definitions and statement",
+    "block": "blocks/legacy-8-01.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 2,
+    "topic": "Congruence classes and elementary collapses",
+    "block": "blocks/legacy-8-02.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 3,
+    "topic": "Proof of the theorem",
+    "block": "blocks/legacy-8-03.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 4,
+    "topic": "Further structure",
+    "block": "blocks/legacy-8-04.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 5,
+    "topic": "The ladder chain and its stationary distribution",
+    "block": "blocks/legacy-8-05.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 6,
+    "topic": "The spectrum of the collision operator",
+    "block": "blocks/legacy-8-06.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 7,
+    "topic": "Why permanental and common-letter hierarchies agree here",
+    "block": "blocks/legacy-8-07.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 8,
+    "topic": "The rank condition: a hypothesis test",
+    "block": "blocks/legacy-8-08.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 9,
+    "topic": "A worked example and exercises",
+    "block": "blocks/legacy-8-09.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  },
+  {
+    "source": "Working_Manuscript/AMAT-8.tex",
+    "source_section": 10,
+    "topic": "Research directions, not asserted theorems",
+    "block": "blocks/legacy-8-10.tex",
+    "home": "13",
+    "status": "inherited text; proof and notation review still required"
+  }
+]

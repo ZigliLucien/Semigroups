@@ -6,7 +6,7 @@ We show basic results based on the fact due to BM-F
 that $\pi k=(1/r)\rho(k)$, for every $k\in\cK$. Given this, it follows that, with $e\in \E(\cK)$ such that
 $ek=ke=k$, $\pi kk^*=\pi ee^*=(1/r)u$, and averaging yields 
 $$
-  \pi N_0 = (1/r) u
+  \pi N = (1/r) u
 $$
 Now suppose that $f$ is any idempotent of $\cK$ such that $\rho(k)=\rho(f)$. Then 
 $$
@@ -22,33 +22,33 @@ for any $w\in\cS$, and any $e\in \E(\cK)$, since $we\in\cK$ has the same range a
 We now show these results directly.
 
 \begin{proposition} 	\label{prop:6.2}
-For every $e\in\cK$, $\pi\Delta e=0$. Equivalently, $\pi Re=\pi Be=\pi e$.
+For every $e\in\E(\cK)$, $\pi\Delta e=0$. Equivalently, $\pi Re=\pi Be=\pi e$.
 \end{proposition}
 
-\begin{proof} Multiplying eq.\tsp(\ref{eq:N}), for $N_0$,
+\begin{proof} Multiplying eq.\tsp(\ref{eq:N}), for $N$,
  on the left by $\Omega$ and on the right by $\Omega^*$, we have,
 using $\Omega A=A\Omega=\Omega$,
 $$
-  \sym{\Omega}{N_0}+\Omega\sym{\Delta}{N_0}\Omega^*
-	=\sym{\Omega}{N_0}
+  \sym{\Omega}{N}+\Omega\sym{\Delta}{N}\Omega^*
+	=\sym{\Omega}{N}
 $$
 Hence,
 $$
-  \Omega\sym{\Delta}{N_0}\Omega^*=0
+  \Omega\sym{\Delta}{N}\Omega^*=0
 	=\alpha_\mu\Omega\Delta e_\mu e_\mu^*\Delta^*\Omega^*
 $$
 Taking traces, all terms are nonnegative so that $\Omega\Delta e=0$ for every $e$. From the definition of $\Delta$ the alternative
 formulation results after averaging $\pi Re=\pi Be$ to $\pi Ae=\pi e$.  \qed
 \end{proof}\label{proppidelta}
 
-\begin{corollary} 	\label{cor:6.1}
+\begin{corollary} 	\label{cor:6.1}\label{ch5:kernel-delta}
 For any $k\in\cK$, $\pi\Delta k =0$.
 \end{corollary}
 
-This follows from Proposition \ref{prop:6.1} by writing $k=ek$, where $ek=ke=e$ is the identity for the local group containing $k$. As well
+This follows from Proposition~\ref{prop:6.2} by writing $k=ek$, where $e$ is the identity of the local group containing $k$, so $ek=ke=k$. As well
 
 \begin{corollary} \label{cor:pideltan}  \label{cor:6.2}
-We have $\pi\Delta N =0$.
+We have $\pi\Delta \bigl(J-N\bigr) =0$.
 \end{corollary}
 
 \begin{proposition} 	\label{prop:6.3}
@@ -57,7 +57,7 @@ For every $w\in\cS$, and $e\in\E(\cK)$, $\pi we=\pi e$.
 
 \begin{proof} This follows by induction on $l$, the length of $w$. Proposition \ref{proppidelta}
 is the result for $l=1$. Let $w_{l+1}$ be a word of
-length $l+1$, then $w_{l+1}=$ one of $Rw_l$, $Bw_l$, where $w_l$ has length $l$. Since $w_le\in\cK$ for $e\in\cK$, Corollary \ref{cor:pideltan} yields 
+length $l+1$, then $w_{l+1}=$ one of $Rw_l$, $Bw_l$, where $w_l$ has length $l$. Since $w_le\in\cK$ for $e\in\cK$, Corollary~\ref{ch5:kernel-delta} yields 
 \begin{eqnarray*}
 \pi w_{l+1} e &=&\pi R w_le\cr &=& \pi B w_le \cr &=& \pi w_l e \hbox to 100pt{}{\rm (averaging)}\cr
 &=& \pi e \hbox to 100pt{} \hbox{\rm (by induction)}\qed\cr
@@ -75,19 +75,19 @@ $$
 
 \begin{proof} From Proposition \ref{proppidelta}, 
 multiplying on the right by $e^*$ , we have $\pi\Delta ee^* =0$. 
-Averaging over $e$ yields $\pi\Delta N_0 = 0$. Equivalently, $N_0\Delta^*\dg\pi.   = 0$. 
+Averaging over $e$ yields $\pi\Delta N = 0$. Equivalently, $N\Delta^*\dg\pi.   = 0$. 
 Hence, multiplying equation \eqref{eq:N} on the right by  $\dg\pi.$ , 
 using $A^*\dg\pi. = \dg\pi.$, we find
 $$
-   AN_0\dg\pi.  = N_0 \dg\pi.
+   AN\dg\pi.  = N \dg\pi.
 $$
-So $N_0\dg\pi.$  is fixed by $A$, hence is a constant vector. Transposing back, say
-$\pi N_0 = au$ for some constant $a$. Now let $e\in \E(\cK)$ and take the $e_i$ with the
-same range as $e$ in the summation defining $N_0$. Then from Proposition \ref{proppwe} we have
+So $N\dg\pi.$  is fixed by $A$, hence is a constant vector. Transposing back, say
+$\pi N = au$ for some constant $a$. Now let $e\in \E(\cK)$ and take the $e_i$ with the
+same range as $e$ in the summation defining $N$. Then from Proposition \ref{proppwe} we have
 $\pi e e_i=\pi e_i$. Since the idempotents of a column are a left-zero semigroup, $\pi ee_i=\pi e$. Thus
-on the one hand $ \pi eN_0e^*=\pi N_0 e^*$
-and on the other $\pi eN_0e^*=\pi ee^*$.
-Or $\pi ee^* =\pi N_0e^*=aue^*=au$ for any idempotent $e$.  Thus, $\pi e=a\rho(e)$ and
+on the one hand $ \pi eNe^*=\pi N e^*$
+and on the other $\pi eNe^*=\pi ee^*$.
+Or $\pi ee^* =\pi Ne^*=aue^*=au$ for any idempotent $e$.  Thus, $\pi e=a\rho(e)$ and
 $\pi e\dg u.=1=ar$ yields $a=1/r$, where $r$ is the rank of the kernel. So, for any $w\in\cS$,
 $\pi we=\pi e = (1/r)\rho(e)$ and $\pi wee^*=(1/r)u$, as required. \qed
 \end{proof}
@@ -96,5 +96,5 @@ Averaging the second relation in the above Proposition
 
 \begin{corollary} \label{cor:pideltann}  \label{cor:6.3}
 For any $w\in\cS$,
-$\pi w N_0 =\frac{1}{r}\,u$. And $\pi w N =r'\,u$.
+$\pi w N =\frac{1}{r}\,u$. And $\pi w \bigl(J-N\bigr) =r'\,u$.
 \end{corollary}

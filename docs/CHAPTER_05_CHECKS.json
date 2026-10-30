@@ -1,0 +1,81 @@
+{
+  "exact_examples": [
+    {
+      "letters": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          3,
+          2
+        ]
+      ],
+      "kernel_rank": 2,
+      "kernel_elements": 4,
+      "checks": {
+        "partition_equation": true,
+        "range_equation": true,
+        "equipartition": true,
+        "trace": true,
+        "centered_row": true,
+        "commutator_with_limit": true
+      }
+    },
+    {
+      "letters": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "kernel_rank": 1,
+      "kernel_elements": 3,
+      "checks": {
+        "partition_equation": true,
+        "range_equation": true,
+        "equipartition": true,
+        "trace": true,
+        "centered_row": true,
+        "commutator_with_limit": true
+      }
+    },
+    {
+      "letters": [
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "kernel_rank": 3,
+      "kernel_elements": 3,
+      "checks": {
+        "partition_equation": true,
+        "range_equation": true,
+        "equipartition": true,
+        "trace": true,
+        "centered_row": true,
+        "commutator_with_limit": true
+      }
+    }
+  ],
+  "unresolved_reference_labels": [],
+  "chapter5_legacy_operator_tokens": [],
+  "compilation_performed": false
+}
