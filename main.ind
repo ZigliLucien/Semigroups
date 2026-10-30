@@ -1,0 +1,166 @@
+\begin{theindex}
+
+  \item Abel limit, 90
+  \item absorbing state, 91
+
+  \indexspace
+
+  \item canonical coloring, 57
+  \item collision
+    \subitem filtration, 79
+    \subitem free quotient, 79
+    \subitem probability, 47
+  \item coloring
+    \subitem canonical, 57
+    \subitem definition, 3
+    \subitem recoloring, 139
+    \subitem semigroup, 18
+    \subitem synchronizing, \see{kernel, minimum rank}{156}
+  \item common-letter dynamics, 79
+  \item commutator, 109
+  \item compatible field
+    \subitem normalized inclusion, 91
+  \item completely simple semigroup, 9
+  \item convolution powers
+    \subitem convergence, 29
+  \item cycle matrix, 69
+
+  \indexspace
+
+  \item divisibility
+    \subitem kernel rank and cycle length, 71
+
+  \indexspace
+
+  \item equipartition
+    \subitem kernel blocks, 52
+    \subitem stationary measure, 52
+    \subitem tensor-square proof, 42
+
+  \indexspace
+
+  \item fixed-point equations
+    \subitem kernel expectations, 50
+  \item Friedman weight, 72
+  \item fundamental inverse, 72
+
+  \indexspace
+
+  \item graph
+    \subitem double construction, 99
+    \subitem edge-state lift, 99
+    \subitem target-pair, 4
+
+  \indexspace
+
+  \item idempotent
+    \subitem average of distinguished idempotents, 49
+  \item inclusion matrix, 91
+  \item independent-particle dynamics, 79
+
+  \indexspace
+
+  \item kernel
+    \subitem idempotents, 47
+    \subitem limiting measure, 29
+    \subitem minimum rank, 20
+    \subitem partition marginals, 47
+    \subitem partition projections, 48
+    \subitem partition structure, 20
+    \subitem range marginals, 47
+    \subitem range projections, 48
+    \subitem range structure, 20
+    \subitem rank from representation levels, 91
+
+  \indexspace
+
+  \item letter probabilities
+    \subitem interpolation, 73
+  \item Lie constant, 109
+  \item limiting projection
+    \subitem higher representations, 90
+
+  \indexspace
+
+  \item Markov chain
+    \subitem permanental, 93
+
+  \indexspace
+
+  \item operators
+    \subitem centered range expectation, 50
+    \subitem collision expectation, 47
+    \subitem pair survival, 50
+    \subitem potential, 72
+    \subitem weighted range expectation, 47
+  \item opposite-letter dynamics, 95
+
+  \indexspace
+
+  \item partial circulant
+    \subitem generators, 113
+    \subitem kernel structure, 114
+    \subitem minimum rank, 114
+    \subitem residue blocks, 113
+  \item permanent, 93
+  \item potential operator, 72
+  \item probability measure
+    \subitem convolution, 23
+  \item projection
+    \subitem partition-fixed, 48
+    \subitem range-fixed, 48
+
+  \indexspace
+
+  \item random walk
+    \subitem on a semigroup, 23
+  \item rank
+    \subitem coloring criterion, 63
+    \subitem cycle matrix, 69
+    \subitem kernel, 20
+    \subitem matrix, 69
+    \subitem ranked condition, 69
+  \item ranked transformation, 69
+  \item recoloring
+    \subitem four-state example, 139
+  \item Rees representation, 11
+  \item Rees--Sushkewitch theorem, 11
+  \item right action, 3
+
+  \indexspace
+
+  \item semigroup
+    \subitem coloring, 18
+    \subitem completely simple, 9
+    \subitem definition, 7
+    \subitem examples, 7
+  \item semigroup algebra, 27
+  \item stationary distribution
+    \subitem perturbation, 73
+  \item symmetric power, 79
+  \item synchronization, \see{coloring, synchronizing}{156}
+
+  \indexspace
+
+  \item target-pair graph, 4
+  \item tensor coupling, 95
+  \item tensor power, 79
+  \item trace identities, 82
+  \item transformation
+    \subitem matrix representation, 3
+  \item transversal, 47
+
+  \indexspace
+
+  \item weak convergence, 121
+  \item weighted block average, 48
+
+  \indexspace
+
+  \item zeon algebra
+    \subitem collision-free interpretation, 79
+    \subitem definition, 81
+    \subitem pair representation, 81
+    \subitem zero-diagonal lift, 82
+
+\end{theindex}

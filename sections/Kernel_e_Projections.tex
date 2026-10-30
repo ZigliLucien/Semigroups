@@ -1,5 +1,12 @@
 \section{Basic observables and the kernel $e$-projections}
 \label{eproj:section}
+% BEGIN SUBJECT INDEX: eproj:section
+\index{kernel!idempotents}
+\index{kernel!partition marginals}
+\index{kernel!range marginals}
+\index{transversal}
+% END SUBJECT INDEX
+
 Let $K$ be the minimum-rank ideal of a finite transformation semigroup,
 with rank $r$, and let $\lambda$ be its limiting kernel measure. Denote
 its partition and range marginals by $\alpha_i$ and $\beta_j$. Write
@@ -8,6 +15,13 @@ $\mathcal R_j$. Each range is a transversal of every kernel partition.
 All matrices below use right-action conventions.
 
 \subsection{The two basic expectation operators}
+\label{notation:expectations}
+% BEGIN SUBJECT INDEX: notation:expectations
+\index{operators!collision expectation}
+\index{operators!weighted range expectation}
+\index{collision!probability}
+% END SUBJECT INDEX
+
 Our convention is
 \[
  \boxed{N=\mathbb E_\lambda[KK^{\mathsf T}],\qquad
@@ -32,6 +46,12 @@ projection. The pair-survival matrix is $J-N$, not another operator
 named $N$. The rank of the average $N$ need not equal the kernel rank $r$.
 
 \subsection{Column projections: hold the range fixed}
+\label{notation:range-projections}
+% BEGIN SUBJECT INDEX: notation:range-projections
+\index{projection!range-fixed}
+\index{kernel!range projections}
+% END SUBJECT INDEX
+
 Put $\rho_j=\operatorname{diag}(\mathbf1_{\mathcal R_j})$ and define
 \[
  P_j=\sum_i\alpha_i e_{ij}.
@@ -50,6 +70,13 @@ its output is supported there and it fixes every coordinate row on that
 range. In particular, $\operatorname{rank}P_j=r$.
 
 \subsection{Row projections: hold the partition fixed}
+\label{notation:partition-projections}
+% BEGIN SUBJECT INDEX: notation:partition-projections
+\index{projection!partition-fixed}
+\index{kernel!partition projections}
+\index{weighted block average}
+% END SUBJECT INDEX
+
 Define
 \[
  Q_i=\sum_j\beta_j e_{ij}.
@@ -79,6 +106,11 @@ partition projections and the range projections above should also be
 kept distinct from the higher-level limiting projections $\Omega_k$.
 
 \subsection{The average of the distinguished idempotents}
+\label{notation:average-idempotents}
+% BEGIN SUBJECT INDEX: notation:average-idempotents
+\index{idempotent!average of distinguished idempotents}
+% END SUBJECT INDEX
+
 Averaging the distinguished idempotents with the product marginal law gives
 \[
  \boxed{\overline e=\sum_{i,j}\alpha_i\beta_j e_{ij}

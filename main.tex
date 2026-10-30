@@ -1,6 +1,7 @@
 \documentclass[graybox,envcountchap]{svmono}
 \usepackage{amsmath,amssymb,graphicx,pstricks,makeidx}
 \usepackage{mathptmx,helvet,courier,type1cm}
+\usepackage{multicol}
 \graphicspath{{figures/}}
 \makeindex
 \input{preamble/AMAT-Defs.tex}
@@ -40,6 +41,7 @@ and the scope of the specialty topics. Please identify comments by chapter,
 section title, and theorem label where possible; numbering may change.
 
 \tableofcontents
+\input{frontmatter/Notation_Index.tex}
 \mainmatter
 \part{Foundations}
 \include{chapters/chapter-01.tex}
@@ -65,4 +67,9 @@ section title, and theorem label where possible; numbering may change.
 \include{appendices/appendix-D.tex}
 \backmatter
 \input{bibliography/References.tex}
+% Subject index: svmono supplies the heading and table-of-contents entry.
+\renewcommand{\indexname}{Subject Index}
+\index{synchronization|see{coloring, synchronizing}}
+\index{coloring!synchronizing|see{kernel, minimum rank}}
+\printindex
 \end{document}

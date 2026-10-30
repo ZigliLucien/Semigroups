@@ -1,0 +1,346 @@
+{
+  "base_commit": "d1532329f99bd81e0ef10cd8ca76d7d7443e872b",
+  "entries": [
+    {
+      "path": "blocks/legacy-1-01.tex",
+      "label": "defn:1",
+      "terms": [
+        "coloring!definition",
+        "transformation!matrix representation",
+        "right action"
+      ]
+    },
+    {
+      "path": "blocks/legacy-1-01.tex",
+      "label": "def:target-pair-graph",
+      "terms": [
+        "graph!target-pair",
+        "target-pair graph"
+      ]
+    },
+    {
+      "path": "blocks/legacy-2-01.tex",
+      "label": "sec:2.1",
+      "terms": [
+        "semigroup!definition",
+        "semigroup!examples"
+      ]
+    },
+    {
+      "path": "blocks/legacy-2-02.tex",
+      "label": "2.2",
+      "terms": [
+        "semigroup!completely simple",
+        "completely simple semigroup"
+      ]
+    },
+    {
+      "path": "blocks/legacy-2-03.tex",
+      "label": "sec:2.3",
+      "terms": [
+        "Rees--Sushkewitch theorem",
+        "Rees representation"
+      ]
+    },
+    {
+      "path": "blocks/legacy-4-02.tex",
+      "label": "sec:4.2",
+      "terms": [
+        "coloring!semigroup",
+        "semigroup!coloring"
+      ]
+    },
+    {
+      "path": "blocks/legacy-4-03.tex",
+      "label": "sec:4.3",
+      "terms": [
+        "kernel!partition structure",
+        "kernel!range structure",
+        "kernel!minimum rank",
+        "rank!kernel"
+      ]
+    },
+    {
+      "path": "blocks/legacy-3-01.tex",
+      "label": "sec:3.1",
+      "terms": [
+        "random walk!on a semigroup",
+        "probability measure!convolution"
+      ]
+    },
+    {
+      "path": "blocks/legacy-3-02.tex",
+      "label": "sec:3.2",
+      "terms": [
+        "convolution powers!convergence",
+        "kernel!limiting measure"
+      ]
+    },
+    {
+      "path": "blocks/legacy-3-06.tex",
+      "label": "sec:3.6",
+      "terms": [
+        "semigroup algebra"
+      ]
+    },
+    {
+      "path": "blocks/tensor-equipartition.tex",
+      "label": "tensor-book:thm:main",
+      "terms": [
+        "equipartition!tensor-square proof"
+      ]
+    },
+    {
+      "path": "sections/Kernel_e_Projections.tex",
+      "label": "eproj:section",
+      "terms": [
+        "kernel!idempotents",
+        "kernel!partition marginals",
+        "kernel!range marginals",
+        "transversal"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-03.tex",
+      "label": "sec:6.3",
+      "terms": [
+        "fixed-point equations!kernel expectations",
+        "operators!centered range expectation",
+        "operators!pair survival"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-05.tex",
+      "label": "sec:6.5",
+      "terms": [
+        "equipartition!kernel blocks",
+        "equipartition!stationary measure"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-06.tex",
+      "label": "defn:6.1",
+      "terms": [
+        "cycle matrix",
+        "rank!matrix",
+        "rank!cycle matrix"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-06.tex",
+      "label": "defn:6.2",
+      "terms": [
+        "ranked transformation",
+        "rank!ranked condition"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-07.tex",
+      "label": "sec:6.7",
+      "terms": [
+        "divisibility!kernel rank and cycle length"
+      ]
+    },
+    {
+      "path": "blocks/legacy-6-08.tex",
+      "label": "sec:6.8.2",
+      "terms": [
+        "Friedman weight"
+      ]
+    },
+    {
+      "path": "blocks/AMAT-5-CC.tex",
+      "label": "cc-exist:section",
+      "terms": [
+        "coloring!canonical",
+        "canonical coloring"
+      ]
+    },
+    {
+      "path": "blocks/legacy-5-05.tex",
+      "label": "defn:5.2",
+      "terms": [
+        "rank!coloring criterion"
+      ]
+    },
+    {
+      "path": "blocks/AMAT-6-Potential.tex",
+      "label": "potential:section",
+      "terms": [
+        "operators!potential",
+        "potential operator",
+        "fundamental inverse"
+      ]
+    },
+    {
+      "path": "blocks/AMAT-6-Potential.tex",
+      "label": "potential:interpolation",
+      "terms": [
+        "letter probabilities!interpolation",
+        "stationary distribution!perturbation"
+      ]
+    },
+    {
+      "path": "sections/Tensor_to_Zeon_Bridge.tex",
+      "label": "hierarchy:collision-quotient",
+      "terms": [
+        "tensor power",
+        "symmetric power",
+        "collision!filtration",
+        "collision!free quotient",
+        "zeon algebra!collision-free interpretation",
+        "common-letter dynamics",
+        "independent-particle dynamics"
+      ]
+    },
+    {
+      "path": "blocks/legacy-7-01.tex",
+      "label": "sec:7.1",
+      "terms": [
+        "zeon algebra!definition",
+        "zeon algebra!pair representation"
+      ]
+    },
+    {
+      "path": "blocks/legacy-7-01.tex",
+      "label": "propBR",
+      "terms": [
+        "zeon algebra!zero-diagonal lift",
+        "trace identities"
+      ]
+    },
+    {
+      "path": "blocks/legacy-7-03.tex",
+      "label": "sec:7.3",
+      "terms": [
+        "Abel limit",
+        "limiting projection!higher representations"
+      ]
+    },
+    {
+      "path": "blocks/legacy-7-04.tex",
+      "label": "sec:7.4",
+      "terms": [
+        "absorbing state",
+        "kernel!rank from representation levels"
+      ]
+    },
+    {
+      "path": "blocks/inclusion-fields.tex",
+      "label": "organized:inclusion-fields",
+      "terms": [
+        "inclusion matrix",
+        "compatible field!normalized inclusion"
+      ]
+    },
+    {
+      "path": "blocks/permanent-markov.tex",
+      "label": "organized:permanent-core",
+      "terms": [
+        "permanent",
+        "Markov chain!permanental"
+      ]
+    },
+    {
+      "path": "blocks/AMAT-7-OppositeTensor.tex",
+      "label": "opp-tensor:section",
+      "terms": [
+        "opposite-letter dynamics",
+        "tensor coupling"
+      ]
+    },
+    {
+      "path": "blocks/graph-double.tex",
+      "label": "organized:double-core",
+      "terms": [
+        "graph!edge-state lift",
+        "graph!double construction"
+      ]
+    },
+    {
+      "path": "blocks/lie-constants.tex",
+      "label": "notation:lie-constants",
+      "terms": [
+        "Lie constant",
+        "commutator"
+      ]
+    },
+    {
+      "path": "blocks/legacy-8-01.tex",
+      "label": "ptc-kernel:thm:main",
+      "terms": [
+        "partial circulant!kernel structure",
+        "partial circulant!minimum rank"
+      ]
+    },
+    {
+      "path": "sections/Four_State_Recolorings.tex",
+      "label": "app:four-state-recolorings",
+      "terms": [
+        "coloring!recoloring",
+        "recoloring!four-state example"
+      ]
+    },
+    {
+      "path": "blocks/legacy-3-03.tex",
+      "label": "organized:weak-convergence",
+      "terms": [
+        "weak convergence"
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "path": "sections/Kernel_e_Projections.tex",
+      "needle": "\\subsection{The two basic expectation operators}",
+      "label": "notation:expectations",
+      "terms": [
+        "operators!collision expectation",
+        "operators!weighted range expectation",
+        "collision!probability"
+      ]
+    },
+    {
+      "path": "sections/Kernel_e_Projections.tex",
+      "needle": "\\subsection{Column projections: hold the range fixed}",
+      "label": "notation:range-projections",
+      "terms": [
+        "projection!range-fixed",
+        "kernel!range projections"
+      ]
+    },
+    {
+      "path": "sections/Kernel_e_Projections.tex",
+      "needle": "\\subsection{Row projections: hold the partition fixed}",
+      "label": "notation:partition-projections",
+      "terms": [
+        "projection!partition-fixed",
+        "kernel!partition projections",
+        "weighted block average"
+      ]
+    },
+    {
+      "path": "sections/Kernel_e_Projections.tex",
+      "needle": "\\subsection{The average of the distinguished idempotents}",
+      "label": "notation:average-idempotents",
+      "terms": [
+        "idempotent!average of distinguished idempotents"
+      ]
+    },
+    {
+      "path": "blocks/legacy-8-01.tex",
+      "needle": "\\section{Definitions and statement}",
+      "label": "notation:ptc-definitions",
+      "terms": [
+        "partial circulant!generators",
+        "partial circulant!residue blocks"
+      ]
+    },
+    {
+      "path": "blocks/lie-constants.tex",
+      "needle": "\\section{The constant ideal}",
+      "label": "notation:lie-constants",
+      "terms": []
+    }
+  ]
+}
