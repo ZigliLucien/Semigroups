@@ -1,0 +1,92 @@
+# Subject-index inventory
+
+Page numbers are generated during the TeX build, not assigned here.
+
+- coloring > definition — `blocks/legacy-1-01.tex`, label `defn:1`
+- transformation > matrix representation — `blocks/legacy-1-01.tex`, label `defn:1`
+- right action — `blocks/legacy-1-01.tex`, label `defn:1`
+- graph > target-pair — `blocks/legacy-1-01.tex`, label `def:target-pair-graph`
+- target-pair graph — `blocks/legacy-1-01.tex`, label `def:target-pair-graph`
+- semigroup > definition — `blocks/legacy-2-01.tex`, label `sec:2.1`
+- semigroup > examples — `blocks/legacy-2-01.tex`, label `sec:2.1`
+- semigroup > completely simple — `blocks/legacy-2-02.tex`, label `2.2`
+- completely simple semigroup — `blocks/legacy-2-02.tex`, label `2.2`
+- Rees--Sushkewitch theorem — `blocks/legacy-2-03.tex`, label `sec:2.3`
+- Rees representation — `blocks/legacy-2-03.tex`, label `sec:2.3`
+- coloring > semigroup — `blocks/legacy-4-02.tex`, label `sec:4.2`
+- semigroup > coloring — `blocks/legacy-4-02.tex`, label `sec:4.2`
+- kernel > partition structure — `blocks/legacy-4-03.tex`, label `sec:4.3`
+- kernel > range structure — `blocks/legacy-4-03.tex`, label `sec:4.3`
+- kernel > minimum rank — `blocks/legacy-4-03.tex`, label `sec:4.3`
+- rank > kernel — `blocks/legacy-4-03.tex`, label `sec:4.3`
+- random walk > on a semigroup — `blocks/legacy-3-01.tex`, label `sec:3.1`
+- probability measure > convolution — `blocks/legacy-3-01.tex`, label `sec:3.1`
+- convolution powers > convergence — `blocks/legacy-3-02.tex`, label `sec:3.2`
+- kernel > limiting measure — `blocks/legacy-3-02.tex`, label `sec:3.2`
+- semigroup algebra — `blocks/legacy-3-06.tex`, label `sec:3.6`
+- equipartition > tensor-square proof — `blocks/tensor-equipartition.tex`, label `tensor-book:thm:main`
+- kernel > idempotents — `sections/Kernel_e_Projections.tex`, label `eproj:section`
+- kernel > partition marginals — `sections/Kernel_e_Projections.tex`, label `eproj:section`
+- kernel > range marginals — `sections/Kernel_e_Projections.tex`, label `eproj:section`
+- transversal — `sections/Kernel_e_Projections.tex`, label `eproj:section`
+- fixed-point equations > kernel expectations — `blocks/legacy-6-03.tex`, label `sec:6.3`
+- operators > centered range expectation — `blocks/legacy-6-03.tex`, label `sec:6.3`
+- operators > pair survival — `blocks/legacy-6-03.tex`, label `sec:6.3`
+- equipartition > kernel blocks — `blocks/legacy-6-05.tex`, label `sec:6.5`
+- equipartition > stationary measure — `blocks/legacy-6-05.tex`, label `sec:6.5`
+- cycle matrix — `blocks/legacy-6-06.tex`, label `defn:6.1`
+- rank > matrix — `blocks/legacy-6-06.tex`, label `defn:6.1`
+- rank > cycle matrix — `blocks/legacy-6-06.tex`, label `defn:6.1`
+- ranked transformation — `blocks/legacy-6-06.tex`, label `defn:6.2`
+- rank > ranked condition — `blocks/legacy-6-06.tex`, label `defn:6.2`
+- divisibility > kernel rank and cycle length — `blocks/legacy-6-07.tex`, label `sec:6.7`
+- Friedman weight — `blocks/legacy-6-08.tex`, label `sec:6.8.2`
+- coloring > canonical — `blocks/AMAT-5-CC.tex`, label `cc-exist:section`
+- canonical coloring — `blocks/AMAT-5-CC.tex`, label `cc-exist:section`
+- rank > coloring criterion — `blocks/legacy-5-05.tex`, label `defn:5.2`
+- operators > potential — `blocks/AMAT-6-Potential.tex`, label `potential:section`
+- potential operator — `blocks/AMAT-6-Potential.tex`, label `potential:section`
+- fundamental inverse — `blocks/AMAT-6-Potential.tex`, label `potential:section`
+- letter probabilities > interpolation — `blocks/AMAT-6-Potential.tex`, label `potential:interpolation`
+- stationary distribution > perturbation — `blocks/AMAT-6-Potential.tex`, label `potential:interpolation`
+- tensor power — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- symmetric power — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- collision > filtration — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- collision > free quotient — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- zeon algebra > collision-free interpretation — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- common-letter dynamics — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- independent-particle dynamics — `sections/Tensor_to_Zeon_Bridge.tex`, label `hierarchy:collision-quotient`
+- zeon algebra > definition — `blocks/legacy-7-01.tex`, label `sec:7.1`
+- zeon algebra > pair representation — `blocks/legacy-7-01.tex`, label `sec:7.1`
+- zeon algebra > zero-diagonal lift — `blocks/legacy-7-01.tex`, label `propBR`
+- trace identities — `blocks/legacy-7-01.tex`, label `propBR`
+- Abel limit — `blocks/legacy-7-03.tex`, label `sec:7.3`
+- limiting projection > higher representations — `blocks/legacy-7-03.tex`, label `sec:7.3`
+- absorbing state — `blocks/legacy-7-04.tex`, label `sec:7.4`
+- kernel > rank from representation levels — `blocks/legacy-7-04.tex`, label `sec:7.4`
+- inclusion matrix — `blocks/inclusion-fields.tex`, label `organized:inclusion-fields`
+- compatible field > normalized inclusion — `blocks/inclusion-fields.tex`, label `organized:inclusion-fields`
+- permanent — `blocks/permanent-markov.tex`, label `organized:permanent-core`
+- Markov chain > permanental — `blocks/permanent-markov.tex`, label `organized:permanent-core`
+- opposite-letter dynamics — `blocks/AMAT-7-OppositeTensor.tex`, label `opp-tensor:section`
+- tensor coupling — `blocks/AMAT-7-OppositeTensor.tex`, label `opp-tensor:section`
+- graph > edge-state lift — `blocks/graph-double.tex`, label `organized:double-core`
+- graph > double construction — `blocks/graph-double.tex`, label `organized:double-core`
+- Lie constant — `blocks/lie-constants.tex`, label `notation:lie-constants`
+- commutator — `blocks/lie-constants.tex`, label `notation:lie-constants`
+- partial circulant > kernel structure — `blocks/legacy-8-01.tex`, label `ptc-kernel:thm:main`
+- partial circulant > minimum rank — `blocks/legacy-8-01.tex`, label `ptc-kernel:thm:main`
+- coloring > recoloring — `sections/Four_State_Recolorings.tex`, label `app:four-state-recolorings`
+- recoloring > four-state example — `sections/Four_State_Recolorings.tex`, label `app:four-state-recolorings`
+- weak convergence — `blocks/legacy-3-03.tex`, label `organized:weak-convergence`
+- operators > collision expectation — `sections/Kernel_e_Projections.tex`, label `notation:expectations`
+- operators > weighted range expectation — `sections/Kernel_e_Projections.tex`, label `notation:expectations`
+- collision > probability — `sections/Kernel_e_Projections.tex`, label `notation:expectations`
+- projection > range-fixed — `sections/Kernel_e_Projections.tex`, label `notation:range-projections`
+- kernel > range projections — `sections/Kernel_e_Projections.tex`, label `notation:range-projections`
+- projection > partition-fixed — `sections/Kernel_e_Projections.tex`, label `notation:partition-projections`
+- kernel > partition projections — `sections/Kernel_e_Projections.tex`, label `notation:partition-projections`
+- weighted block average — `sections/Kernel_e_Projections.tex`, label `notation:partition-projections`
+- idempotent > average of distinguished idempotents — `sections/Kernel_e_Projections.tex`, label `notation:average-idempotents`
+- partial circulant > generators — `blocks/legacy-8-01.tex`, label `notation:ptc-definitions`
+- partial circulant > residue blocks — `blocks/legacy-8-01.tex`, label `notation:ptc-definitions`

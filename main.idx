@@ -1,0 +1,90 @@
+\indexentry{coloring!definition}{3}
+\indexentry{transformation!matrix representation}{3}
+\indexentry{right action}{3}
+\indexentry{graph!target-pair}{4}
+\indexentry{target-pair graph}{4}
+\indexentry{semigroup!definition}{7}
+\indexentry{semigroup!examples}{7}
+\indexentry{semigroup!completely simple}{9}
+\indexentry{completely simple semigroup}{9}
+\indexentry{Rees--Sushkewitch theorem}{11}
+\indexentry{Rees representation}{11}
+\indexentry{coloring!semigroup}{18}
+\indexentry{semigroup!coloring}{18}
+\indexentry{kernel!partition structure}{20}
+\indexentry{kernel!range structure}{20}
+\indexentry{kernel!minimum rank}{20}
+\indexentry{rank!kernel}{20}
+\indexentry{random walk!on a semigroup}{23}
+\indexentry{probability measure!convolution}{23}
+\indexentry{semigroup algebra}{27}
+\indexentry{convolution powers!convergence}{29}
+\indexentry{kernel!limiting measure}{29}
+\indexentry{equipartition!tensor-square proof}{42}
+\indexentry{kernel!idempotents}{47}
+\indexentry{kernel!partition marginals}{47}
+\indexentry{kernel!range marginals}{47}
+\indexentry{transversal}{47}
+\indexentry{operators!collision expectation}{47}
+\indexentry{operators!weighted range expectation}{47}
+\indexentry{collision!probability}{47}
+\indexentry{projection!range-fixed}{48}
+\indexentry{kernel!range projections}{48}
+\indexentry{projection!partition-fixed}{48}
+\indexentry{kernel!partition projections}{48}
+\indexentry{weighted block average}{48}
+\indexentry{idempotent!average of distinguished idempotents}{49}
+\indexentry{fixed-point equations!kernel expectations}{50}
+\indexentry{operators!centered range expectation}{50}
+\indexentry{operators!pair survival}{50}
+\indexentry{equipartition!kernel blocks}{52}
+\indexentry{equipartition!stationary measure}{52}
+\indexentry{coloring!canonical}{57}
+\indexentry{canonical coloring}{57}
+\indexentry{rank!coloring criterion}{63}
+\indexentry{cycle matrix}{69}
+\indexentry{rank!matrix}{69}
+\indexentry{rank!cycle matrix}{69}
+\indexentry{ranked transformation}{69}
+\indexentry{rank!ranked condition}{69}
+\indexentry{divisibility!kernel rank and cycle length}{71}
+\indexentry{Friedman weight}{72}
+\indexentry{operators!potential}{72}
+\indexentry{potential operator}{72}
+\indexentry{fundamental inverse}{72}
+\indexentry{letter probabilities!interpolation}{73}
+\indexentry{stationary distribution!perturbation}{73}
+\indexentry{tensor power}{79}
+\indexentry{symmetric power}{79}
+\indexentry{collision!filtration}{79}
+\indexentry{collision!free quotient}{79}
+\indexentry{zeon algebra!collision-free interpretation}{79}
+\indexentry{common-letter dynamics}{79}
+\indexentry{independent-particle dynamics}{79}
+\indexentry{zeon algebra!definition}{81}
+\indexentry{zeon algebra!pair representation}{81}
+\indexentry{zeon algebra!zero-diagonal lift}{82}
+\indexentry{trace identities}{82}
+\indexentry{Abel limit}{90}
+\indexentry{limiting projection!higher representations}{90}
+\indexentry{absorbing state}{91}
+\indexentry{kernel!rank from representation levels}{91}
+\indexentry{inclusion matrix}{91}
+\indexentry{compatible field!normalized inclusion}{91}
+\indexentry{permanent}{93}
+\indexentry{Markov chain!permanental}{93}
+\indexentry{opposite-letter dynamics}{95}
+\indexentry{tensor coupling}{95}
+\indexentry{graph!edge-state lift}{99}
+\indexentry{graph!double construction}{99}
+\indexentry{Lie constant}{109}
+\indexentry{commutator}{109}
+\indexentry{partial circulant!generators}{113}
+\indexentry{partial circulant!residue blocks}{113}
+\indexentry{partial circulant!kernel structure}{114}
+\indexentry{partial circulant!minimum rank}{114}
+\indexentry{weak convergence}{121}
+\indexentry{coloring!recoloring}{139}
+\indexentry{recoloring!four-state example}{139}
+\indexentry{synchronization|see{coloring, synchronizing}}{156}
+\indexentry{coloring!synchronizing|see{kernel, minimum rank}}{156}
