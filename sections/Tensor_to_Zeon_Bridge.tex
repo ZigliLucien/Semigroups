@@ -1,0 +1,71 @@
+\section{From particle configurations to the zeon quotient}
+\label{hierarchy:collision-quotient}
+Let $V$ have basis $e_1,\ldots,e_n$ over $\mathbb Q$. A deterministic
+transformation $f$ sends $e_i$ to $e_{if}$ and acts on tensor powers by
+\[
+ (e_{i_1}\otimes\cdots\otimes e_{i_k})f^{\otimes k}
+ =e_{i_1f}\otimes\cdots\otimes e_{i_kf}.
+\]
+This is simultaneous common-transformation motion of ordered particles.
+Passing to $\operatorname{Sym}^k(V)$ forgets order but retains multiplicity:
+repeated factors remain valid configurations.
+
+\subsection{The invariant collision filtration}
+Let $F_\ell$ be the span of degree-$k$ monomials with at most $\ell$
+distinct occupied vertices. Deterministic transformations cannot increase
+the number of distinct images, so
+\[
+ 0\subseteq F_1\subseteq\cdots\subseteq F_k
+ =\operatorname{Sym}^k(V)
+\]
+is an invariant filtration. The collision-free span itself need not be
+invariant: distinct particles may collide. For $1\le k\le n$, the
+quotient $F_k/F_{k-1}$ has basis the squarefree monomials $e_I$, indexed
+by $k$-subsets, with action
+\[
+ e_I f^{\vee k}=\begin{cases}
+ e_{If},&|If|=k,\\0,&|If|<k.
+ \end{cases}
+\]
+This is the degree-$k$ zeon representation. Thus zeons isolate the
+collision-free layer of the symmetric-power action rather than introduce
+a different deterministic dynamics. Lost cardinality cannot be restored,
+which proves $(fg)^{\vee k}=f^{\vee k}g^{\vee k}$.
+An equivalent set-theoretic construction is the quotient of the module
+on subsets of size at most $k$ by its submodule on subsets of size at most
+$k-1$. This is not an exterior power: permutation signs are absent.
+
+\subsection{Averages and limiting projections}
+For deterministic generators $M_i$ chosen with probabilities $p_i$, put
+\[
+ A_k=\sum_i p_iM_i^{\vee k},\qquad
+ \Omega_k=\lim_{m\to\infty}\frac1m\sum_{t=0}^{m-1}A_k^t.
+\]
+Each summand preserves the collision filtration before taking the quotient.
+One must average these induced actions, not substitute the averaged
+one-particle matrix into a symmetric-power formula. A general stochastic
+linear map need not preserve the collision subspace of the symmetric
+power. The independent-particle permanent construction is treated separately.
+
+The basic observables remain visible in the full tensor construction.
+Writing
+\[
+ \Phi(X)=\sum_i p_iM_iXM_i^{\mathsf T},\qquad
+ \Psi(X)=\sum_i p_iM_i^{\mathsf T}XM_i,
+\]
+the limiting kernel measure gives
+\[
+ N=\lim_{m\to\infty}\frac1m\sum_{t=0}^{m-1}\Phi^t(I),\qquad
+ M=\lim_{m\to\infty}\frac1m\sum_{t=0}^{m-1}\Psi^t(J).
+\]
+At zeon level two, $u_2=\Omega_2\mathbf1$ records survival of a distinct
+pair, and its symmetric, zero-diagonal matrix realization is
+\[
+ \boxed{\operatorname{Mat}(u_2)=J-N.}
+\]
+The full projection $\Omega_2$ acts on pair space; $J-N$ is reconstructed
+from its right field and is not that full projection. The $P_j,Q_i$
+projections of Section~\ref{eproj:section} act on the original state space
+and have yet another role. The following sections develop the higher
+fields and their compatible inclusion maps within this framework.
+

@@ -1,27 +1,48 @@
 
-%%% M and N
-\section{$\mathbf M$ and $\mathbf N$}
+\section{Expectation operators and their fixed-point equations}
 \label{sec:6.3}
+Throughout this chapter, $A=(R+B)/2$ is irreducible, $\pi A=\pi$,
+$\pi u^{\mathsf T}=1$, $\Omega=u^{\mathsf T}\pi$, and
+$\omega=\operatorname{diag}(\pi)$. The letters are selected independently
+with equal probabilities. Kernel expectations use the limiting Cesaro
+measure $\lambda$; aperiodicity is not required for this convention.
+Thus $\mathbb E_\lambda[K]=\Omega$. Write
+\[
+ N=\mathbb E_\lambda[KK^{\mathsf T}],\qquad
+ M=\mathbb E_\lambda[K^{\mathsf T}JK],\qquad
+ \tau=\operatorname{tr}M.
+\]
+The complementary operator is always written $J-N$, and the centered
+operator is always written $M-\tau\omega$. In particular, neither is
+silently denoted by $N$ or $M$.
 
-Note that $\Omega=\avg K.$, the average element of the kernel. As well, $\Omega=\beta_\lambda\rho(k_\lambda)$,
-where $k_i$ runs through any row, so that each range is represented once.
-
-Let $N_0=\avg KK^*.  = \avg EE^*.$, where $K$ denotes a random element of $\cK$, and $E$ denotes a random idempotent,
-element of $\E(\cK)$. Define $N=J-N_0$. $N$ satisfies the equation
-%
-\begin{equation}  \label{eq:N}
- \sym{A}{N}+\sym{\Delta}{N}=N
-\end{equation} 
-%
-$N_0$ and $J$ satisfy the above equation as well.
-
-Note that $N_0=\alpha_\mu e_\mu e_\mu^*$ where the $e_i$ are (all of) the idempotents with
-a given range, i.e., they can be chosen as the idempotents from a single column in the kernel.
-
-Let $M_0=\avg K^*JK.$. Define $\tau=\tr M_0$ and  $M=M_0-\tau\omega$. $M$ satisfies the equation
+Set $\Delta=(R-B)/2$. The common-letter fixed-point equations are
+\begin{equation}\label{eq:N}
+ AXA^{\mathsf T}+\Delta X\Delta^{\mathsf T}=X,
+ \qquad X\in\{N,J,J-N\}.
+\end{equation}
 \begin{equation}\label{eq:M}
-\symm{A}{M}+\symm{\Delta}{M}=M
-\end{equation} 
-$M_0$ and $\omega$ satisfy the above equation as well. Note that $JM_0=n^2\Omega$ and $\tr JM_0=n^2$.
+ A^{\mathsf T}YA+\Delta^{\mathsf T}Y\Delta=Y,
+ \qquad Y\in\{M,\omega,M-\tau\omega\}.
+\end{equation}
+Indeed, the left sides are respectively
+$(RXR^{\mathsf T}+BXB^{\mathsf T})/2$ and
+$(R^{\mathsf T}YR+B^{\mathsf T}YB)/2$.
+Stationarity of $\lambda$ under left and right multiplication by a random
+letter gives the equations for $N$ and $M$. The identities for $J$ and
+$\omega$ follow from stochasticity and $\pi A=\pi$; linearity gives
+the remaining two equations.
 
-Note that $M_0$, $N_0$, $M$, $N$ as well as $J$ are all symmetric matrices.
+If $e_i$ is the idempotent associated with partition $i$ in any fixed
+kernel column, then
+\[
+ N=\sum_i\alpha_i e_i e_i^{\mathsf T}.
+\]
+Moreover,
+\[
+ JM=n^2\Omega,\qquad \operatorname{tr}(JM)=n^2.
+\]
+All five matrices $N$, $M$, $J-N$, $M-\tau\omega$ and $J$ are symmetric.
+The two expectation operators $N$ and $M$ are positive semidefinite;
+this assertion does not extend automatically to their complementary
+or centered counterparts.

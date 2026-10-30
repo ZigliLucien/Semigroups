@@ -1,0 +1,39 @@
+\chapter*{Scope and assumptions}
+\section*{General theory}
+The general theory concerns finite transformation semigroups, their kernels,
+partitions, ranges, idempotents, representations and associated operators.
+It includes the partial-circulant family (PtC). Simplicity, the absence of
+loops, two-out regularity, irreducibility and aperiodicity are not blanket
+assumptions on this general theory. Probabilistic results state their
+own hypotheses on the stochastic matrix and generator probabilities;
+existence, positivity, uniqueness and convergence of stationary laws must
+not be inferred without the relevant hypotheses.
+
+\section*{Assumptions for road-coloring questions}
+In questions concerning the road coloring problem, the underlying graph
+$G$ is a finite simple directed graph: there are no loops and no parallel
+edges with the same ordered endpoints. Opposite arrows $x\to y$ and
+$y\to x$ are permitted. Every vertex has exactly two distinct outgoing
+neighbours. The graph is strongly connected and aperiodic.
+Write $\mathcal A$ for its adjacency matrix and set
+\[
+ \mathcal A\in\{0,1\}^{n\times n},\qquad
+ \mathcal A_{xx}=0,\qquad\mathcal A\mathbf1=2\mathbf1,
+ \qquad A=\tfrac12\mathcal A=\tfrac12(R+B).
+\]
+Thus $A$ is stochastic, traceless, irreducible and aperiodic. For a coloring,
+\[
+ R_{xx}=B_{xx}=0,\qquad R_{xy}B_{xy}=0,
+ \qquad xR\ne xB.
+\]
+The stationary row $\pi$ is strictly positive and normalized by
+$\pi\mathbf1=1$; $\pi A=\pi$ and $A^m\to\mathbf1\pi$.
+Within this setting $A$ denotes the normalized transition matrix, not the
+adjacency matrix. Recoloring changes $R,B$ but not $\mathcal A$ or $A$.
+
+The auxiliary target-pair graph has one edge $\{xR,xB\}$ for each source.
+Under these road-coloring assumptions it has no loops. Distinct sources
+may give the same auxiliary edge without violating simplicity of $G$.
+
+The road-coloring assumptions are not imposed on PtC or on the general
+semigroup theory. Each theorem retains its own explicitly stated hypotheses.

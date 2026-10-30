@@ -1,0 +1,18 @@
+{
+  "check_type": "Static include/label/environment scan performed during the organization pass",
+  "missing_includes": [],
+  "environment_count_mismatches": [],
+  "unresolved_reference_labels_in_scan": [],
+  "inherited_duplicate_labels_found": [
+    "defn:1",
+    "sec:3.2"
+  ],
+  "duplicate_label_repairs": "Renamed the later coloring definition and the weak-convergence section in the organized copies; original sources unchanged.",
+  "lie_macro_repair": "Expanded the remaining Lie operator macro in the organized copy.",
+  "compilation_performed": false,
+  "citation_audit_completed": false,
+  "legacy_active_sections_placed": 49,
+  "operator_notation_normalized": false,
+  "complete_source_transfer_claimed": false,
+  "note": "A subsequent combined inventory/audit/export operation timed out after saving the placement map and source inventory; no ZIP export is claimed."
+}

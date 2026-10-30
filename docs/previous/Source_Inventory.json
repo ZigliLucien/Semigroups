@@ -1,0 +1,237 @@
+[
+  {
+    "path": "SEMIGROUPS/Kernel_of_Partial_Circulants.tex",
+    "bytes": 9387,
+    "sha256": "9889a76a53eba3aa87b043f80213bcd412730da6f78aa6658b9a63dee6b4d688"
+  },
+  {
+    "path": "SEMIGROUPS/LieConstants/LieConstants_WorkingNotes.tex",
+    "bytes": 6831,
+    "sha256": "865bf1f6fb144901dfc7a53a8d3b747a78a92b1baa9cb64ffec6cf6ede594a6f"
+  },
+  {
+    "path": "SEMIGROUPS/PartialCirculantOperators/PartialCirculants_Operators.tex",
+    "bytes": 36616,
+    "sha256": "920cef37c3e153fe145177e3af62469a02bcfcc26261b31dc74844cf341b4705"
+  },
+  {
+    "path": "SEMIGROUPS/PartialCirculantOperators/RCN_Correlation_and_Revisions.md",
+    "bytes": 8539,
+    "sha256": "784cd2564c81bfaecf13a447194c39edd3e5e8c7ccbcde6b85e2f8359ee5d54d"
+  },
+  {
+    "path": "SEMIGROUPS/PartialCirculantOperators/README.md",
+    "bytes": 3413,
+    "sha256": "43367249f05192d797ddcd644352eceeabe14f1296c9f254d0f01b0a2143839c"
+  },
+  {
+    "path": "SEMIGROUPS/PartialCirculantOperators/ZeonMarkov_Permanent_Connection.md",
+    "bytes": 4186,
+    "sha256": "a6793d18a342110fae3aebb1270d888805ac464ed1c30ba8c74bbf6b554da01e"
+  },
+  {
+    "path": "SEMIGROUPS/PartialCirculantOperators/verification_results.json",
+    "bytes": 2844,
+    "sha256": "51a9c39ad8839cb27646411e45330d2382b42e04898a57c5cf5ec2a98739e2f9"
+  },
+  {
+    "path": "SEMIGROUPS/Potential_and_OppositeTensor_Integration.md",
+    "bytes": 8931,
+    "sha256": "d0ec3c4313973ce897e85f283e34cc1961b22f007f52b2f4a76ab29b54f168ee"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Delta.pdf",
+    "bytes": 73797,
+    "sha256": "e172b7102f3d57e0497bb35b649790bc885f17bd717686996b8a927173430650"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Double.pdf",
+    "bytes": 79045,
+    "sha256": "f5084e270913cc3def6c18b90970663e3db6f7083e755f87eb235b4f7ffce9b3"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/KernelHierarchy.pdf",
+    "bytes": 40098,
+    "sha256": "dabb3b1fd2ad6d3fafae03a53b49756b6b9ca2c67613816e56753ce1cafbc115"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/LadderProcesses.tex",
+    "bytes": 127126,
+    "sha256": "5169fe4fa9cf9ec9d7bce4a57a3a72349f4a38d0287a2aac2e5f9f3e5b87669b"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/LieRank.pdf",
+    "bytes": 62064,
+    "sha256": "6eb2e067a05fa05ca2e943c71199c0a7a438193350117da23e1103707ac0366a"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/LieRank.tex",
+    "bytes": 7438,
+    "sha256": "aa4940948d987205c9022c273da7afb74c6fed3bed00f9b330ee840fdb4bfabd"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Potential_Tensor_Uploads_Manifest.json",
+    "bytes": 282,
+    "sha256": "4a1bd9b23c69a4a42487438f6f4cde8a2c088e762d9b1921c6d906bbf3a0db82"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/QuantumRCOperators.pdf",
+    "bytes": 307771,
+    "sha256": "cef1b4d236f2e30b9facabae5aaa45d6e9879fd511cf9f0a406d6418b5af1f42"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/QuantumRCOperators.tex",
+    "bytes": 81098,
+    "sha256": "cf5051e9da5ace58f2cd613f6bee5a9edce9c9a091d1e043dece4b59f9823ab7"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/RCN.pdf",
+    "bytes": 161903,
+    "sha256": "a2a3930fb1a8d648a08cbcbd6edeb61b85ce13a1b1cee10330b05ce5cd77fe79"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/RCQuestion.pdf",
+    "bytes": 15557,
+    "sha256": "48033a04457c5eb6c4e2076c29bf82f914ae5bc9d1ac8303dd3b09d008f0cd21"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/SemigroupNotes.pdf",
+    "bytes": 119998,
+    "sha256": "488ac7277a02a26871ac0cc237d5e766b0260901a38a07e10de50e306e335645"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/SemigroupNotes.tex",
+    "bytes": 1894,
+    "sha256": "63b1d882f11f8a7f02eef2ad7bdd7485199681c6353cc94ef31d9dc5be63e9b0"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Specialty_Uploads_Manifest.json",
+    "bytes": 516,
+    "sha256": "c795189c122fbb0fbeea8575e5ed26fda988403d29e9c7e6be6ce32a38e1cceb"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/U-FIELD.pdf",
+    "bytes": 5491,
+    "sha256": "d1278170b3bf55c0864b616f574135254d850cc2ab478b4bab8cec9da38e8e46"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Unicycles.pdf",
+    "bytes": 22791,
+    "sha256": "33f4836dd916a1477dd198dcf5d87ef175e63353102b732409b1672c4f098e66"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/Upload_Archive_Manifest.json",
+    "bytes": 2622,
+    "sha256": "822e82f4ae363dd7202a801ee3844ec22ebfed27ca50676145881f64f14d027b"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/V-Operator.pdf",
+    "bytes": 78634,
+    "sha256": "a12bba5c2649211bc8cc345821b5fab85ea437bfe40fe394f51a268cc810c114"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/ZeonFockSpaceMarkovChains.pdf",
+    "bytes": 162359,
+    "sha256": "68f75208993bdb29ec604569811b3242b1e14ff818a98f170f61d424a49c4644"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/ZeonFockSpaceMarkovChains.tex",
+    "bytes": 31898,
+    "sha256": "b10b10348a4e45d7ec54af7d74b4932c66c9ca2736c307483b502df26921448d"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/kernelHierarchy.tex",
+    "bytes": 71424,
+    "sha256": "e448766f8cde3a8dabc53e87e408a7e3f0299c3eb8dea7d8115d445743caacc9"
+  },
+  {
+    "path": "SEMIGROUPS/SourcePapers/kernelHierarchy_Complete.pdf",
+    "bytes": 263273,
+    "sha256": "c5df81d2a2275cad3546d0278f62d241e0b501c5648a7825a09bf4e71faba4ae"
+  },
+  {
+    "path": "SEMIGROUPS/SpecialtyTopics_Connections.md",
+    "bytes": 3744,
+    "sha256": "0edea267a74491c2d74ef270e2220e996a4263641825e81b5fe66689855b2a85"
+  },
+  {
+    "path": "SEMIGROUPS/Tensor_Squares_and_Friedmans_Theorem.tex",
+    "bytes": 10237,
+    "sha256": "4772a83d6fdb0f04d97def5114866c9c8a220e261bea0d8c3009a293c0db909f"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/Anticoupled_Kernel_Structure.json",
+    "bytes": 6070,
+    "sha256": "4c82096d2fcf367755521dc024bbb869a5907987315aae99fb05b5934c696aa8"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/CC_Existence_Verification.json",
+    "bytes": 1169,
+    "sha256": "79ee1889b304b743a9057121515e8f5c0aee07971e5130b71445013693e48ce5"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/Canonical_Coloring_Survey.json",
+    "bytes": 11242,
+    "sha256": "0c2a1106848e6102d9f09cfd59f32656d0b718ab39a68b00137d769948d0445a"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/Canonical_Coloring_Survey.md",
+    "bytes": 4099,
+    "sha256": "3c21b3c24c9c64555ab27bcd0d2318dd12f102c886bce130d03ec8b75944f0b7"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/Potential_and_Anticoupled_Verification.json",
+    "bytes": 2520,
+    "sha256": "9e6d7bfc5a47c780a7286b6771cd0f9fd3ee8b26d8642e39b26d1355a86bcd0f"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R312344_B666565.md",
+    "bytes": 2147,
+    "sha256": "00a1a667960fea28f750f7c9163afe524a83fb1e74fce0ae84393db1ec93dbe5"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R312344_B666565_Lie_Verification.json",
+    "bytes": 586,
+    "sha256": "5fc42d1d65c982a2f2e250ab3e7decf0a89109d334c31a434c932549da1fc0bd"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R312344_B666565_Verification.json",
+    "bytes": 2418,
+    "sha256": "0a88c1741aefe13e352dea37876926dc154f65c133b972604789794447a8ce7b"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R4312_B3443.md",
+    "bytes": 2875,
+    "sha256": "77645f166add67db32c599148bb8bc22e5e9a260d5e7b2ff45d2e6a8d013e378"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R4312_B3443_Verification.json",
+    "bytes": 3356,
+    "sha256": "ce2c2786a01a688fc601d537d62d88037b2c61f3b0de260a9cf7748ab641b755"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R444777111_B295838562.md",
+    "bytes": 2900,
+    "sha256": "60796d63ba0411a449a58e78f3e1ca5a5d1055fff4f763bd9dc16abc2a42874d"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/R444777111_B295838562_Verification.json",
+    "bytes": 17213,
+    "sha256": "a0bc152fb2df7f4055eb9b9add9f008fa0ef9cf94240d3c92cb141039645b2fe"
+  },
+  {
+    "path": "SEMIGROUPS_Book/Examples/Same_Kernel_Different_Anticoupling.json",
+    "bytes": 2460,
+    "sha256": "b874da7fb40447b2cb052f0ce6fb6058c21672d6217355fa41c3551351e9c340"
+  },
+  {
+    "path": "SymmetricFunctions/Connections_to_SEMIGROUPS.md",
+    "bytes": 5799,
+    "sha256": "9f606980efcf41b398a6398e9d521a8021f2c0476088eddb6b6889d80b93f3b7"
+  },
+  {
+    "path": "SymmetricFunctions/LadderProcesses_SymmetricFunctions.tex",
+    "bytes": 70832,
+    "sha256": "5823c8c9246eac6d3f06a66064b7324445a168a90435a79130c7f93423224b8e"
+  }
+]

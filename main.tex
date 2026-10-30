@@ -1,15 +1,16 @@
 \documentclass[graybox,envcountchap]{svmono}
 \usepackage{amsmath,amssymb,graphicx,pstricks,makeidx}
 \usepackage{mathptmx,helvet,courier,type1cm}
+\graphicspath{{figures/}}
 \makeindex
-\input{AMAT-Defs.tex}
+\input{preamble/AMAT-Defs.tex}
 \begin{document}
 \author{Gregory Budzban and Philip Feinsilver}
 \title{Algebraic Methods in Automata Theory}
 \subtitle{Discussion Draft for Colleague Review -- 2026-10-22}
 \maketitle
 \frontmatter
-\input{Standing_Assumptions}
+\input{frontmatter/Standing_Assumptions.tex}
 \chapter*{Note to readers}
 This is a provisional discussion draft, version 2026-10-22, circulated for
 comments on mathematical content, organization, hypotheses, and exposition.
@@ -22,9 +23,8 @@ a complete exposition of Trahtman's proof is not included. The partial
 circulant family serves as a running laboratory and a synthesis chapter.
 
 Readers should distinguish inherited exposition, recently added material,
-and explicitly marked research questions. The older expectation-operator
-blocks retain their original notation, with a printed crosswalk to the newer
-convention. Some historical prose and cross-references still need revision.
+and explicitly marked research questions. Chapter 5 uses a single expectation-operator convention. Later inherited
+blocks retain their locally announced historical conventions. Some historical prose and cross-references still need revision.
 The Lie-constant converse and the general description of opposite-letter
 kernel coordinates are not asserted as proved results.
 
@@ -42,27 +42,27 @@ section title, and theorem label where possible; numbering may change.
 \tableofcontents
 \mainmatter
 \part{Foundations}
-\include{chapter-01}
-\include{chapter-02}
-\include{chapter-03}
+\include{chapters/chapter-01.tex}
+\include{chapters/chapter-02.tex}
+\include{chapters/chapter-03.tex}
 \part{Kernel geometry and coloring}
-\include{chapter-04}
-\include{chapter-05}
-\include{chapter-06}
-\include{chapter-07}
+\include{chapters/chapter-04.tex}
+\include{chapters/chapter-05.tex}
+\include{chapters/chapter-06.tex}
+\include{chapters/chapter-07.tex}
 \part{Higher representations and constructions}
-\include{chapter-08}
-\include{chapter-09}
-\include{chapter-10}
-\include{chapter-11}
+\include{chapters/chapter-08.tex}
+\include{chapters/chapter-09.tex}
+\include{chapters/chapter-10.tex}
+\include{chapters/chapter-11.tex}
 \part{Synthesis}
-\include{chapter-12}
-\include{chapter-13}
+\include{chapters/chapter-12.tex}
+\include{chapters/chapter-13.tex}
 \appendix
-\include{appendix-A}
-\include{appendix-B}
-\include{appendix-C}
-\include{appendix-D}
+\include{appendices/appendix-A.tex}
+\include{appendices/appendix-B.tex}
+\include{appendices/appendix-C.tex}
+\include{appendices/appendix-D.tex}
 \backmatter
-\input{References}
+\input{bibliography/References.tex}
 \end{document}

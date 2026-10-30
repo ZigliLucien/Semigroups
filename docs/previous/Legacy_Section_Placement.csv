@@ -1,0 +1,50 @@
+source,source_section,topic,block,home,status
+Working_Manuscript/AMAT-1.tex,1,The Generalized Road Coloring Problem,blocks/legacy-1-01.tex,1,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-2.tex,1,Introduction to Semigroup Theory,blocks/legacy-2-01.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-2.tex,2,Completely Simple Semigroups,blocks/legacy-2-02.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-2.tex,3,The Rees-Sushkewitch Theorem,blocks/legacy-2-03.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-2.tex,4,The Semigroup $\F_X$,blocks/legacy-2-04.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,1,Random Walks on Semigroups,blocks/legacy-3-01.tex,3,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,2,Convergence of Convolution Powers,blocks/legacy-3-02.tex,3,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,3,Weak Convergence of Probability Measures,blocks/legacy-3-03.tex,A,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,4,Some Initial Results of Convergence,blocks/legacy-3-04.tex,A,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,5,Convolution Powers,blocks/legacy-3-05.tex,A,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-3.tex,6,Semigroup Algebras,blocks/legacy-3-06.tex,3,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,1,Introduction,blocks/legacy-4-01.tex,D,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,2,Finite Semigroups and the Road Coloring Problem,blocks/legacy-4-02.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,3,The Kernel of a Coloring Semigroup,blocks/legacy-4-03.tex,2,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,4,Semigroup Proofs of Selected Results,blocks/legacy-4-04.tex,D,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,5,Main Result,blocks/legacy-4-05.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,6,A technique to complete the solution to the generalized road coloring conjecture,blocks/legacy-4-06.tex,D,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,7,Conclusion,blocks/legacy-4-07.tex,D,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,8,"Completely Simple Semigroups, Lie Algebras, and the Road Coloring Problem",blocks/legacy-4-08.tex,12,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-4.tex,9,Solvability and right groups,blocks/legacy-4-09.tex,12,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,1,Introduction,blocks/legacy-5-01.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,2,The matrix $\Delta$,blocks/legacy-5-02.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,3,The matrix $\Delta$ annihilates only rank one kernels,blocks/legacy-5-03.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,4,Special rank one matrices in Vec($S$),blocks/legacy-5-04.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,5,The Rank Condition,blocks/legacy-5-05.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-5.tex,6,Coloring and recoloring,blocks/legacy-5-06.tex,6,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,1,Basic Terminology and Notations,blocks/legacy-6-01.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,2,Norms,blocks/legacy-6-02.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,3,$\mathbf M$ and $\mathbf N$,blocks/legacy-6-03.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,4,Basic data and properties,blocks/legacy-6-04.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,5,Equipartitioning,blocks/legacy-6-05.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,6,Ranking,blocks/legacy-6-06.tex,7,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,7,Divisibility,blocks/legacy-6-07.tex,7,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,8,Applications,blocks/legacy-6-08.tex,7,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-6.tex,9,Algebra generated by $\mathbf M$ and $\mathbf N$,blocks/legacy-6-09.tex,5,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-7.tex,1,Zeon algebra and structure of the kernel,blocks/legacy-7-01.tex,8,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-7.tex,2,Levels,blocks/legacy-7-02.tex,8,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-7.tex,3,Distributions,blocks/legacy-7-03.tex,8,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-7.tex,4,Absorbing states,blocks/legacy-7-04.tex,8,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,1,Definitions and statement,blocks/legacy-8-01.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,2,Congruence classes and elementary collapses,blocks/legacy-8-02.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,3,Proof of the theorem,blocks/legacy-8-03.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,4,Further structure,blocks/legacy-8-04.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,5,The ladder chain and its stationary distribution,blocks/legacy-8-05.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,6,The spectrum of the collision operator,blocks/legacy-8-06.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,7,Why permanental and common-letter hierarchies agree here,blocks/legacy-8-07.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,8,The rank condition: a hypothesis test,blocks/legacy-8-08.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,9,A worked example and exercises,blocks/legacy-8-09.tex,13,inherited text; proof and notation review still required
+Working_Manuscript/AMAT-8.tex,10,"Research directions, not asserted theorems",blocks/legacy-8-10.tex,13,inherited text; proof and notation review still required
