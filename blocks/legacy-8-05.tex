@@ -1,0 +1,22 @@
+
+
+\section{The ladder chain and its stationary distribution}
+Assign positive probabilities $p_i$ to the selected generators, with
+$\sum_{i\in I}p_i=1$, and put $T=\sum_{i\in I}p_iM_i$.
+Write $\mu=\sum_{i\in I}i p_i$. Then
+\begin{proposition}\label{ptc-book:stationary}
+The stationary distribution, extended by zero outside $C$, is
+\[
+ \pi_j=\frac{\sum_{i\in I,\ i\ge j}p_i}{\mu}\quad(1\le j\le m),
+ \qquad \pi_j=0\quad(j>m).
+\]
+On $C$ the chain is irreducible and its period is $d=\gcd(I)$.
+\end{proposition}
+\begin{proof}
+The stationary equations read $\pi_j=\pi_1p_j+\pi_{j+1}$ on the core,
+where $p_j=0$ for unselected indices and $\pi_{m+1}=0$. Backward substitution
+and normalization give the formula. The $M_m$ cycle visits all of $C$, so
+the chain is irreducible there. A return from state 1 to itself consists of
+excursions of lengths in $I$, and each selected length occurs. Their greatest
+common divisor is therefore the period. States above $m$ descend into $C$.
+\end{proof}

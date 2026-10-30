@@ -1,0 +1,54 @@
+\section{The edge-state lift}
+\label{organized:double-core}
+Order the $2n$ edge states by the red outgoing edge from each vertex,
+then the blue one; parallel edges remain distinct labeled edge states.
+The induced transformations and their average are
+\[
+ \widehat R=\begin{pmatrix}R&0\\B&0\end{pmatrix},\quad
+ \widehat B=\begin{pmatrix}0&R\\0&B\end{pmatrix},\quad
+ \widehat A=\tfrac12\begin{pmatrix}R&R\\B&B\end{pmatrix}.
+\]
+If $\pi A=\pi$, then
+\[
+ \widehat\pi=(\pi R/2,\pi B/2).
+\]
+Multiplication verifies the identity, since $\pi R+\pi B=2\pi$.
+In general this is not $(\pi/2,\pi/2)$.
+Writing $U=\tfrac12[R;B]$ and $W=[I,I]$ gives $\widehat A=UW$,
+$A=WU$, so
+\[
+ \det(\lambda I_{2n}-\widehat A)=\lambda^n\det(\lambda I_n-A).
+\]
+
+\section{Kernel rank and kernel elements under the lift}
+Assume every vertex has an incoming edge, as in the irreducible case.
+Let $H=[R;B]$ be the head map, and $J_R=[I,0]$, $J_B=[0,I]$ the two
+edge injections. Then $\widehat L=HJ_L$ and $J_LH=L$.
+For a nonempty word $w=L_1\cdots L_t$,
+\[
+ \widehat w=H(L_1\cdots L_{t-1})J_{L_t}.
+\]
+The head map is onto and each $J_L$ is injective, so the rank is the
+rank of the prefix. If the base kernel has rank $r$, the lifted kernel
+therefore has rank $r$ and is precisely
+\[
+ \widehat K=\{HkJ_R,HkJ_B:k\in K\}.
+\]
+If a prefix is empty its rank is $n$; it contributes to the kernel only
+when $r=n$, in which case the base semigroup is a group containing the
+identity. The two last-color ranges are disjoint and $H$ is onto, so
+these representations are distinct and $|\widehat K|=2|K|$.
+Kernel partitions pull back through $H$; kernel ranges are the two edge
+copies of the base ranges. Transport of all hierarchy fields is a
+further question, not an automatic identification of stationary laws.
+
+\section{A systematic source of CC examples}
+Every outgoing pair at a lifted source consists of edge vertices $i$
+and $i+n$, where $i$ is its head. Since every head occurs, the auxiliary
+target-pair graph is exactly a matching of $n$ pairs. Thus the double is
+CC and has $2^n$ labeled CC choices. The displayed lift is one such
+choice, with disjoint red and blue ranges.
+Graph doubling preserves the kernel rank in this coloring; canonical
+recoloring of that CC coloring doubles it. These are different operations.
+This distinction is essential when comparing the lift with the CC
+rank-doubling theorem.

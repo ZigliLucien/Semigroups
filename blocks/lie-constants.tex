@@ -1,0 +1,150 @@
+\section{The constant ideal}
+Use right-action transformation matrices and the bracket $[X,Y]=XY-YX$.
+Let $\mathfrak g=\operatorname{Lie}_{\mathbb Q}(R,B)$, and let
+$C_j=\mathbf{1} e_j^{\mathsf{T}}$ be the constant transformation with value $j$.
+Then $C_iC_j=C_j$, and consequently
+\[
+ [C_i,C_j]=C_j-C_i.
+\]
+The Lie constants in the supplied summary are the derived algebra of the
+constant transformations:
+\[
+ \mathfrak c_0=
+ \{\mathbf{1} v:v\in\mathbb Q^{1\times n},\ v\mathbf{1}=0\}
+ =\operatorname{span}\{C_j-C_1:2\le j\le n\}.
+\]
+This is an $(n-1)$-dimensional abelian algebra; indeed products of any two
+of its elements are zero. It is the differences of constants, not
+necessarily the individual $C_j$, that the conjecture requires.
+
+Every $X\in\mathfrak g$ satisfies $X\mathbf{1}=c(X)\mathbf{1}$ for a scalar $c(X)$.
+Moreover
+\[
+ [X,\mathbf{1} v]=\mathbf{1}\bigl(c(X)v-vX\bigr),
+\]
+so $\mathfrak c_0$ is an ideal in the ambient constant-row-sum Lie algebra.
+In particular $\mathfrak g\cap\mathfrak c_0$ is a module under commutation
+with $R$ and $B$. Once one nonzero constant difference is obtained, its
+commutator orbit can produce further constant differences.
+
+The derived algebras of $\operatorname{Lie}(R,B)$ and $\operatorname{Lie}(R-I,B-I)$ agree, since
+all brackets are unchanged by scalar identity shifts. This does not
+identify their complete linear spans without a separate argument.
+
+\section{An exact computational procedure}
+Start with an independent basis of $\operatorname{span}\{R,B\}$. For each new basis
+matrix $X$, adjoin $[X,R]$ and $[X,B]$ if independent of the current span.
+Repeat until no new direction occurs. The stable space is the generated
+Lie algebra: it contains the generators and is stable under their adjoint
+actions; Jacobi's identity then gives stability under adjoints of all Lie
+words. Its dimension is at most $n^2-n+1$ because of the constant-row-sum
+constraint. Rational row reduction avoids floating-point rank decisions.
+
+If $G$ is the matrix whose columns are vectorizations of the resulting
+basis, and $C$ has columns $\operatorname{vec}(C_j-C_1)$, then
+\[
+ \dim(\mathfrak g\cap\mathfrak c_0)
+ =\rank G+(n-1)-\rank[\,G\ C\,].
+\]
+Thus membership of all Lie constants is an exact linear-algebra test.
+The coefficients in $Gz=\operatorname{vec}([X_i,X_j])$ give structure
+constants in this basis. Keeping the Lie-word expression attached to each
+adjoined basis matrix also produces explicit commutator witnesses.
+
+\section{The kernel-partition obstruction}
+Assume the irreducible stochastic setting of our equipartition results.
+For every semigroup word $W$ and every kernel element $k$,
+\[
+ \pi Wk=\pi k.
+\]
+Every $X\in\mathfrak g$ is a linear combination of semigroup words, whose
+coefficient sum is $c(X)$. Hence
+\[
+ \pi Xk=c(X)\pi k.
+\]
+If $X=\mathbf{1} v\in\mathfrak g\cap\mathfrak c_0$, then $c(X)=0$ and
+$\pi X=v$, so $vk=0$ for every $k$ in the kernel.
+
+\begin{proposition}
+Under these assumptions,
+\[
+ \mathfrak g\cap\mathfrak c_0
+ \subseteq
+ \left\{\mathbf{1} v:\sum_{x\in F}v_x=0
+ \text{ for every fiber }F\text{ of every kernel partition}\right\}.
+\]
+In particular, if the kernel rank is $r$, then
+\[
+ \dim(\mathfrak g\cap\mathfrak c_0)\le n-r.
+\]
+Containment of all Lie constants therefore forces rank one.
+\end{proposition}
+\begin{proof}
+For a transformation $k$, the coordinates of $vk$ are the sums of $v$
+over its fibers. Fixing one rank-$r$ partition imposes $r$ independent
+linear conditions on $v\in\mathbb Q^n$, so the allowed dimension is at
+most $n-r$. Requiring the same for all partitions can only decrease it.
+\end{proof}
+
+For partial circulants, on the recurrent core $n=m$, the allowed space is
+\[
+ \{\mathbf{1} v:\sum_{x\equiv a\pmod r}v_x=0\text{ for all }a\},
+\]
+of dimension $m-r$. With transient states, the same bound holds for the
+Lie-constant intersection: invariance of the core forces $v_x=0$ outside
+it, and the core argument applies. This is a proved upper bound; equality
+in the examples below is computational evidence, not a general proof.
+
+\section{A short explicit extraction}
+\begin{example}
+Take $R=M_2=[212]$ and $B=M_3=[312]$. Set
+\[
+ H=[R,B],\qquad F=\frac13\bigl(H-[[H,R],R]\bigr).
+\]
+Direct multiplication gives
+\[
+ F=C_2-C_1=\begin{pmatrix}-1&1&0\\-1&1&0\\-1&1&0\end{pmatrix},
+ \qquad [B,F]-F=C_3-C_1.
+\]
+Thus the generated Lie algebra contains all Lie constants in this example.
+These identities were checked exactly over the rationals.
+Its dimension is six and its derived-series dimensions are $6,5,5$,
+so it is not solvable, although the transformation kernel is a right group
+(in fact rank one).
+\end{example}
+
+\section{Computations and the remaining problem}
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+$n$ & Generator indices & $\dim\mathfrak g$ & $\dim(\mathfrak g\cap\mathfrak c_0)$\\
+\hline
+2 & $1,2$ & 3 & 1\\
+3 & $2,3$ & 6 & 2\\
+4 & $2,4$ & 8 & 2\\
+4 & $3,4$ & 12 & 3\\
+6 & $3,6$ & 18 & 3\\
+5 & $2,4$ & 10 & 2\\
+4 & $4$ & 1 & 0\\
+\hline
+\end{tabular}
+\end{center}
+All ranks are exact rational computations. In the six-state row the kernel
+rank is three, and in the five-state row the largest index is four with
+one transient state. In every displayed case the intersection dimension
+attains the bound $m-r$. Proving or refuting this equality for arbitrary
+partial-circulant supports is a concrete intermediate problem. Its rank-one
+case would establish the proposed converse for this family.
+
+The known solvability-to-right-group implication and the Lie-constant
+conjecture should not be conflated. Right groups need not have solvable
+generated Lie algebras, as the example above demonstrates. Moreover, in a
+strongly connected synchronizing automaton the associative algebra contains
+all constants (a reset word followed by suitable paths gives each constant),
+but this does not automatically yield nested-commutator expressions for their
+differences. That associative-to-Lie step is the essential gap in the
+proposed general converse.
+
+These notes establish definitions, obstructions, an algorithm and finite
+examples. They do not settle that converse or assert a general equality
+from the observed table.

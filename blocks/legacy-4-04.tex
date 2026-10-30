@@ -1,0 +1,443 @@
+
+
+\section{Semigroup Proofs of Selected Results}
+\label{sec:4.4}
+
+In this final section we present new proofs of several well-known results.
+Part one of the next theorem was originally proven by Friedman in \cite{F}. 
+To the best of our knowledge, part two of this theorem is a new result.
+
+\begin{theorem}		\label{thm:4.7}
+Let $G=(V,\mathcal{E})$ be a strongly connected, $d$-out digraph with adjacency matrix $A$. 
+Suppose $w=\left( w_1,w_2,\dots,w_n\right) $ is such that $wA=dw$ and let $W=\sum\limits_{i=1}^nw_i$ be the Friedman weight of $G$. 
+We can and do assume that each $w_i$ is a positive integer.
+
+Let $S=\left\langle R_1,R_2,\dots,R_d\right\rangle$ be a coloring semigroup
+of $G$ with kernel $\mathcal{K}$ having rank $k$. 
+Then 
+%
+\begin{enumerate}
+\item[{\normalfont(1)}] $k\mid W$
+
+\item[{\normalfont(2)}] $k\mid |\mathcal{H}|$ where $\mathcal{H}$ is any maximal group in $\mathcal{K}$.
+\end{enumerate}
+%
+\end{theorem}
+
+\begin{proof}
+If $S=\left\langle R_1,R_2,\dots,R_d\right\rangle$ then
+\[
+  \frac1dA=\frac1d\sum_{j=1}^dR_j.
+\]
+Notice $\dfrac1dA$ is stochastic, and since strongly connected 
+\[
+  \lim_{m\to\infty}\frac1m\sum_{k=1}^m\left( \frac1dA\right) ^k=A_0,
+\]
+where $A_0$ is a rank one strictly positive stochastic matrix with each row
+equal to $w_0=\left( \dfrac1W\right) w$.
+
+Now consider the element in the semigroup algebra of binary stochastic
+matrices
+\[
+  \frac1d R_1+\frac1d R_2+\cdots+\frac1d R_d.
+\]
+Since the coloring semigroup is finite, there is an equivalence between
+powers of this element and convolution powers of the probability measure $\mu$ where
+\[
+  \mu\left( R_i\right) =\frac1d.
+\]
+
+It is known that
+\[
+  \lim_{m\to\infty}\left( \frac1m\sum_{k=1}^m\mu^k\right) =\lambda
+\]
+where the support of the measure $\lambda$ is precisely the kernel $\mathcal{K}$ of the coloring semigroup $S$. 
+(See H\"ogn\"as and Mukherjea \cite{HM}, pages 79 and 92, for more details.) 
+Thus
+\[
+  A_0=\sum_{K\in \mathcal{K}}\lambda(K) K.
+\]
+
+Now $\lambda$ is an idempotent probability measure which is well-known to be
+locally uniform on each maximal group $\mathcal{H}$.
+
+Precisely, let $E\in E(\mathcal{K})$, then since $A_0$ is a rank one stochastic matrix,
+\[
+  EA_0E=A_0E.
+\]
+Also, $\delta_E\ast\lambda\ast\delta_E$, which is an idempotent probability
+measure on its support $E\mathcal{K}E$ (the reason being $\lambda\ast\delta_E\ast\lambda=\lambda$, see \cite{HM}), is uniform on $E\mathcal{K}E$; 
+thus
+\[
+  A_0E=\sum_{H\in E\mathcal{K}E}\frac 1{|\mathcal{H}|}\,H. \tag{$\ast$}
+\]
+Since $\rank(E)=k$, renumber the range elements of $E$ to be $\{1,\dots,k\}$. 
+Then
+\[
+  E=\left[ \left.\dfrac{I_{k\times k}}T\ \right|\ 0\ \right] 
+\]
+where $T$ is $(b-k)\times k$. 
+Also, each $H\in \mathcal{H} = E\mathcal{K}E$ has the same zero columns as $E$, being elements in the same group.
+
+Write $\mathcal{H} = \left\{H_1,H_2,\dots,H_m\right\}$ and let $\mathcal{H}_1=\left\{H_1,H_2,\dots,H_t\right\}$ be all the elements such that
+\[
+  \left( H_j\right) _{1,1}=1\qquad 1\le j\le t;
+\]
+then by ($\ast$) above
+\[
+  \left( A_0E\right) _{1,1}=\frac t{|\mathcal{H}|}.
+\]
+But $A_0E$ has identical rows, thus
+\[
+  \left( A_0E\right) _{2,1}=\frac t{|\mathcal{H}|}.
+\]
+
+Now $\mathcal{H}_1$ is a subgroup of $\mathcal{H}$ that fixes the element $1$. 
+Let $H_{t+1}$ be such that
+\[
+  \left( H_{t+1}\right) _{1,2}=1
+\]
+then $\mathcal{H}_1 H_{t+1}=\left\{H_{t+1},\dots,H_{2t}\right\}$ is a coset of $\mathcal{H}_1$.
+
+Notice for $j$ such that $t+1\le j\le 2t$
+\[
+  \left( H_j^{-1}\right) _{2,1}=1;
+\]
+thus
+\[
+  \left( A_0E\right) _{1,2}=\frac t{|\mathcal{H}|}
+\]
+thus,
+\[
+  A_0E=\left[ \left.\begin{matrix} 
+	\frac t{|\mathcal{H}|} & \frac t{|\mathcal{H}|} 
+		&\cdots & \frac t{|\mathcal{H}|} \\
+	\vdots & {} & {} & \vdots \\
+	\vdots & {} & {} & \vdots \\
+	\frac t{|\mathcal{H}|} & \cdots & \cdots & \frac t{|\mathcal{H}|}  
+	\end{matrix}\,\right|\ 0\ \right] 
+\]
+Since $A_0E$ is a stochastic matrix, then
+\[
+  \frac{tk}{|\mathcal{H}|}=1
+\]
+which implies
+\[
+  k\,\bigg|\left|\mathcal{H}\right|.
+\]
+Also, since
+\[
+  A_0=\begin{pmatrix} w_0 \\ w_0 \\ \vdots \\ w_0\end{pmatrix}
+\]
+where
+\[
+  w_0=\left( \frac{w_1}W,\frac{w_2}W,\cdots,\frac{w_n}W\right) \qquad w_i\in Z^+
+\]
+then
+\[
+  A_0E=\left[ \left.\begin{matrix}
+	\sum\limits_{E_{i,1}=1}\frac{w_i}W, 
+		& \sum\limits_{E_{i,2}=1}\frac{w_i}W, 
+		&\cdots, 
+		& \sum\limits_{E_{i,k}=1}\frac{w_i}W \\
+	\vdots & \vdots & \vdots & \vdots \\
+	\vdots & \vdots & \vdots & \vdots \\
+	\vdots & \vdots & \vdots & \vdots
+	\end{matrix} \right|\,\, 0\right]  
+\]
+
+Let
+\[
+  \sum_{E_{i,1}=1}w_i=W_0.
+\]
+Then
+\[
+  \frac{W_0}W=\frac t{|\mathcal{H}|};
+\]
+but since $|\mathcal{H}|=tk$, then
+\[
+  kW_0=W
+\]
+and thus,
+\[
+  k\mid W. \quad \qed
+\]
+\end{proof}
+
+In the remainder of the paper, we will make the simplifying assumption that
+the out degree of each vertex is two. 
+We are leading up to O'Brien's result, in which he assumes that a cycle of prime length exists within the graph. 
+Under this assumption, O'Brien also showed that the general problem can be reduced to one of out degree two (see \cite{O} for details).
+The cycle $C$ will, for the purposes of notation, always in the rest of this
+paper consist of vertices $1\to 2\to 3\cdots\to p\to 1$. 
+If $p$ is assumed to be prime, it will be explicitly stated.
+
+\begin{definition}          \label{defn:4.4}
+A binary stochastic matrix $R$ will be called a $C$-matrix for $G$ iff
+%
+\begin{enumerate}
+\item[(1)]  $A=R+B$
+
+\item[(2)]  $\left( R\right) _{i,i+1}=\left( R\right) _{p,1}=1$ for $i=1,\dots,p-1$.
+
+\item[(3)]   For each $w\in V$, there is an $i\in C$ such that
+$\left( R^t\right) _{w,i}=1$, for some $t$ sufficiently large.
+\end{enumerate}
+%
+
+It is clear from this definition that for $t_0$ sufficiently large
+\[
+  R^{t_0}=\left[ \left.\dfrac{I_{p\times p}}M\ \right|\  0\ \right] 
+\]
+where $I_{p\times p}$ is the $p\times p$ identity matrix and $M$ is a binary
+stochastic $(b-p)\times p$ matrix. 
+In fact, the powers of $R$ generate an abelian semigroup whose kernel is a cyclic group of order $p$. 
+$R^{t_0}$ is simply the identity element for this cyclic group.
+\end{definition}
+
+\begin{definition}          \label{defn:4.5}
+A vertex $w\in V$ is called periodic with respect to a $C$-matrix $R$ iff
+whenever $A_{w,u}=A_{w,v}=1$, then there exists $k\ge 1$ such that for some $i\in C$,
+\[
+  \left( R^k\right) _{u,i}=\left( R^k\right) _{v,i}=1.
+\]
+If $w$ is not periodic with respect to $R$, then it is called aperiodic.
+\end{definition}
+
+\begin{theorem}		\label{thm:4.8}
+If $G$ is aperiodic and $R$ is any $C$-matrix of $G$, then there exists a
+vertex $w\in V$ which is aperiodic with respect to $R$.
+\end{theorem}
+
+\begin{proof}
+Suppose each $w\in V$ is periodic with respect to a given $C$-matrix $R$.
+Then if $u$, $v$ are such that
+\[
+  A_{w,u}=A_{w,v}=1.
+\]
+Then for some $k$ ($=k(w)$),
+\[
+  \left( R^k\right) _{u,i}=\left( R^k\right) _{v,i}=1.
+\]
+Thus
+\[
+  \left( BR^k\right) _{w,i}=\left( R^{k+1}\right) _{w,i}=1.
+\]
+But once the $w$-th row of $BR^k$ and $R^{k+1}$ are equal, they remain equal
+under additional powers of $R$. 
+Since this is true for each vertex, there exists a $\bar{k}=\max\limits_w(k(w))$, such that for all $k\ge\bar{k}$
+\[
+  BR^k=R^{k+1}.
+\]
+This implies,
+\[
+  \begin{gathered}
+	\left( \frac12 A\right) R^k =\left( \frac12 R+\frac12 B\right) R^k \\
+	=R^{k+1}.
+  \end{gathered}
+\]
+
+Recall that $A$ is irreducible and aperiodic or, equivalently,
+\[
+  \left( \frac12 A\right) ^t>0\quad\text{for some }t.
+\]
+However, since
+\[
+  \left( \frac12 A\right) ^t R^k=R^{k+t},\quad t\ge 1,
+\]
+the $p\times p$ submatrix of $R^{k+t}$ (corresponding to the cycle) is
+strictly positive. 
+Since $R^{k+t}$ is a binary stochastic matrix, we have our contradiction.
+\qed
+\end{proof}
+
+\begin{theorem}		\label{thm:4.9}
+Let $R$ be a $C$-matrix for $G$ and let $\mathcal{K}$ be the kernel of
+$S=\left\langle R,B\right\rangle$. Then the rank of 
+$\mathcal{K}$ divides $p$. Here $p$ need not be a prime.
+\end{theorem}
+
+\begin{proof}
+Let 
+\[
+  M=R^t=\left[ \left.\begin{matrix} 
+	0 & 1 & 0 & \cdots & 0 \\
+	0 & 0 & 1 & \cdots & \vdots \\
+	\vdots & {} & {} & {} & \vdots \\
+	0 & \cdots & \cdots & \cdots & 1 \\
+	1 & 0 & \cdots & \cdots & 0 \\
+	{--} & {--} & {--} & {--} & {--}  \\
+	{} & {} & D & {} & {}
+	\end{matrix}\,\right|\,0\right] .
+\]
+
+Let $z\in \mathcal{K}$ and let $\mathcal{G} = zM\mathcal{K}zM$. 
+Suppose $E=E^2$ is the local identity of $\mathcal{G}$. 
+Notice that each zero column of $M$ is a zero column of $E$.
+
+Suppose that $\rank(E)=k$ and that $k$ does not divide $p$. 
+Then
+\[
+  p=kr+s,\quad 1\le s<k.
+\]
+
+If we can show that, as a result of this assumption, there exists a positive
+integer $m$ such that
+\[
+  \rank\left( EM^mE\right) <k,
+\]
+then we are done.
+\qed
+\end{proof}
+
+Let the non-zero columns of $E$ be the columns $i_1<i_2\cdots<i_k\le p$ and
+define
+\[
+  P_j:=\left\{\ell:E_{\ell,i_j}=1,1\le\ell\le p\right\}.
+\]
+Since the $P_j$'s are disjoint and
+\[
+  \card\left( \bigcup\limits_{j=1}^k P_j\right) =p<(r+1)k
+\]
+there must exist at least one $j_0$ such that $\card\left( P_{j_0}\right) \le r$. 
+With no loss of generality, assume that $j_0=1$.
+
+\runinhead{Claim.}
+For some $m$, $1\le m\le p$,
+\[
+  \left( M^mE\right) _{i_j,i_1}=0\quad 1\le j\le k.
+\]
+Notice that, because of the action of the cycle, if $\left( M^mE\right) _{i_j,i_1}=1$,
+then $i_j+m$ must be in $P_1$. 
+Therefore, $m$ has at most $r$ choices for each $j$. 
+Thus, there are at most $rk$ choices and if $m$ is different from each of these choices so that for this $m$, $i_j+m$ is not in $P_1$ for any $j$, $1\le j\le k$
+\[
+  \left( M^mE\right) _{i_j,i_1}=0.
+\]
+It follows that the $i_1$th column of $EM^mE$ is zero and this implies that
+\[
+  \rank\left( EM^mE\right) <k.
+\]
+
+\begin{theorem}		\label{thm:4.10}
+Suppose $G=(V,\mathcal{E})$ is aperiodic, has no parallel edges and a simple
+cycle, $C$, of prime length $p$. 
+Then there exists a $C$-matrix $R$ whose coloring semigroup $S=\langle R,B\rangle$ contains a synchronizing instruction.
+\end{theorem}
+
+\begin{proof}
+Let $A=R+B$. 
+Construct the $C$-matrix $R$ in the following way. 
+If for $i$ not in $C$, there are $j$ in $C$ and $k$ not in $C$ such that
+\[
+  A_{i,j}=A_{i,k}=1,
+\]
+then we choose so that $R_{i,j}=1=B_{i,k}$. 
+Now if there are any vertices outside of $C$ not connected to $C$ by the 
+previous rule, simply connect them to $C$ by the shortest path to define
+$R$.
+
+\runinhead{Case 1.} Every point in $V-C$ is periodic with respect to $R$.
+
+\vphantom{...}
+
+Notice that if every point in $V-C$ is periodic with respect to $R$, then by
+the assumption of no parallel edges, and by construction the $(V-C)\times C$ block of the matrix $B$ is all zero. 
+(If a vertex in $V-C$ is connected to two distinct vertices in $C$, it must be aperiodic.) 
+We know that since every point in $V-C$ is  periodic, $BR^n=R^{n+1}$, for 
+sufficiently large $n$, when we restrict the matrices to $V-C$. 
+Notice that because of our convention mentioned earlier, for every positive integer $p$ the $(V-C)\times V$ block of $B^{p+1}R^n$ is equal to the product of the $(V-C)\times (V-C)$ block of $B$ and the $(V-C)\times V$ block of $B^pR^n$. 
+Thus, by induction, it is easy to see that for any word $H$ in $B$
+and $R$ of length $r$,
+\[
+  \begin{gathered}
+	HR^n\text{ restricted to the }(V-C)\times V\text{ block} \\
+	=R^{n+r}\text{ restricted to the }(V-C)\times V\text{ block}. 
+  \end{gathered}
+\]
+
+This means that $[(1/2)A]^p\left( R^n\right) = R^{n+p}$, when we restrict both matrices
+to the $(V-C)\times V$ block, for some sufficiently large $n$, but for all positive integers $p$. 
+But this is a contradiction as the left side converges as $p$ goes to 
+infinity, but the right side does not unless $p=1$. 
+The case $p=1$ is trivial to synchronize.
+
+\runinhead{Case 2.} There is at least one aperiodic point outside $C$ with
+respect to $R$.
+
+\vphantom{...}
+
+\subruninhead{First observation:} 
+Let $w_1$ be aperiodic, $w_1$ not in $C$.
+Consider all those vertices $v_k$ outside $C$ such that 
+\[
+  v_kR^k =w_1.
+\]
+If there is no such positive $k$, then we work with $w_1$; otherwise, let
+$k_0$ be the largest such $k$. 
+If $v_{k_0}$ is aperiodic, then we will replace $w_1$ by $v_{k_0}$ and we'll still call it $w_1$. 
+If $v_{k_0}$ is periodic, we will not change anything and still work with our old $w_1$. 
+Thus, there is no loss of generality in assuming that $w_1$ is aperiodic, $w_1$ not in $C$, and if there is a $v_k$ such that $v_kR^k=w_1$ for positive integer $k$, then such a $v_k$ must be periodic.
+
+\vphantom{...}
+
+\subruninhead{Second observation:} 
+Let us consider the shortest path from $C$ to $w_1$. 
+We consider a word $H$ (in $R$ and $B$) such that $(C)H=\{w_1,w_2,\dots,w_p\}$, and for $i>1$, the $H$-path from $C$ to $w_i$ does not contain $w_1$. In other words, if we interchange $R$ and $B$ only at the vertex $w_1$, then $(C)H$ remains unaffected.
+
+\vphantom{...}
+
+\subruninhead{Final observation:} 
+Decompose $(C)H=\{w_1\}\cup Y_k\cup Z_k$, where $Y_k=\{w_2,\dots,w_k\}$ and
+$Z_k=\{w_{k+1},\dots,w_p\}$, such that for $1<j<k+1$, $w_jR^{s_j-1}=w_1$ and
+$w_j$ is periodic, where $s_2,s_3,\dots,s_k$ are distinct positive integers, and for each $j>k$, there is no positive integer $p$ such that
+$w_jR^p=w_1$. 
+[Note: There cannot be two different $w_i$ in $Y_k$ leading to $w_1$ in the same number of $R$-steps, as otherwise we can easily reduce the rank of the kernel.] 
+Thus, every vertex in $Y_k$ is periodic; and when we apply the map $R^{n+1}$ on $(C)H$, then the vertices in $Z_k$ remain unaffected if we interchange $R$ and $B$ only at $w_1$.
+
+
+Suppose $Z_k$ is empty (in this case, recoloring is not needed). 
+Choose $n$ large so that $(V)R^n$ is inside $C$ and $w_1R^{n+1}=1$. 
+Then, $Y_k$ is mapped onto $\{2,3,\dots,p\}$ by both $R^{n+1}$ and $BR^n$. 
+However, $w_1BR^n>1$.
+
+Suppose $Z_k$ is not empty. 
+Choose $n$ large as before. 
+Let $w_jR^{n+1}=q_j$. Then, $w_1BR^{n+1}=q_{j_0}$, for some $j_0>k$. 
+Now we recolor at the vertex $w_1$ and then again consider $(C)HR^{n+1}$, with the new $R$. 
+Notice that the image of $Z_k$ remains  the same before and after coloring under the map $R^{n+1}$; however, $q_{j_0}$, the present image of $w_1$ after recoloring, creates a contradiction.
+\qed
+\end{proof}
+
+Finally, we state a result where the elementary proof is left to the reader.
+It is included since it dispenses with a large number of examples quite easily. Notice no assumption concerning parallel edges is required.
+
+\begin{theorem}		\label{thm:4.11}
+Let $G=(V,E)$ have a simple cycle $C$ of prime length $p$ and adjacency
+matrix $A$. 
+Suppose one of the following conditions holds:
+%
+\begin{enumerate}
+\item[{\normalfont(1)}]  there exists $j\notin C$ such that
+\[
+  \sum_{i=1}^p A_{i,j}\ge 2\text{; or}
+\]
+
+\item[{\normalfont(2)}]  there exists $j\in C$ such that
+\[
+  \sum_{i=1}^p A_{i,j}\ge 3.
+\]
+\end{enumerate}
+%
+Then $G$ has a coloring semigroup that contains a synchronizing instruction.
+\end{theorem}
+
+\paragraph{Acknowledgements}
+
+The authors are grateful to the members of the Discrete Mathematics Seminar at the University of South Florida (USF) for their kind attention to a series of lectures given 
+by the authors.  
+In particular, conversations with W.E.\ Clark, N.\ Jonaska, and S.\ Suen were always interesting.  
+The authors would  also like to thank G\"oran H\"ogn\"as for helpful comments.
+
+This work was done while the first author was visiting USF while on sabbatical from Southern Illinois University at Carbondale (SIUC).
+Both the generosity of SIUC and the hospitality of USF were very much appreciated. 

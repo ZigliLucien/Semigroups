@@ -1,0 +1,95 @@
+
+
+
+\section{The matrix $\Delta$}  %2
+
+
+We will use the following notation.  
+All matrices are $n \times n$, where $n$ is the number of vertices in the graph. 
+The \textbf{normalized adjacency matrix} $T= \frac{1}{2}(R+B)$, while the \textbf{coloring difference matrix} $\Delta= \frac{1}{2}(R-B)$.
+
+% Rank remarks immediately following the definition of Delta.
+Here $T=A=\mathcal A/2$ in the normalized notation used elsewhere.
+The remarks below use the road-coloring hypotheses: the original graph is
+simple and two-out, and $A$ is irreducible and aperiodic (and traceless).
+
+\begin{remark}[Ranks and the auxiliary target-pair graph]
+\label{delta-rank:component-counts}
+Let $H_A$ be the target-pair graph of Definition~\ref{def:target-pair-graph}. Different sources may give the same
+auxiliary edge; its multiplicity does not affect the statements below.
+Let $b$ and $o$ be the numbers of bipartite and nonbipartite connected
+components, respectively, and put $c=b+o$. Then
+\[
+ \dim\ker A=b,\qquad \dim\ker\Delta=c,
+ \qquad
+ \operatorname{rank}A-\operatorname{rank}\Delta=o.
+\]
+Indeed, $\Delta v=0$ says that $v_{xR}=v_{xB}$, so $v$ is constant on
+each component. The equation $Av=0$ says that $v_{xR}=-v_{xB}$; it
+has one free parameter on each bipartite component and forces zero on
+each nonbipartite component. In particular,
+\[
+ \operatorname{rank}\Delta\le\operatorname{rank}A,
+\]
+with equality if and only if $H_A$ is bipartite, equivalently if and only
+if the graph admits a CC coloring. Also
+$\operatorname{rank}\Delta=n-1$ if and only if $H_A$ is connected.
+These ranks depend only on the uncolored graph, not on the choice of
+red/blue coloring.
+\end{remark}
+
+\begin{remark}[Bounds given the rank of $A$]
+\label{delta-rank:bounds}
+Put $a=\operatorname{rank}A$ and $d=\operatorname{rank}\Delta$.
+Irreducibility ensures that every vertex occurs as a destination, so
+$H_A$ has no isolated vertices. Simplicity of the original graph ensures
+that $H_A$ has no loops. Thus each bipartite component has at least two
+vertices and each nonbipartite component at least three. Consequently
+\[
+ n\ge2b+3o=2(n-a)+3(a-d),
+\]
+and therefore
+\[
+ \boxed{\left\lceil\frac{n+a}{3}\right\rceil
+ \le d\le\min\{a,n-1\}.}
+\]
+The component-count identities are exact; the bounds use only $n$ and $a$.
+\end{remark}
+
+\begin{remark}[Invertibility does not force rank $n-1$]
+\label{delta-rank:invertible}
+If $A$ is invertible, every component of $H_A$ is nonbipartite. Hence
+\[
+ \operatorname{rank}\Delta=n-c,\qquad
+ \left\lceil\frac{2n}{3}\right\rceil
+ \le\operatorname{rank}\Delta\le n-1.
+\]
+Equality on the right holds exactly when $H_A$ is connected; invertibility
+alone does not imply this connectedness. For example,
+\[
+ R=[245114],\qquad B=[366235]
+\]
+give $\det A=1/16$ and $\operatorname{rank}\Delta=4=n-2$.
+Their auxiliary graph is the disjoint union of triangles on $\{1,2,3\}$
+and $\{4,5,6\}$. The original directed graph is simple, loopless and
+strongly connected. Its cycles $1\to2\to4\to1$ and
+$1\to2\to6\to5\to1$ have lengths three and four, so it is aperiodic.
+\end{remark}
+
+  
+Since the graph is strongly connected and aperiodic, $\lim\limits_{n\to\i} T^n= \Om$ exists, where $\Om$ is a positive stochastic matrix with identical rows.  
+Each row of $\Om$ is a probability vector which we will refer to as $\pi$.  
+In what follows, important structures will be the real vector space spanned by $S$, denoted vec($S$), and the span of the kernel $K$, denoted vec($K$).
+
+
+Any eventual solution to the conjecture must find a systematic method for analyzing the possible recolorings of the graph.  
+To this end, let $\phi_i$ be the diagonal matrix with $-1$ in the $i$th diagonal position, and 1’s along the rest of the diagonal.   
+We refer to $\phi_i$ as the $i$th elementary recoloring matrix, where an elementary recoloring of vertex $i$ is a recoloring that switches the red and blue labels for the edges leading from $i$, and leaves all other labels in the graph unchanged.  
+Notice that given the coloring difference matrix $\Dl = \frac{1}{2}(R-B)$, then $\phi_i\Dl$ is the coloring difference matrix induced by an elementary recoloring of $i$.  
+It is clear any possible difference matrix $\Dl'$ is of the form $\Dl'=\phi_{i_1} \phi_{i_2} \ldots \phi_{i_j}\Dl$ where $\phi_{i_1} \phi_{i_2} \ldots \phi_{i_j}$ are elementary recoloring matrices.  
+Because all possible coloring differences matrices are of this form, the following proposition is immediate.
+
+
+\begin{proposition}  \label{prop:5.1}
+All coloring difference matrices have the same rank.
+\end{proposition}

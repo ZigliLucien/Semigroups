@@ -1,0 +1,28 @@
+
+\section{Norms}
+\label{sec:6.2}
+
+Build up a series of words in $\cS$, by concatenation of $R$ or $B$ at each step.
+Denote $w_i$ the $i^{\rm th}$ word, of length $i$, the total number of $R$'s and $B$'s appearing in it.
+Then
+% 
+\begin{proposition} 	\label{prop:6.1}
+The squared norms $\|uw_i\|^2=uw_iw_i^*\dg u.$ are nondecreasing. 
+I.e.,
+$$
+  \|uw_i\|^2\le\|uw_{i+1}\|^2
+$$
+\end{proposition}
+
+\begin{proof} 
+Say $w_{i+1}=w_iR$. Recall that for any word $w$, $ww^*$ has ones on the diagonal. In particular,
+$RR^*-I$ has nonnegative, $0$ or $1$, entries. Thus
+\begin{align*}
+\|uw_{i+1}\|^2-\|uw_{i}\|^2&=uw_iRR^*w_i^*\dg u.-uw_iw_i^*\dg u.\cr
+&=uw_i(RR^*-I)w_i^*\dg u.
+\end{align*}
+is nonnegative. \qed
+\end{proof}
+
+Once $w_i$ is in the kernel, the squared norm is maxed out, and 
+for all succeeding $w_{i+k}$, $k\ge0$, equals the sum of the squares of the block sizes of the partition for $w_i$.

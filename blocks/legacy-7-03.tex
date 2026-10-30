@@ -1,0 +1,44 @@
+
+\section{Distributions}
+\label{sec:7.3}   %old 6.12
+
+At level 1, we have left and right eigenvectors of $A$: $\pi_1=\pi$ and $u_1^+=u^+$, respectively.
+All of the components of $u$ are equal to 1. And $\Omega=\Omega_1=u^+\pi$.\\
+At every level $\kappa$, $1\le \kappa\le r$, we have an abel limit 
+$$
+  \Omega_\kappa=\lim_{s\uparrow1} (1-s)(I-sA_\kappa)^{-1}
+$$
+When $\pi_\kappa$ and $u_\kappa$ are unique, we have $\Omega_\kappa=u_\kappa^+\pi_\kappa$.
+
+At level $r$, as at level 1, we have $\Omega_r=u_r^+\pi_r$.
+
+
+\subsection{Interpretation}
+\label{sec:7.3.1}
+
+Start at level $r$. Then the nonzero entries of $\pi_r$ are in the columns corresponding to the ranges of the kernel, $\cK$. 
+The nonzero entries of $u_r^+$ are in rows corresponding
+to cross-sections of the partition classes of $\cK$. 
+I.e., for each partition class, find all possible cross-sections weighted by one, take the total, then the corresponding entries of $u_r^+$ will be at least that. 
+In particular, for a right group, all cross-sections appear with the same weight, which can be scaled to 1.
+
+At each level, if unique, $\pi_\kappa$ and $u_\kappa$ give you the recurrent class and corresponding cross-sections.
+
+To get a unique sequence of pairs $(\pi_\kappa,u_\kappa)$, construct them inductively from 
+$(\pi_r,u_r)$ as consecutive marginals. 
+Thus, for $\kappa<r$, let
+$$ 
+  \pi_\kappa(I)=\sum_{J\supset I}\pi_{\kappa+1}(J) 
+$$
+Note that in the sum each $J$ differs from $I$ by a single vertex. Starting from level $r$, we could thus set
+$$
+  \pi_\kappa(I)
+	=\sum_{\substack{J\supset I\\ |J\setminus I|=r-\kappa}}\pi_r(J) 
+$$
+Thus, for each $\kappa$ there is a unique $\pi_\kappa$.\\
+For $u$'s, proceed one step at a time:
+$$ u_\kappa(I)=\sum_i p_i \,u_{\kappa+1}(I\cup \{i\}) $$
+where the weights $p_i$ are the components of the invariant measure $\pi$.
+
+With this construction, one recovers at level one, a multiple of $\pi_1=\pi$ and a
+constant vector $u_1$, a multiple of $u$.

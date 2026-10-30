@@ -1,0 +1,35 @@
+
+
+%%% Divisibility
+\section{Divisibility}
+\label{sec:6.7}
+
+Let $R$ have a single limiting cycle, $C$, of length $c$. Let $\R$ denote the closure of $R$.
+The vector $u_c$ is $1\times c$ with all entries equal to 1. 
+
+\begin{lemma} 		\label{lem:6.1}
+The sum $\R+\R^2+\cdots+\R^c=\dg u.\chi_C$.
+\end{lemma}
+
+\begin{proof} Immediate since every vertex is either one step away from the cycle $C$ or is in the cycle so visits each point of the cycle exactly once. \qed
+\end{proof}
+
+\begin{theorem} 	\label{thm:6.4}
+Let $r$ denote the rank of the kernel, $\cK$. Then $r|c$.
+\end{theorem}
+
+\begin{proof} Let $\Sigma=\Sigma(\pi,\R)$.
+Let $e$ be any idempotent in $\cK$. Then by BM-F, we have 
+$$
+  \pi w ee^*=\frac{1}{r}\,u
+$$ 
+for any word in $\cS$. Hence,
+$$
+  u_c\Sigma ee^*=\,u_c(\frac{1}{r}\dg u_c.u)=\frac{c}{r}\,u
+$$
+On the other hand, by the Lemma,
+$$
+  u_c\Sigma ee^*=\pi\dg u.\chi_Cee^*=\chi_Cee^*
+$$
+which has integer entries. Hence the result. \qed
+\end{proof}

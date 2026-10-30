@@ -1,0 +1,5 @@
+# Algebraic Methods in Automata Theory — discussion draft 2026-10-22
+
+Start with main.tex. This snapshot includes the current illustrated CC discussion, Delta rank remarks, the complete four-state recoloring appendix, the general/road-coloring scope distinction, the early target-pair definition, the kernel e-projections, and the tensor-to-zeon bridge. Read ORGANIZATION_PROGRESS.md and the front-matter note for the state of revision.
+
+The supplied legacy book class is retained for continuity with the manuscript. This package contains its LaTeX inputs, class, macros, bibliography and figures. Build with a full TeX distribution using `latexmk -pdfps main.tex` (LaTeX / dvips / ps2pdf), since the inherited source uses EPS and PSTricks. The preparation environment has no TeX engine; no successful compilation or PDF is claimed. STATIC_CHECKS.json reports input, label, citation and environment checks only. Formula-by-formula normalization of inherited symbols remains unfinished. Original sources and prior snapshots are preserved in Drive.

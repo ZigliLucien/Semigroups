@@ -1,0 +1,136 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%              582-2
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Completely Simple Semigroups}
+\label{2.2}
+
+     Let us again consider a semigroup $S = X \times G \times Y$ where for
+$(x_1,g_1,y_1),(x_2,g_2,y_2) \in S$
+\[
+     (x_1,g_1,y_1)(x_2,g_2,y_2) = (x_1,g_1 \phi(y_1x_2)g_2, y_2)
+\]
+ where $\phi: Y \times X \to G$ is arbitrary.  (We will usually write
+$\phi(y,x) = (yx).$  Notice the following:
+\begin{enumerate}
+\item[(1)] Each set of the form $\{ x_1\} \times G \times \{ y_1\}$ is
+isomorphic to $G$ under the isomorphism
+\[
+     \aligned
+     g &\mapsto (x_1,g(y_1x_1)^{-1}, y_1)               \\
+     \hbox{or } \quad g &\mapsto
+          (x_1,(y_1x_1)^{-1}g, y_1).
+     \endaligned
+\]
+(Show this.)
+
+\item[(2)] Note that the local idempotent is of the form
+$(x,(yx)^{-1},y)$.  In fact, suppose $(x,h,y)(x,h,y) = (x,h,y)$
+\[
+     \alignedat{2}
+     \hbox{then}& &\quad &h(yx)h = h                    \\
+-     \hbox{or}& &\quad &h(yx) = e                       \\
+     & &\quad &h = (yx)^{-1}.
+     \endalignedat
+\]
+
+\item[(3)] One can picture $X \times G \times Y$ as a union of isomorphic
+copies of $G$ with a different ``center'' in each box (``center'' is
+the local identity).
+\[
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{c|c|c|c|c|c|} \hline
+	&$y_1$  &$y_2$  &$y_3$  &$y_4$  &$y_5$ \\ \hline
+$x_1$   & & & & & \\ \hline
+$x_2$   & & & & & \\ \hline
+$x_3$   & & & & & \\ \hline
+$x_4$   & & & & & \\ \hline
+\end{tabular}
+\]
+
+
+\runinhead{Homework.}\runinhead{Homework} 
+
+\item[(4)] Sets of the form $\{ x\} \times G \times Y$ form minimal right ideals, while minimal left ideals are $X \times G \times \{ y\}$.
+
+\runinhead{Homework.} 
+Show that if $L$ is a left ideal of $S$.  
+Then $L = X \times G \times Y$, where $Y_1 \subset Y$.  
+(A similar result holds for right ideals.)
+
+\item[(5)] Since the local groups of the form $\{ x\} \times G \times \{ Y\}$
+are disjoint from each other (that is, $\{ x_1\} \times G \times \{ y_1\} \cap
+\{ x_2\} \times G \times \{ y_2\} = \emptyset$ iff $x_1 \not= x_2$ or
+$y_1 \not= y_2$), then these form a partition of $S$.
+\[
+     S = \underset{y_j \in Y}{\bigcup_{x_i \in X}}
+          \{ x_i\} \times G \times \{ y_j\} \equiv \bigcup_{i,j} G_{ij}
+\]
+Also note that $G_{ij} \cdot G_{mn} = G_{in}$.  
+That is, the partition $\{ G_{ij}\}$ is preserved under the semigroup operation.  
+If we call $\rho$ the equivalence relation that generates $\{ G_{ij}\}$ then
+
+\runinhead{Homework.} 
+$S/\rho$ is a quotient semigroup isomorphic to $x \times \{ e\} \times Y$.
+
+\end{enumerate}
+
+\begin{proposition}  	\label{prop:2.1}
+Let $S = X \times G \times Y$.  
+Then $S$ is simple.
+\end{proposition}
+
+\begin{proof}  Suppose $I \subsetneq S$ was a nontrivial ideal of
+$S$.  Then for all $a \in I$
+\[
+     \gathered
+     Sa \subset I                                       \\
+     \Rightarrow Sa S \subset IS \subset I
+     \endgathered
+\]
+Let $a = (x,g,y)$ be arbitrary.  Then
+\[
+     \gathered
+     (X \times G \times Y)(x,g,y)(X \times G \times Y)                  \\
+     = X \times G(Yx)g(yX)G \times Y
+     \endgathered
+\]
+but $GhG = G$ for {\it any} $h \in G$.  Thus $SaS = X \times G \times Y$ and
+$I = S$ which implies that $S$ is simple.
+\qed
+\end{proof}
+
+\begin{definition} 	\label{defn:2.4}
+An idempotent $e$ is called primitive iff $e$ is minimal w.r.t. the partial order $e \le f \Leftrightarrow ef = fe = e$.
+\end{definition}
+
+\begin{definition} 	\label{defn:2.5}
+A semigroup $S$ is called completely simple iff $S$ is simple and contains a primitive idempotent.
+\end{definition}
+
+\begin{example}		\label{exm:2.5}  
+\[
+     S = \left\{ \begin{bmatrix}  a &0 \\ b &1 \end{bmatrix}
+          \,\bigg\|\, a,b > 0 \right\}                 
+\]
+Observe that if 
+\[
+        \begin{bmatrix}  a_1 &0 \\ b_1 &1 \end{bmatrix} \
+        \begin{bmatrix} a_1 &0  \\ b_1 &1 \end{bmatrix} =
+        \begin{bmatrix} a_1 &0  \\ b_1 &1 \end{bmatrix},    
+\]
+then $a^2_1 = a_1$ and $a_1b_1 + b_1 = b_1$.
+But $a^2_1=a_1$ implies that $a_1=1$.
+Thus $2b_1=b_1$, which forces $b_1 = 0$.
+Thus $S$ contains no idempotent.
+\end{example}
+
+\runinhead{Homework.} 
+Show that the semigroup $S$ in Example \ref{exm:2.5} is simple.
+
+\runinhead{Homework.} 
+Show that every finite semigroup contains an idempotent.

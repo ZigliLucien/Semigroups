@@ -1,0 +1,23 @@
+
+\section{Why permanental and common-letter hierarchies agree here}
+For a matrix $X$, define $X^{\vee k}$ by permanents of $k$-by-$k$
+submatrices, indexed by subsets. In general the permanental lift of an
+average is not the average of the lifts. Here, however,
+\begin{proposition}\label{ptc-book:permanents}
+At every subset level,
+\[
+ T^{\vee k}=\sum_{i\in I}p_i M_i^{\vee k}.
+\]
+\end{proposition}
+\begin{proof}
+All generators differ only in row 1. A submatrix either omits that row,
+in which case it is identical for every generator, or includes it once.
+A permanent is linear in each row separately. In either case averaging
+commutes with the submatrix permanent.
+\end{proof}
+Thus the common-letter semigroup hierarchy is also the permanental
+hierarchy of the single ladder transition matrix. The equality is special
+to this shared-row structure, not a general identity for stochastic matrices.
+Identifying compatible fields, projection normalizations, and cyclic-pattern
+recurrent classes is the next extension of this chapter, using the separate
+hierarchy paper and the operator draft.

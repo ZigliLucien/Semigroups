@@ -1,0 +1,225 @@
+% use \chaptermark{}
+% to alter or adjust the chapter heading in the running head
+
+
+
+\section{Random Walks on Semigroups}
+\label{sec:3.1}
+
+Now we will begin to do some probability.
+
+Let $x_1,x_2,x_3,\ldots$ be a sequence of independent random variables taking values in a semigroup $S$.
+
+(Recall that this means that there exists a measure space $(\Om,P,B)$ where $B$ consists of a sigma-algebra of $P$-measurable subsets of $\Om$ (the measurable sets) and $X_i$ is a measurable function from $\Om$ into $S$.
+
+Now each $X_i$ induces a measure on $S$ via $P$ called the distribution of $X_i$.  That is, for each $X_i$ define a measure $\mu_i$ on $S$ such that for any subset $T \ub S$ 
+\[
+     \mu_i(T) = P\{ w \in \Om \mid (w) X_i \in T \}.
+\]
+Now given $(X_k)$, define a random walk on $S$ in the following way.
+Let
+\[
+\begin{aligned}
+       w_1 &= x_1                                  \\
+       w_2 &= x_1 \cdot x_2                        \\
+       w_3 &= x_1 \cdot x_2 \cdot x_3              \\
+        \vdots\ \ &                                 \\
+       w_n &= x_1 \cdot x_2 \cdot x_3 \cdots x_n
+\end{aligned}
+\]
+
+Now each $w_i$, itself has a distribution, say $\nu_i$, where $\nu_i(s) = P(w_i = s) = P(x_1 \cdot x_2 \cdots x_i = S)$.
+$P(w_i = s)$ always means $P\{ w \mid w(w_i) = S \}$.  
+Let's compute $\nu_2$.
+\[
+     \nu_2(S) = P(w_2 = S) = P(x_1 \cdot x_2 = S)
+\]
+
+Now, what is $P(x_1 \cdot x_2 = S)$
+\[
+\begin{aligned}
+       \nu_2(s) = P(x_1 \cdot x_2 = s)
+               &= \sum_{t\in S} P(x_1 \cdot x_i = s \hbox{ and }
+                    x_2 = t)                       \\
+          &= \sum_{t\in S} P(x_1 \cdot x_i = s \mid x_2 = t)
+                    P(x_2 = t)                     \\
+          &= \sum_{t\in S} P(x_1 \cdot t = s \mid x_2 = t)
+                    P(x_2 = t)                     \\
+          &= \sum_{t\in S} P(x_1 \cdot t = s) P(x_2 = t)       \\
+          &= \sum_{t\in S} \mu_1(st^{-1}) \mu_2(t)
+\end{aligned}
+\]
+where $st^{-1} = \{ x \in S \mid xt = s \}$.  
+Notice that if $S$ is a group, $st^{-1}$ is a single element.
+
+We will call $\sum \mu_1(st^{-1}) \mu_2(t)$ the convolution of $\mu_1,\mu_2$ and denote it as $\mu_1 * \mu_2$.
+
+\runinhead{Homework.}
+\begin{enumerate}
+\item[1)] Show that $\mu_1 * \mu_2(s) = \sum\limits_{t\in S}
+     \mu_2(t^{-1}s) \mu_1(t)$.
+\item[2)] $\mu_1 * \mu_2(s) = \sum\limits_{S_1S_2=s}
+     \mu_1(s_1) \mu_2(s_2)$.
+\item[3)] Show that $\mu_1 * \mu_2 \in \Prob(S)$.
+\item[4)] Show that $\mu_1 * (\mu_2 * \mu_3) = (\mu_1 * \mu_2)
+     * \mu_3$.
+\end{enumerate}
+
+Notice that $3,4$ together show that $(\Prob(S),*)$ is a semigroup.  
+In fact, $(\Prob(S),*)$ is a topological semigroup.
+
+\begin{definition}   \label{defn:3.1}
+Let $(S,\cdot)$ be a semigroup with $S$ a topological space as well.  
+Then $S$ is a topological semigroup if the mapping
+\[
+     \a: S \times S \to S \qquad \a(s,t) = s \cdot t
+\]
+is continuous.  
+Here $S \times S$ is given the product topology.
+\end{definition}
+
+\begin{example}	\label{exm:3.1}
+  Let $(R,+)$ be endowed with the standard
+topology $[d(x,y) = |x-y|]$.  Then $(R,+)$ is a topological group.
+Since there is a countable basis for the topology we can use sequence
+to detect limit points.  Thus $(x,y) \mapsto x+y$ being continuous is
+equivalent to
+\[
+     x_n \to x, \quad y_n \to y
+\]
+then
+\[
+  \begin{gathered}
+       x_n+y_n \to x+y     \\
+       |x_n+y_n - (x+y)| \le |x_n-x| + y_n-y|.
+  \end{gathered}
+\]
+\end{example}
+
+\begin{example}	\label{exm:3.2}
+$S = [0,1]$ under multiplication, again under
+the standard (subspace) topology.
+\[
+     (x,y) \mapsto x \cdot y
+\]
+
+\[
+\begin{aligned}
+  |x_ny_n - xy| &= |(x_n-x)(y_n-y) + x(y_n-y) + y(x_n-x)| \\
+  &\le |(x_n-x)(y_n-y)| + |x||y_n-y| + |y||x_n-x|
+\end{aligned}
+\]
+
+\[
+  (x_n-x)(y_n-y) = x_ny_n - xy_n - yx_n + xy + xy_n + yx_n - 2xy
+\]
+
+Now let $S$ be a two point semigroup and let $\mu \in \Prob(S)$.
+Let $S = \{ s_1,s_2 \}$.
+\[
+     \mu(s_1) + \mu(s_2) = 1
+\]
+\end{example}
+
+\vbox to .75in{}
+
+\[
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{l|c|c|ccl|c|c|} 
+	\multicolumn{2}{r}{$s_1$} &\multicolumn{1}{c}{$s_2$}
+	&&& \multicolumn{2}{r}{$s_1$}  &\multicolumn{1}{c}{$s_2$}
+			\\ \cline{2-3}\cline{7-8}
+$s_1$   &$s_1$   &$s_2$   &&&$s_1$ &$s_1$   &$s_2$ \\ \cline{2-3}\cline{7-8}  
+$s_2$   &$s_1$   &$s_2$   &&&$s_2$ &$s_2$   &$s_1$ \\ \cline{2-3}\cline{7-8} 
+
+\end{tabular}
+\]
+
+\[
+\begin{aligned}
+       \mu_1 * \mu_2(s_1) &= \sum_t \mu_1(s,t^{-1}) \mu_2(t)
+                  = \mu_1\{ s \} \mu_2(s_1) = \mu_2(s_1)       \\
+       s_1t^{-1} &= \{ y \mid yt = s_1 \}
+                    = \begin{cases}
+                         \{ s_1,s_2 \} &t=s_1 \\
+                         \emptyset     &t=s_2 \\
+                    \end{cases}                                  \\
+       s_2t^{-1} &= \begin{cases}
+                         (s_1,s_2)  &t=s_2 \\
+                         \emptyset.
+                    \end{cases}
+\end{aligned}
+\]
+Thus
+\[
+     \mu_1 * \mu_2 = \mu_2.
+\]
+\[
+\begin{aligned}
+       \mu_1(s_1) &= p_{11} \qquad \mu_2(s_1) = p_{21}         \\
+       \mu_1(s_2) &= p_{12} \qquad \mu_2(s_2) = p_{22}
+\end{aligned}
+\]
+\[
+\begin{aligned}
+       \mu_1 * \mu_2(s_1)
+          &= \mu_1(s_1) \mu_2(s_1) + \mu_1(s_2) \mu_2(s_2)     \\
+          &= p_{11}p_{21} + p_{12}p_{22}                       \\
+       \mu_1 * \mu_2(s_2)
+          &= \mu_1(s_1) \mu_2(s_2) + \mu_1(s_2) \mu_2(s_1)     \\
+          &= p_{11}p_{22} + p_{12}p_{21}
+\end{aligned}
+\]
+\[
+\begin{aligned}
+       \hbox{Ent}(\mu) &= -\sum^n_{i=1} p_i \ln p_i            \\
+       \hbox{Ent}(\mu_1) &= -(p_{11} \ln p_{11}
+                         + p_{12} \ln p_{12})                  \\
+       \hbox{Ent}(\mu_2) &= -(p_{21} \ln p_{21}
+                         + p_{22} \ln p_{22})                  \\
+       \hbox{Ent} (\mu_1 * \mu_2)
+          &= (p_{11}p_{21} + p_{12}p_{22})
+                         \ln(p_{11}p_{21} + p_{12}p_{22})      \\
+          &+ (p_{11}p_{22} + p_{12}p_{21})
+                         \ln(p_{11}p_{22} + p_{12}p_{21})
+\end{aligned}
+\]
+
+\begin{example}	\label{exm:3.3}
+$\mu_1 = \mu_2 = \left( \frac{1}{4}, \frac{3}{4} \right)$
+\end{example}
+
+\vbox to .75in{}
+
+\[
+\begin{aligned}
+     \mu_1 * \mu_2 &= \left( \left(\frac{1}{4}\right)^2
+          + \left( \frac{3}{4} \right)^2,\
+          2\left( \frac{1}{4}, \frac{3}{4} \right) \right)     \\
+     &= \left( \frac{10}{10}, \frac{6}{10} \right)
+          = \left( \frac{5}{8} , \frac{3}{8} \right)
+\end{aligned}
+\]
+
+\runinhead{Graph of a Semigroup}
+
+Digraph induced by right translation
+\[
+     \hbox{If } s_1s_j = s_k \hbox{ \ then \ }
+               (s_i,s_k) \hbox{ has edge labeled } s_j
+\]
+for two element group
+
+\vbox to 1.5truein{}
+
+\noindent
+right zero semigroup
+
+\vbox to 1.5truein{}
+
+\noindent
+Then if vertices $s_1,s_2$ have ``energy'' $\mu_1(s_1),\mu_1(s_2)$ and
+$\mu_2$ represents the proportion of the energy transferred over the
+edges, then $\mu_1 * \mu_2(s_i)$ is the energy that ends up at vertex
+$(s_i)$.

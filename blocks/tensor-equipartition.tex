@@ -1,0 +1,271 @@
+
+
+
+
+
+\section{Setup and statement}
+Let $Q=\{1,\ldots,d\}$, and let $R$ and $B$ be transformation matrices
+on $Q$: every row contains exactly one entry equal to $1$, all other
+entries being zero. We use right-action composition,
+\[
+ x(fg)=(xf)g.
+\]
+Thus a transformation $f$ has matrix entry $f_{xy}=1$ exactly when
+$xf=y$. Its matrix rank equals $|\operatorname{im} f|$.
+
+Fix $0<p<1$ and set
+\[
+ T=pR+(1-p)B,\qquad S=\langle R,B\rangle.
+\]
+Assume $T$ is irreducible. Let $\pi$ be its stationary probability row
+vector, so that
+\[
+ \pi T=\pi,\qquad \pi\mathbf{1}=1.
+\]
+Write
+\[
+ r=\min_{s\in S}\rank(s),\qquad K=\{s\in S:\rank(s)=r\}.
+\]
+The set $K$ is the minimal ideal (kernel) of this finite transformation
+semigroup. In particular, the word ``kernel'' here denotes a semigroup
+ideal, whereas a transformation's fibers form its kernel partition.
+
+Define the linear operator
+\[
+ \Phi(X)=pRXR^{\mathsf{T}}+(1-p)BXB^{\mathsf{T}}
+\]
+on real $d\times d$ matrices. Identifying $X$ with its array of entries
+indexed by ordered pairs, this is the operator with transition matrix
+\[
+ P_2=p(R\otimes R)+(1-p)(B\otimes B).
+\]
+Both particles use the same randomly chosen letter; this is not the
+independent-particle transition matrix $T\otimes T$.
+
+\begin{theorem}\label{tensor-book:thm:main}
+The Ces\`aro limit
+\[
+ H=\lim_{N\to\infty}\frac1N\sum_{\ell=0}^{N-1}\Phi^\ell(I_d)
+\]
+exists and satisfies
+\[
+ H\succeq0,\qquad H_{xx}=1,\qquad \Phi(H)=H.
+\]
+Moreover,
+\begin{equation}\label{tensor-book:eq:stationary}
+ H\pi^{\mathsf{T}}=\frac1r\mathbf{1},
+ \qquad
+ \pi H\pi^{\mathsf{T}}=\frac1r.
+\end{equation}
+For every $k\in K$ and every fiber $F$ of $k$,
+\begin{equation}\label{tensor-book:eq:friedman}
+ \pi(F):=\sum_{x\in F}\pi_x=\frac1r.
+\end{equation}
+Consequently the kernel rank is determined by the tensor-square action:
+\[
+ \boxed{\displaystyle r=\frac{1}{\pi H\pi^{\mathsf{T}}}.}
+\]
+\end{theorem}
+
+Equation~\eqref{tensor-book:eq:friedman} is the equal-stationary-mass conclusion
+associated with Friedman's work on road coloring~\cite{F}.
+The proof below is self-contained.
+
+\section{The collision matrix}
+For a word $w$ in the two letters, write $W$ for its transformation
+matrix, and let $q_w$ be the product of its letter probabilities. Thus
+$q_w>0$. Summing over words (not merely over distinct resulting matrices),
+\begin{equation}\label{tensor-book:eq:word-average}
+ \Phi^\ell(X)=\sum_{|w|=\ell}q_wWXW^{\mathsf{T}},
+ \qquad
+ T^\ell=\sum_{|w|=\ell}q_wW.
+\end{equation}
+At length zero, the word matrix is $I_d$.
+
+\begin{lemma}\label{tensor-book:lem:H}
+The matrix $H$ in Theorem~\ref{tensor-book:thm:main} exists, is positive
+semidefinite, has diagonal entries one, and satisfies $\Phi(H)=H$.
+If distinct states $x,y$ cannot be merged by any word, then $H_{xy}=0$.
+\end{lemma}
+\begin{proof}
+The matrix $P_2$ is a finite stochastic matrix. Its Ces\`aro powers
+converge, so their action on the vectorized identity also converges.
+This proves existence of $H$.
+
+Each $WW^{\mathsf{T}}$ is positive semidefinite, and
+\[
+ (WW^{\mathsf{T}})_{xy}=\begin{cases}1,&xW=yW,\\0,&xW\ne yW.\end{cases}
+\]
+In particular its diagonal entries equal one. Formula
+\eqref{tensor-book:eq:word-average} and passage to the limit prove the corresponding
+assertions for $H$. The fixed-point equation follows either from the
+Ces\`aro projection or from the telescoping identity
+\[
+ \Phi\left(\frac1N\sum_{\ell=0}^{N-1}\Phi^\ell(I_d)\right)
+ -\frac1N\sum_{\ell=0}^{N-1}\Phi^\ell(I_d)
+ =\frac{\Phi^N(I_d)-I_d}{N}.
+\]
+The right side tends to zero because all its entries are bounded in
+absolute value by $1/N$. Finally, a nonmergeable pair has zero entry in
+every matrix being averaged, and hence in $H$.
+\end{proof}
+
+\begin{remark}[Probabilistic interpretation]
+The entry $(\Phi^\ell(I_d))_{xy}$ is the probability that two particles
+started at $x,y$ agree after $\ell$ common random letters. Once they
+agree, they remain together. These probabilities are therefore
+nondecreasing in $\ell$ and bounded by one. Thus, in this particular
+construction, the ordinary limit $\Phi^\ell(I_d)\to H$ also exists,
+and $H_{xy}$ is the probability of eventual coalescence. Ces\`aro
+averaging provides a direct finite-Markov-chain construction that does
+not require aperiodicity.
+\end{remark}
+
+\section{Positive semidefiniteness and stationarity}
+\begin{lemma}\label{tensor-book:lem:word-invariance}
+For every word matrix $W\in S$,
+\begin{equation}\label{tensor-book:eq:word-invariance}
+ HW^{\mathsf{T}}\pi^{\mathsf{T}}=H\pi^{\mathsf{T}}.
+\end{equation}
+Furthermore, if $c=\pi H\pi^{\mathsf{T}}$, then
+\begin{equation}\label{tensor-book:eq:constant}
+ H\pi^{\mathsf{T}}=c\mathbf{1}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix a word length $\ell\ge1$. Since $\Phi^\ell(H)=H$ and
+$\pi T^\ell=\pi$, the word averages satisfy
+\[
+ \sum_{|w|=\ell}q_w\pi W=\pi,
+ \qquad
+ \sum_{|w|=\ell}q_w(\pi W)H(\pi W)^{\mathsf{T}}=c.
+\]
+Expanding the squared deviations therefore gives
+\begin{equation}\label{tensor-book:eq:variance}
+ \sum_{|w|=\ell}q_w
+ (\pi W-\pi)H(\pi W-\pi)^{\mathsf{T}}=0.
+\end{equation}
+Every summand is nonnegative because $H\succeq0$, and every $q_w$ is
+positive. For a positive semidefinite matrix, $vHv^{\mathsf{T}}=0$ implies
+$Hv^{\mathsf{T}}=0$. Hence
+\[
+ H(\pi W-\pi)^{\mathsf{T}}=0
+\]
+for every word of length $\ell$. As $\ell$ was arbitrary, this proves
+\eqref{tensor-book:eq:word-invariance} for every word.
+
+Set $h=H\pi^{\mathsf{T}}$. Applying the fixed-point equation and the
+length-one cases of \eqref{tensor-book:eq:word-invariance}, we obtain
+\[
+ \begin{aligned}
+ h&=pRH R^{\mathsf{T}}\pi^{\mathsf{T}}+(1-p)BH B^{\mathsf{T}}\pi^{\mathsf{T}}\\
+  &=pRh+(1-p)Bh=Th.
+ \end{aligned}
+\]
+For an irreducible finite stochastic matrix, the right fixed vectors
+are the constant vectors. Thus $h=\alpha\mathbf{1}$. Multiplying by $\pi$
+gives $\alpha=\pi h=c$, proving \eqref{tensor-book:eq:constant}.
+\end{proof}
+
+\begin{remark}
+To obtain \eqref{tensor-book:eq:word-invariance} for arbitrary words, the variance
+identity is applied separately at every word length. The length-one
+identities alone do not justify a direct iteration without a further
+invariance argument.
+\end{remark}
+
+\section{Minimum-rank ranges and equal fiber masses}
+\begin{lemma}\label{tensor-book:lem:range}
+For every $k\in K$,
+\begin{equation}\label{tensor-book:eq:range}
+ kHk^{\mathsf{T}}=kk^{\mathsf{T}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $U=\operatorname{im} k$, so $|U|=r$. No word can merge two distinct points of
+$U$: otherwise its composition after $k$ would have rank below $r$.
+Lemma~\ref{tensor-book:lem:H} consequently gives
+\[
+ H_{uv}=\delta_{uv}\qquad(u,v\in U).
+\]
+For any $x,y\in Q$, therefore,
+\[
+ (kHk^{\mathsf{T}})_{xy}=H_{xk,yk}
+ =\begin{cases}1,&xk=yk,\\0,&xk\ne yk,\end{cases}
+ =(kk^{\mathsf{T}})_{xy}.
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{tensor-book:thm:main}]
+The initial properties of $H$ were proved in Lemma~\ref{tensor-book:lem:H}.
+For $k\in K$, Lemmas~\ref{tensor-book:lem:word-invariance} and~\ref{tensor-book:lem:range}
+give
+\[
+ \begin{aligned}
+ kk^{\mathsf{T}}\pi^{\mathsf{T}}
+ &=kHk^{\mathsf{T}}\pi^{\mathsf{T}}\\
+ &=kH\pi^{\mathsf{T}}\\
+ &=c\,k\mathbf{1}=c\mathbf{1},
+ \end{aligned}
+\]
+where $c=\pi H\pi^{\mathsf{T}}$. On the other hand,
+\[
+ (kk^{\mathsf{T}}\pi^{\mathsf{T}})_x
+ =\sum_{y:\,yk=xk}\pi_y.
+\]
+This is precisely the stationary mass of the fiber containing $x$.
+Thus all fibers of $k$ have mass $c$. There are $r$ such fibers and
+they partition $Q$, so $rc=1$. This proves all the remaining assertions.
+\end{proof}
+
+\section{Consequences and scope}
+\begin{corollary}[A coloring-independent arithmetic restriction]
+Suppose $\pi_x=w_x/W$, where the $w_x$ are positive integers and
+$W=\sum_xw_x$. Then every kernel block has integer weight $W/r$;
+in particular $r$ divides $W$.
+If $\pi$ is uniform, every kernel block has cardinality $d/r$, so
+$r$ divides $d$.
+\end{corollary}
+\begin{proof}
+Multiply the equal-mass identity by $W$, or by $d$ in the uniform case.
+\end{proof}
+
+\begin{corollary}[Synchronization]
+The following are equivalent:
+\begin{enumerate}
+\item $S$ contains a constant transformation;
+\item $r=1$;
+\item $H=\mathbf{1}\mathbf{1}^{\mathsf{T}}$;
+\item $\pi H\pi^{\mathsf{T}}=1$.
+\end{enumerate}
+\end{corollary}
+\begin{proof}
+The equivalence of the first two statements follows from the definition
+of rank, and their equivalence with the fourth follows from the rank
+formula. A reset word occurs eventually with probability one among
+independent random letters, for instance by considering disjoint blocks
+of its length. It therefore forces eventual coalescence of every pair,
+so the first statement implies the third. The third implies the fourth
+because $\pi\mathbf{1}=1$.
+\end{proof}
+
+\begin{remark}[Application to road colorings]
+For a $0$--$1$ adjacency matrix $A$ having two ones per row and a coloring
+$A=R+B$, take $p=1/2$. Then $T=A/2$ and its stationary distribution do
+not depend on the coloring, whereas $P_2$ and $H$ generally do.
+Thus every coloring obeys the same stationary-weight restrictions,
+while its particular tensor-square fixed point determines its kernel
+rank. Irreducibility and aperiodicity are the standing assumptions for
+the road-coloring existence problem; only irreducibility is used in the
+equal-mass theorem proved here.
+\end{remark}
+
+\begin{remark}[More than two generators]
+The entire proof applies to finitely many transformation matrices
+$M_1,\ldots,M_s$ with positive probabilities $p_i$ summing to one:
+replace $T$ by $\sum_i p_iM_i$ and $\Phi(X)$ by
+$\sum_i p_iM_iXM_i^{\mathsf{T}}$. The same conclusions hold whenever $T$
+is irreducible.
+\end{remark}
+
+

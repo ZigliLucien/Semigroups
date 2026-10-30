@@ -1,0 +1,129 @@
+
+
+\section{The Kernel of a Coloring Semigroup}  
+\label{sec:4.3}
+
+Suppose $S=\left\langle R_1,R_2,\dots,R_d\right\rangle$ is a coloring
+semigroup for some $d$-out digraph $G$. 
+Even if $G$ is not strongly connected, $S$ will be a finite semigroup with kernel $\mathcal{K}$. As we stated in the last section, $\mathcal{K} = \mathcal{X} \times \mathcal{G} \times \mathcal{Y}$. 
+Let $M$, $N$ be elements of $\mathcal{K}$. 
+Then with respect to the Rees product structure $M=\left( M_1,M_2,M_3\right) $ and $N=\left( N_1,N_2 ,N_3\right) $. 
+We will consider the structure of $\mathcal{K}M$, $N\mathcal{K}$, and $N\mathcal{K}M$:
+
+\vphantom{...}
+%
+\begin{enumerate}
+\item[(1)] $\mathcal{K}M = \mathcal{X} \times \mathcal{G} \times \left\{M_3\right\}$ is a minimal left ideal in $\mathcal{K}$ whose elements all have the same range, or nonzero columns as $M$. 
+This type of semigroup is also referred to as a left group. 
+
+\vphantom{...}
+\item[(2)] $N\mathcal{K} = \left\{N_1\right\} \times \mathcal{G} \times \mathcal{Y}$ is a minimal right ideal in $\mathcal{K}$ whose elements all have the same partition of the vertices as $N$. 
+An element $P_j$ in the partition can be assigned to each nonzero column of $N$ by 
+\[
+P_j =\left\{ i : N_{i,j}=1\right\}
+\]
+A semigroup like $N\mathcal{K}$ is usually called a right group.
+
+\vphantom{...}
+\item[(3)] $N\mathcal{K}M$ is the intersection of $N\mathcal{K}$ and $\mathcal{K}M$ and is a maximal group in $\mathcal{K}$ (an $H$-class in the language of semigroups). 
+In this instance, it is best thought of as a set of one-to-one functions specified by the partition of $N$ and the range of $M$. 
+The idempotent of $N\mathcal{K}M$ is the function which is the identity when
+restricted to the range of $M$.
+\end{enumerate}
+%
+
+\vphantom{...}
+
+The next result establishes the connection between the kernel and the
+property of strong connectedness.
+
+\begin{theorem}		\label{thm:4.4}
+Let $S=\left\langle R_1,R_2,\dots,R_d \right\rangle$ be any coloring
+semigroup for $G=(V,E)$. Let $S$ have kernel $\mathcal{K}$ and let $M$ 
+be any element of $\mathcal{K}$. 
+Then $G$ is strongly connected iff for all $w$ in $V$, $wM\mathcal{K} = V$.
+\end{theorem}
+
+\begin{proof}
+Notice that $wM\mathcal{K} = V$ implies strong connectedness immediately, since this implies there is a path between any two vertices. 
+Now, given $w_1$ in $V$, let $M$ be any element in $\mathcal{K}$ and suppose
+$w_1M=w_2$. 
+Let $w_3$ be any vertex in $V$. 
+There is a $T$ in $S$ such that $w_2T=w_3$, since $G$ is strongly connected. 
+Thus $w_1MT=w_3$. 
+But $MT$ is in $\mathcal{K}$ and has the same partition as $M$, since $\rank(M)\leq\rank (T)$. 
+Thus $MT$ is in $M\mathcal{K}$.
+\qed
+\end{proof}
+
+Next we seek to demonstrate that it is the structure of the maximal groups
+in the kernel that determines whether a coloring semigroup contains a synchronizing instruction. 
+This will follow easily from the ensuing result.
+
+\begin{theorem}		\label{thm:4.5}
+Let $u$, $v$ be arbitrary elements of $V$. 
+If $S$ is any coloring semigroup with kernel $\mathcal{K}$, then for each maximal group $\mathcal{G}$ in $\mathcal{K}$, $u\mathcal{G} = v\mathcal{G}$.
+\end{theorem}
+
+\begin{proof}
+By the previous result, within each minimal right ideal $M\mathcal{K}$, there exists a $T_1$ such that $uT_1=v$. 
+Now $T_1$ belongs to the maximal group $T_1\mathcal{K}T_1 = \mathcal{G}_1\subset M\mathcal{K}$.
+
+For this group
+\[
+  v\mathcal{G}_1 = uT_1\mathcal{G}_1= u\mathcal{G}_1.
+\]
+If $\mathcal{G}_2$ is any other maximal group in $M\mathcal{K}$ and $T_2 \in \mathcal{G}_2$, then $\mathcal{G}_1T_2 = \mathcal{G}_2$ and 
+\[
+  v\mathcal{G}_2 = v\mathcal{G}_1T_2 = u\mathcal{G}_1T_2 = u\mathcal{G}_2.
+\]
+But $M\mathcal{K}$ was an arbitrary minimal right ideal. 
+Thus for every maximal group $\mathcal{G}$ in $\mathcal{K}$,
+\[
+  u\mathcal{G} = v\mathcal{G}. \quad \qed
+\]
+\end{proof}
+
+\begin{theorem}		\label{thm:4.6}
+A coloring semigroup $S$ with kernel $\mathcal{K}$ contains a synchronizing
+instruction iff for every idempotent $E$ in 
+$\mathcal{K}$, $E\mathcal{K}E = \{E\}$.
+\end{theorem}
+
+\begin{proof}
+Clearly, if $S$ contains a synchronizing instruction $E$, then $E=E^2$ is an
+idempotent. 
+Since $E$ is a rank one binary stochastic matrix, $E\mathcal{K}E=\{E\}$.
+
+Now suppose for every idempotent $E$ in $\mathcal{K}$, $E\mathcal{K}E = \{E\}$. 
+Since $E$ is an idempotent function, $E$ is the identity when restricted to its range. 
+Suppose $E$ is not a constant function. 
+Then there exist $u$, $v$ in the range of $E$ with $u\neq v$. 
+But $uE=u\neq v=vE$. 
+Since $\{E\}$ is a maximal group in $\mathcal{K}$, this contradicts the previous result.
+\qed
+\end{proof}
+
+The maximal groups in the kernel carry a great deal of information. 
+In fact, we believe that the structure of the maximal groups in the kernels of certain coloring semigroups will provide the periodic structure of the graph. 
+Making this idea precise will require the following definition of periodicity that can be shown to be equivalent to the previous one.
+
+\begin{definition}          \label{defn:4.3}
+A digraph $G=(V,\mathcal{E})$ is periodic of period $t\ge 2$ iff there exists a partition of the vertices $\left\{P_1,P_2,\dots,P_t\right\}$ such that if $(i,j)\in E$  and $i\in P_k$ then $j\in P_{k+1}$ ($i\in P_t$ implies $j\in P_1$). 
+If no such partition exists, then $G$ is aperiodic. 
+In this case, $\pi=\{V\}$ is the ``periodic'' partition.
+\end{definition}
+
+The cyclic nature of a periodic graph suggests the following generalization
+of the road coloring problem.
+
+\begin{conjecture}	\label{conj:4.2}
+Let $G=(V,\mathcal{E})$ be a strongly connected $d$-out digraph. 
+Then $G$ is periodic of period $t\ge 1$ with periodic partition $\pi=\left\{P_1,\dots,P_t\right\}$ iff $G$ has a minimal {\rm(}with respect to the rank of its kernel{\rm )} coloring semigroup $S=\left\langle R_1,\dots,R_d\right\rangle$ whose kernel $\mathcal{K}$ is a right group with partition $\pi$ and  whose maximal groups are all cyclic of order $t$.
+\end{conjecture}
+
+Computer simulations provide evidence for the conjecture. 
+In addition, a closely-related result in the context of Markov chains has been proven in a very interesting paper by H\"ogn\"as \cite{H}.
+It should be mentioned that in H\"ogn\"as' result, (many) more than $d$ colors are often required. 
+Also note that in the aperiodic case, the set of constant functions would be the kernel. 
+The constant functions are a right group with partition $\pi=\{V\}$ and whose maximal groups are all order one, thus trivially cyclic.

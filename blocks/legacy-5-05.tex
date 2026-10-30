@@ -1,0 +1,50 @@
+
+
+\section{The Rank Condition}   %V
+
+
+Recall that  $\pi$ denotes the invariant distribution, the row vector satisfying  $\pi T = \pi$, with  $\pi \cdot \bu = 1$.
+
+
+\begin{definition}  \label{defn:5.2}
+Let $d$ denote the rank of  $\Dl$.  
+The \textit{rank condition} holds for $\Dl$ if the span of $\{\pi\Dl,\pi\Dl^2,\ldots,\pi\Dl^d\}$ is a $d$-dimensional space, in other words, these vectors span the range (row space) of  $\Dl$. 
+\end{definition}
+
+
+As a consequence of the rank condition, any vector $\by$ satisfying  $\Om\Dl^i\by=0$,  $1 \le i \le d$, satisfies $\Dl\by=0$ as well. 
+
+
+Once again, the proof of Theorem 7 in \cite{BM} shows that $\pi k$ is a multiple of a range vector for every $k \in K$.  
+Specifically, if $k$ is in $K$, then $\pi k$ is a multiple of the range vector corresponding to the nonzero columns of $k$, and that multiple depends only on the collection of non-zero columns, that is, the range of $k$.  
+Observe that for any $k \in K$, $Rk$  and  $Bk$ are elements of $K$ with the same range.  
+Hence, $\Om Rk=\Om Bk$, or $\Om\Dl k = 0$ for all  $k \in K$.
+
+
+Assume the rank condition.  
+Let $e$ be any idempotent in $K$. 
+Let $w$ be any word in $S$.  
+Then $Rwe$ and $Bwe$ are elements of $K$ with the same range.  
+Hence, $\Om Rwe = \Om Bwe$ is a multiple of the range matrix corresponding to $e$. 
+In other words, $\Om\Dl we=0$ for any $w$ in $S$. 
+But then $\Om\Dl^ie=0$, for all $i \ge 0$,  since powers of $\Dl$ are in vec($S$). 
+From the rank condition, we have $\Dl e=0$, for all idempotents  $e \in K$.  
+By Corollary 3.4, $K$ is rank one.
+
+
+We thus have the following
+
+
+\begin{theorem}  	\label{thm:5.1}
+The rank condition implies that the kernel is rank one.
+\end{theorem}
+
+
+The following Corollary is immediate, and is stated here only for completeness.
+
+
+\begin{corollary}  	\label{cor:5.4} 
+Let $G$ be a strongly connected, aperiodic graph.  
+Suppose $G$ admits a coloring semigroup $S=\lrn{R,B}$ such that the rank condition holds for the difference matrix $\Dl= \frac{1}{2}(R-B)$ associated with the coloring.  
+Then $S$ contains a synchronizing instruction.
+\end{corollary}

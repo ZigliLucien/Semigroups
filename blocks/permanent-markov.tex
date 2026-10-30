@@ -1,0 +1,52 @@
+\section{Permanents as killed independent-particle transitions}
+\label{organized:permanent-core}
+For a stochastic matrix $P$ and $k$-subsets $I,J$, define
+\[
+ Q_k(I,J)=\operatorname{per}P[I,J].
+\]
+This is the probability that $k$ independently moving labeled particles,
+initially at distinct states $I$, occupy the distinct unordered states $J$
+after one step. The permanent sums the assignments of labels to $J$.
+The matrix is substochastic: the missing row mass is the probability of
+a collision. A cemetery state makes it stochastic; repeated powers track
+survival without collisions at every intermediate step.
+In general $Q_k^t\ne(P^t)^{\vee k}$, since the latter permits intermediate
+collisions followed by separation. General permanental lifts are not
+multiplicative. They are multiplicative for deterministic transformations.
+
+\section{A positivity hypothesis in the converse}
+Suppose $P$ has a strictly positive stationary distribution. Then
+\begin{theorem}\label{organized:permanent-criterion}
+The following are equivalent: $P$ is irreducible and aperiodic;
+$\rho(Q_2)<1$; and $\det(I-Q_2)\ne0$.
+\end{theorem}
+\begin{proof}
+If $P$ is primitive, choose $t$ with every entry of $P^t$ positive.
+For every distinct starting pair the independent particles have a
+uniformly positive probability of meeting at time $t$. The probability
+of surviving without any collision through time $t$ is therefore
+uniformly less than one. Hence $\|Q_2^t\|_\infty<1$ and $\rho(Q_2)<1$.
+If $P$ is reducible, strict positivity of a stationary row excludes
+transient states. There are then at least two closed classes; a particle
+in each cannot collide. If $P$ is irreducible but periodic, two particles
+in different cyclic classes also cannot collide. In either case the
+finite killed chain has a nonempty closed stochastic class and $Q_2$
+has eigenvalue one. Finally a nonnegative substochastic matrix has
+spectral radius at most one, and if it equals one, one itself is an
+eigenvalue. This proves the determinant equivalence.
+\end{proof}
+Without strict positivity the converse fails. For example
+$P=\left(\begin{smallmatrix}1&0\\1&0\end{smallmatrix}\right)$ has
+$Q_2=0$ but is not irreducible. Thus uniqueness of a stationary measure
+alone is not the hypothesis of this theorem.
+
+\section{Independent versus common-letter motion}
+For $P=\sum_i p_iM_i$, distinguish
+\[
+ P^{\vee k}\quad\text{from}\quad\sum_i p_iM_i^{\vee k}.
+\]
+The first uses independent choices and kills collisions; the second uses
+one common random transformation. They agree for PtC because every
+generator differs only in row 1 and a submatrix contains that row at most
+once. The detailed proof is in the laboratory chapter. This equality is
+special, not a general averaging rule.

@@ -1,0 +1,136 @@
+\section{Opposite-letter tensor coupling and its kernel}
+\label{opp-tensor:section}
+Let $S=\langle R,B\rangle$ be a finite transformation semigroup, with
+kernel $K$ of rank $r$. For a word $w$, let $\bar w$ exchange every $R$
+and $B$. Define
+\[
+ T_-=\langle(R,B),(B,R)\rangle\subseteq S\times S.
+\]
+Its action on ordered pairs is represented by $R\otimes B$ and
+$B\otimes R$, and a word gives $(w,\bar w)$.
+
+\begin{theorem}\label{opp-tensor:kernel}
+The kernel of the opposite-letter semigroup is
+\[
+ K_-=T_-\cap(K\times K),
+\]
+and every element of $K_-$ has transformation rank $r^2$ on $X\times X$.
+Both coordinate projections $K_-\to K$ are surjective.
+\end{theorem}
+\begin{proof}
+The rank of $(f,g)$ on $X\times X$ is
+$\operatorname{rank}(f)\operatorname{rank}(g)\ge r^2$.
+Choose a word $u\in K$. The word $u\bar u$ gives the pair
+$(u\bar u,\bar u u)$; both coordinates lie in $K$ by the ideal property.
+Thus minimum rank is $r^2$, attained exactly when both coordinates lie
+in $K$. The minimum-rank ideal of a finite transformation semigroup is
+its kernel, proving the formula. Each coordinate projection of $T_-$
+is onto $S$. Its image of $K_-$ is a nonempty ideal of $S$ contained in
+$K$, and hence equals $K$.
+\end{proof}
+The product fibers are $F\times G$ and the product ranges are
+$A\times B$, but only the pairs compatible with complementary words occur.
+Local groups are subdirect products of the two corresponding local groups:
+restriction to an idempotent cell is a subgroup of their product, and
+sandwiching preimages by that idempotent proves surjectivity on each factor.
+
+\subsection{The original kernel alone is insufficient}
+Letter exchange need not define a map on $S$: equality $w=v$ need not
+imply $\bar w=\bar v$. If it does define an automorphism $\theta$, then
+$T_-$ is its graph and $K_-=\{(k,\theta(k)):k\in K\}$.
+In general the required extra information is complementary-word compatibility.
+For a concrete counterexample, the pairs
+\[
+ [312344],[666565]\qquad\text{and}\qquad [112345],[612345]
+\]
+have the same concrete base kernel, all six constant maps, but their
+opposite-letter kernels have respectively 16 and 31 elements.
+For the second pair, $R^5B^5$ is a reset word on the product state space;
+its target is $(2,1)$ and its orbit has 31 points. For the first pair,
+$R^2B$ resets to $(6,4)$, whose orbit has 16 points. Once one constant
+product map is obtained, its orbit gives every constant product map,
+so these finite orbit counts determine the two kernels.
+
+\subsection{The running examples}
+Exact enumeration gives
+\[
+\begin{array}{c|r|r|r|r|r|r}
+\text{example}&|T_-|&|K_-|&\text{rank}&\text{partitions}&\text{ranges}&|G_-|\\
+\hline
+4\text{ states}&44&36&4&3&3&4\\
+6\text{ states}&44&16&1&1&16&1\\
+9\text{ states}&300&288&9&4&4&18
+\end{array}
+\]
+The examples are the previously studied pairs $[4312],[3443]$,
+$[312344],[666565]$, and $[444777111],[295838562]$.
+In the nine-state example the local group is
+\[
+ \{(\sigma,\eta)\in S_3\times S_3:
+       \operatorname{sgn}\sigma=\operatorname{sgn}\eta\}.
+\]
+Enumeration in an idempotent cell produces all 18 equal-parity pairs.
+Thus it is not the full product of the original local groups.
+For six states the kernel constants have targets precisely in
+\[
+ (\{1,2,3,4\}\times\{5,6\})\ \cup\
+ (\{5,6\}\times\{1,2,3,4\}),
+\]
+the opposite-type sector of the CC coloring.
+
+\subsection{Same-letter and opposite-letter chains}
+For $A=(R+B)/2$ and $\Delta=(R-B)/2$, put
+\[
+ P_+=\tfrac12(R\otimes R+B\otimes B)
+     =A\otimes A+\Delta\otimes\Delta,
+\]
+\[
+ P_-=\tfrac12(R\otimes B+B\otimes R)
+     =A\otimes A-\Delta\otimes\Delta.
+\]
+Use Cesaro or Abel limits unless convergence of ordinary powers is
+proved. The limiting kernel measure of $T_-$ need not be the product
+of the two original kernel measures; both word and probability correlations matter.
+
+If $A$ is primitive, the midpoint $Q=A\otimes A$ is primitive with
+stationary projection $\Omega\otimes\Omega$. The preceding potential
+construction applies with
+\[
+ D=\Delta\otimes\Delta,\qquad
+ V_{\mathrm{pair}}=D(I-Q+\Omega\otimes\Omega)^{-1}.
+\]
+It interpolates $Q+\tau D$ between $P_-$ and $P_+$.
+Invertibility of $I\mp V_{\mathrm{pair}}$ detects uniqueness of the
+stationary distribution at the respective endpoints. For $P_+$,
+uniqueness is equivalent to synchronization: the diagonal is a closed
+irreducible class; if it is the only recurrent class every pair can be
+merged, hence successive pair mergers synchronize the entire set.
+Conversely a reset word makes all off-diagonal states transient.
+
+For a CC target-sign column $s$, we have $As=0$, $\Delta s=\mathbf1$,
+and $\pi s=0$. Therefore
+\[
+ Q(s\otimes s)=0,\qquad D(s\otimes s)=\mathbf1.
+\]
+If $\mu_\tau$ is the stationary row of $Q+\tau D$, then
+\[
+ \mu_\tau(s\otimes s)=\tau.
+\]
+At the endpoints this is the same-type sector for $P_+$ and the
+opposite-type sector for $P_-$. This is a direct connection between
+the potential operator, the tensor hierarchy, and canonical colorings.
+
+\subsection{A partial-circulant consequence}
+Let the base generators be $M_a,M_b$, with $d=\gcd(a,b)$. Their kernel
+has one partition, the residue classes modulo $d$, and local group $C_d$.
+The opposite-letter kernel also has one partition, namely the products
+of those residue classes. It is therefore a right group, of transformation
+rank $d^2$. Its local group is still $C_d$, rather than $C_d\times C_d$.
+Indeed each letter decreases both coordinates by one modulo $d$, so
+both coordinate phases of every kernel pair agree. In an idempotent cell
+the local group is contained in the diagonal $C_d$ and projects onto it,
+hence equals it. The remaining problem is to characterize the compatible
+pairs of ranges, not to determine the local group.
+The relative residue $x-y\pmod d$ is preserved, explaining why the local
+group need not act transitively on all $d^2$ points of a product range.
+The example $M_1,M_6$ already shows nontrivial range compatibility when $d=1$.

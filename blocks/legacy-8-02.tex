@@ -1,0 +1,70 @@
+
+\section{Congruence classes and elementary collapses}
+
+\begin{lemma}\label{ptc-kernel:lem:lower}
+If $w$ is a word of length $\ell$, then
+\[
+ xw\equiv x-\ell\pmod d\qquad(x\in\mathcal N).
+\]
+Moreover $Cw\subseteq C$ and $|Cw|\ge d$. In particular, $\rank(w)\ge d$.
+\end{lemma}
+\begin{proof}
+For every $i\in I$, we have $xM_i\equiv x-1\pmod d$: at $x=1$ this
+uses $d\mid i$, and at all other points it follows from the definition.
+Induction proves the formula for words. Since every generator preserves
+$C$, so does every word. The set $C$ meets every residue class modulo
+$d$, and the congruence formula shows that its image does as well.
+\end{proof}
+
+\begin{lemma}\label{ptc-kernel:lem:collapse}
+For each $i\in I$ with $i<m$, and each $a\in C$, the restriction
+semigroup $S|_C$ contains the transformation fixing every point other
+than $a$ and sending $a$ to $a+i$ modulo $m$.
+\end{lemma}
+\begin{proof}
+On $C$, let $c=M_m|_C$. This is the permutation $x\mapsto x-1$
+modulo $m$, so $c^{-1}=c^{m-1}$. The restriction of
+$M_iM_m^{m-1}$ fixes every $x>1$ and sends $1$ to $i+1$.
+Conjugation by powers of $c$ gives all the asserted transformations.
+These conjugations are realized by words in the original generators,
+since both $c$ and $c^{-1}$ are restrictions of positive powers of $M_m$.
+\end{proof}
+
+\begin{lemma}\label{ptc-kernel:lem:retraction}
+For every $A\in\mathcal A$, there exists $v_A\in S$ such that
+\[
+ xv_A=a_r\quad(x\in C_r),\qquad
+ xv_A\equiv x\pmod d\quad(x\in\mathcal N).
+\]
+\end{lemma}
+\begin{proof}
+Form the directed graph on $\mathbb{Z}/m\mathbb{Z}$ with edges
+\[
+ a\longrightarrow a+i\qquad(i\in I,\ i<m).
+\]
+Its strongly connected components are exactly the classes modulo $d$.
+Indeed, the increments generate the subgroup $d\mathbb{Z}/m\mathbb{Z}$. In a finite
+cyclic group the additive inverse of any increment is a nonnegative
+multiple of that increment, so directed reachability gives precisely
+the cosets of this subgroup.
+
+In each component choose a directed spanning tree oriented toward the
+prescribed root $a_r$. Such a tree exists, for example by choosing from
+each nonroot vertex an edge along a shortest directed path to the root.
+For each nonroot vertex apply the elementary collapse to its parent,
+in decreasing order of distance from the root. A point first moves to
+its parent and is subsequently moved along the remaining path to the
+root. Thus the product of these collapses is the desired retraction
+on $C$.
+
+Choose words realizing these elementary collapses as in
+Lemma~\ref{ptc-kernel:lem:collapse}, and concatenate them to obtain $v_A$.
+Each collapse preserves residues modulo $d$. By
+Lemma~\ref{ptc-kernel:lem:lower}, a representing word for such a collapse must
+have length divisible by $d$ (apply the congruence formula to any point
+of $C$). Hence that word preserves residues on all of $\mathcal N$,
+not only on $C$. The product $v_A$ does too.
+
+If there are no nonroot vertices, then $d=m$, $I=\{m\}$, and $A=C$.
+In this case take $v_A=M_m^m$, which has the required properties.
+\end{proof}

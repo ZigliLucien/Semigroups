@@ -1,0 +1,58 @@
+
+\section{Proof of the theorem}
+\begin{proof}[Proof of Theorem~\ref{ptc-kernel:thm:main}]
+Choose a positive integer $L$ divisible by $d$ and satisfying $L\ge n-m$.
+Iteration of $M_m$ moves every point outside $C$ down by one until it
+enters $C$, and subsequently stays inside $C$. Therefore
+\[
+ \mathcal N M_m^L\subseteq C.
+\]
+For $A\in\mathcal A$ and an integer representative $0\le t<d$,
+Lemma~\ref{ptc-kernel:lem:retraction} now gives
+\[
+ M_m^{L+t}v_A=k_{A,t}.
+\]
+Indeed the prefix sends $x$ to a point of $C$ congruent to $x-t$
+modulo $d$, and $v_A$ sends that point to $a_{[x]-t}$.
+Thus every $k_{A,t}$ belongs to $S$ and has rank $d$.
+Lemma~\ref{ptc-kernel:lem:lower} proves that this is the minimum rank.
+
+Conversely, suppose $w\in S$ has rank $d$, and choose a word
+representing it of length $\ell$. Since $Cw\subseteq\mathcal Nw$ and
+$|Cw|\ge d$, we have
+\[
+ \mathcal Nw=Cw\subseteq C.
+\]
+Its image therefore consists of exactly one point in each residue
+class modulo $d$. Call this transversal $A$. The congruence formula
+forces
+\[
+ xw=a_{[x]-[\ell]},
+\]
+so $w=k_{A,[\ell]}$. This proves the classification of all minimum-rank
+elements and their fiber partitions and ranges.
+
+For multiplication, observe that $a_r\equiv r\pmod d$, whence
+\[
+ xk_{A,t}k_{B,u}=a_{[x]-t}k_{B,u}=b_{[x]-t-u}.
+\]
+Thus $k_{A,t}k_{B,u}=k_{B,t+u}$. The parametrization is injective:
+the image determines $A$, and the induced shift of residue classes
+determines $t$. It follows that $(t,A)\mapsto k_{A,t}$ is an
+isomorphism $C_d\times R_{\mathcal A}\to K$.
+
+It remains to check that $K$ is the minimal ideal, rather than merely
+a subsemigroup. Multiplication cannot increase transformation rank,
+and no element of $S$ has rank below $d$. Hence $K$ is a two-sided
+ideal. The multiplication formula also gives $kK=K$ for every $k\in K$.
+If $J$ is any nonempty two-sided ideal, choose $s\in J$ and $k\in K$.
+Then $sk\in J\cap K$, and
+\[
+ K=(sk)K\subseteq J.
+\]
+Thus $K$ is the unique minimal nonempty two-sided ideal.
+
+Finally, each of the $d$ sets $C_r$ has $m/d$ points. Choosing one
+point independently from each gives $|\mathcal A|=(m/d)^d$, and
+$|K|=d|\mathcal A|$.
+\end{proof}

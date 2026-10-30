@@ -1,0 +1,21 @@
+\section{Trees, unicycles, and the stationary distribution}
+For an irreducible equally weighted two-out graph, count parallel outgoing
+edges separately. Let $s_i$ count in-directed spanning trees rooted at $i$,
+and put $S=\sum_i s_i$. The Markov chain tree theorem gives $\pi_i=s_i/S$.
+Let $\nu(C)$ count spanning functional subgraphs having the single limiting
+cycle $C$, including their attached trees and selected edge multiplicities.
+Adding either outgoing edge at the root of an $i$-tree, or deleting the edge
+out of $i$ on a unicycle containing $i$, gives the bijection
+\[
+ 2s_i=\sum_{C\ni i}\nu(C).
+\]
+Hence
+\[
+ 2S=\sum_C|C|\nu(C),\qquad
+ \pi=\sum_C\frac{|C|\nu(C)}{2S}\frac{\chi_C}{|C|}.
+\]
+This decomposes stationary mass into uniform cycle measures. The weights
+refer to complete spanning unicycles, not only bare directed cycles.
+It is a one-particle identity; it does not by itself identify the kernel
+partition/range measure. For weighted ladders, use weighted tree counts or
+edge-counting conventions appropriate to the probabilities.

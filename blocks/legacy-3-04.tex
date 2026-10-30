@@ -1,0 +1,450 @@
+
+
+\section{Some Initial Results of Convergence}
+\label{sec:3.4}
+
+In all that follows, $S$ will be a compact semigroup and
+$(\mu_n) \ub \Prob(S)$ such that $\mu_{k,n} \to \nu_k$ weakly for all
+$k$, and $\F = \{ \lambda \mid \nu_{n_i} \to \lambda \hbox{ for some }
+(n_1)\}$ is the set of tail limits of $(\mu_n)$.
+
+\runinhead{Examples of Compact Algebraic Structures.}
+%
+\begin{enumerate}
+\item[(1)] $[0,1]$ under multiplication \quad (abelian semigroup)
+
+\item[(2)] $[0,k)$ under addition mod $k$ \quad (abelian group)
+
+\item[(3)] $\{ z \in \BDC \mid \|z\| = 1 \}$ \quad (unit circle in
+     the complex plane) \newline
+     under multiplication \quad (abelian group)
+     \newline
+     $z = e^{i\th}$
+
+\item[(4)] $n \times n$ stochastic matrices \quad (semigroup)
+
+\item[(5)] $n \times n$ doubly stochastic matrices \quad (semigroup)
+
+\item[(6)] $\{ f: x \to x \mid x \hbox{ a normed vector space} \}$
+     \newline
+     $\|f(x) - f(y)\| \le c \|x-y\|, \quad c < 1$
+     \newline
+     contractions \quad (semigroup)
+\end{enumerate}
+%
+
+\begin{theorem}  	\label{thm:3.3}
+Let $\overline S = \bigcup\limits_{\nu\in\F}
+S(\nu)$ where $\F$ is the set of tail limits.  Then the following are
+true:
+\begin{enumerate}
+\item[(a)] $\overline S $ is completely simple;
+
+\item[(b)] $S(\nu) = X_\nu \times G \times Y$ for each $\nu \in \F$;
+
+\item[(c)] $\overline S = \overline X \times G \times Y$ where $\overline X = \bigcup\limits_{\nu \in \overline S} X_\nu$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof} Let $a \in \overline S$ and consider $\overline S a
+\overline S$.  WLOG assume $a \in S(\nu_\a)$, $\nu_\a \in \F$ then
+since $S(\nu_\a) S(\nu_\bt) = S(\nu_\a)$ for all $\bt$, $a\overline S
+\ub S(\nu_\a)$.  But $\overline S\, S(\nu_\a) =
+\bigcup\limits_{\nu\in\F} S(\nu) S(\nu_\a) = \bigcup\limits_{\nu\in\F}
+S(\nu) = \overline S$.  Thus $\overline S a \overline S = \overline S$
+for all $a$ and $\overline S$ is simple.
+
+     Now suppose $e,f$ are idempotents with
+\[
+     ef = fe = e.
+\]
+If $e,f \in S(\nu)$ for some fixed $\nu$, then $ef = fe \Rightarrow e = f$,
+since $S(\nu)$ is completely simple.  Thus suppose $e \in S(\nu_\a)$,
+$f \in S(\nu_2)$.  But $ef \in S(\nu_\a) S(\nu_\bt) = S(\nu_\a)$ and
+$fe \in S(\nu_\bt) S(\nu_\a) = S(\nu_\bt)$
+\[
+\begin{aligned}
+       &\Rightarrow \quad e \in S(\nu_\bt)                 \\
+       &\Rightarrow \quad e = f \hbox{ since both are in the completely} \\
+       &\phantom{\Rightarrow} \qquad \hbox{simple semigroup } S(\nu_\bt)     \\
+       &\Rightarrow \quad \hbox{all idempotents are primitive}
+\end{aligned}
+\]
+
+     (b)  Choose $S(\nu)$ arbitrarily and pick $e \in S(\nu)$.
+Decompose both $S(\nu)$ and $\overline S$ with respect to $e$.  That
+is, let
+\[
+\begin{alignedat}{3}
+     X_1 &= E[S(\nu)e], &\quad H &= eS(\nu)e,
+               &\quad Y_1 &= E[eS(\nu)]                        \\
+     X &= E[\overline S e], &\quad G &= e\overline Se,
+               &\quad Y &= E[e\overline s]
+\end{alignedat}
+\]
+
+     Now for an arbitrary $S(\nu_\a)$
+\[
+\begin{aligned}
+       S(\nu_\a) S(\nu) &= S(\nu_\a)               \\
+       S(\nu) S(\nu_\a) &= S(\nu)
+\end{aligned}
+\]
+thus if $(x,g,y) \in S(\nu_\a)$
+\[
+\begin{gathered}
+       (X_1 \times H \times Y_1) (x,g,y) \ub X_1 \times H \times Y_1           \\
+       \Rightarrow \quad y \in Y_1.
+\end{gathered}
+\]
+Now recall that $Y_1 X_1 \ub H$.  Thus
+\[
+     (x,g,y) (X_1 \times H \times Y_1) = \{ x \} 
+	\times gH \times Y_1 \ub S(\nu_\a).
+\]
+Consider $g$.  Since $(e,e,e) \in X_1 \times H \times Y_1$ then
+\[
+\begin{aligned}
+       (e,e,e)(x,g,y) &\in X_1 \times H \times Y_1         \\
+       \Rightarrow \quad (e,e(ex)g,y) &\in X_1 \times H \times Y_1
+\end{aligned}
+\]
+but $ex = e$ since $e \in X$ and $X$ is a left zero semigroup.  But
+this implies that $g \in H$ and from this we get that $\{ x \} \times H \times
+Y_1 \ub S(\nu_\a)$ from which $S(\nu_\a) = X_{\nu_\a} \times H \times Y_1$
+follows easily.
+
+     (c) Finally, since
+\[
+\begin{aligned}
+       \overline S = \bigcup_{\nu\in\F} S(\nu)
+          &= \bigcup_{\nu\in\F} X_\nu \times H \times Y_1  \\
+     &= X \times G \times Y.
+\end{aligned}
+\]
+Then
+\[
+     H = G, \quad Y_1 = Y \hbox{ and } X = \bigcup_{\nu\in\F} X_\nu.
+\]
+\qed
+\end{proof}
+
+Now consider the case where $S$ is a compact group.  If $\nu_\i$,
+$\nu'_i$ are tail limits of a convergent sequence then
+%
+\begin{equation}    \label{eq:3.1}
+  \aligned
+       \nu_\i &= \nu_\i \times \nu'_\i                 \\
+       \nu'_\i &= \nu'_\i \times \nu_\i.
+     \endaligned 
+\end{equation}
+%
+Since $S$ is a group and $\nu_\i$, $\nu'_\i$ are idempotents then
+$\nu_\i = w_{H_1}$, $\nu'_\i = w_{H_2}$, the Haar measure are compact
+subgroups $H_1, H_2$.  Thus the above equations become
+%
+\begin{equation}    \label{eq:3.2}
+\begin{aligned}
+       w_{H_1} &= w_{H_1} * w_{H_2}                \\
+       w_{H_2} &= w_{H_2} * w_{H_1}
+\end{aligned}
+\end{equation}
+%
+which means that
+\[
+\begin{aligned}
+       H_1 &= H_1 \cdot H_2 \sim \bigcup_{h_1 \in H_1} \cdot H_2 \\
+       H_2 &= H_2 \cdot H_1.
+\end{aligned}
+\]
+Since $e \in H_1 \Rightarrow e \cdot H_2 \ub H_1 \Rightarrow H_2 \ub H_1$, likewise $H_1 \ub H_2 \Rightarrow H_1 = H_2 = H$, say.  
+Thus $w_H$ is the unique tail idempotent.
+
+\begin{theorem}  	\label{thm:3.4}
+Suppose $S$ is a compact group and $(\mu_n) \ub \Prob(S)$ with $\mu_{k,n} \to \nu_k$ for all $k$.  
+Then for some subgroup $H \ub S$,
+\[
+     \nu_k \to w_H.
+\]
+\end{theorem}
+
+\begin{proof}  Recall that if every subsequence has a subsequence
+that converges to the same point, then the original sequence averages
+to that point.
+
+Now let $(\nu_{n_i}) \ub (\nu_k)$ be any subsequence.  
+Since $\Prob(S)$ is compact, then $(\nu_{n_i})$ contains a limit point $\lambda$ and $\nu_{n_i} \to \lambda$ for some $(\nu_{n_i}) \ub (\nu_{n_i})$.
+
+Now $\lambda = \lambda^2 \Rightarrow \lambda = w_H$ for some $H \ub S$, but $w_H$ is the unique tail idempotent.  
+Thus all subsequences converge to $w_H \Rightarrow \nu_k \to w_H$.
+
+Now suppose the convolution products do not converge.
+
+For each fixed $k$, $(\mu_{k,n})$ is an infinite sequence of element in the compact set $\Prob(S)$.  Let $k = 1$.  
+Then there exists a subsequence $(n_{0i})$ such that $\mu_{0,n_{0i}}$ converges to some probability measure $\nu_0$.  Consider $(\mu_{1,n_{0,i}}).$
+This is an infinite set in a compact space and has a limit point, say
+$\nu_1$, and there exists a subsequence $(n_{1i}) \ub (n_{0i})$ such
+that $\mu_{1,n_{1i}} \to \nu_1$.  
+But since $(n_{1i})$ is a subsequence of $(n_{0i})$, $\mu_{0,n_{1i}} \to \nu_0$ as well.
+
+Continuing in this manner, we generate a nested collection of subsequences $(n_{0i}) \up (n_{1i}) \up (n_{2i}) \ldots$.  
+Let $(n_i) = \bigcap\limits^\i_{j=0} (n_{ji})$.  
+Then $\mu_{k,n_i} \to \nu_k$ for all $K$.
+\qed
+\end{proof}
+
+Finally, consider $(\nu_{ni})$.  
+Then this is also an infinite set in a compact space and it has a limit point, say $\nu_\i$.
+Choosing one final subsequence allows us to state the following
+theorem.
+
+\begin{theorem} [Csiszar's Theorem]	\label{thm:3.5}
+Let $(\mu_n) \ub \Prob(S)$ and let $(m_i)$ be a given sequence of integers.  
+Then there exists $(n_i) \ub (m_i)$ such that
+%
+\begin{enumerate}
+\item[{\normalfont(1)}] $u_{k,n_i} \to \nu_k$, \quad $\nu_{n_i} \to \nu_\i$;
+
+\item[{\normalfont(2)}] $\nu_k = \nu_k * \nu_\i$;
+
+\item[{\normalfont(3)}] $\nu_\i = \nu^2_\i$.
+\end{enumerate}
+%
+\end{theorem}
+
+\begin{proof}  Our previous discussion proved (1).
+
+To prove (2) notice for $k < m < n_i$,
+\[
+     \mu_{k,n_i} = \mu_{k,m} * \mu_{m,n_i}
+\]
+letting $n_i \to \i$
+\[
+     \nu_k = \mu_{k,m} * \nu_m.
+\]
+But this is true for all $m$, $m > k$.  
+Thus letting $m = n_i$,
+\[
+     \nu_k = \mu_{k,n_i} * \nu_{n_i} \Rightarrow \nu_k = \nu_k * \nu_\i.
+\]
+Since $k$ was arbitrary, letting $k = n_i$ we get $\nu_{n_i} = \nu_{n_i} * \nu_\i$, which implies that $\nu_\i = \nu^2_\i$. 
+\qed
+\end{proof}
+
+(Mention tightness)
+
+What about limit points that are not idempotent.  
+Suppose $(S_i)$ is an arbitrary subsequence and $\lambda$ be a limit point of $(\nu_{s_i})$, then for some $(r_i) \ub (s_i)$, $\nu_{r_i} \to \lambda$.
+
+     Now consider the subsequence $(r_i)$ in the original products.
+Taking subsequences when appropriate (and renaming them $(r_i)$ for
+convenience) we get,
+\[
+\begin{gathered}
+     \mu_{k,r_i} \to \nu'_k \quad \nu'_{r_i} \to \nu'_\i       \\
+     \nu'_k = \nu'_k * \nu'_\i.
+\end{gathered}
+\]
+Finally, let $\lambda'$ be such that $\nu'_{n_i} \to \lambda'$.  
+Then we have the following theorem.
+
+\begin{theorem}		\label{thm:3.6}
+\[
+\begin{alignedat}{4}
+     &\hbox{{\normalfont(1a)}} &\quad \nu_k &= \nu'_k * \lambda &\qquad \qquad
+               &\hbox{{\normalfont(1b)}} &\quad \nu'_k &= \nu_k * \lambda'      \\
+     &\hbox{{\normalfont(2a)}} &\quad \lambda &= \lambda * \nu_\i &\quad \qquad
+               &\hbox{{\normalfont(2b)}} &\quad \lambda' &= \lambda' * \nu'_\i      \\
+     &\hbox{{\normalfont(3a)}} &\quad \lambda' &= \nu_\i * \lambda' &\quad \qquad
+               &\hbox{{\normalfont(3b)}} &\quad \lambda &= \nu'_\i * \lambda        \\
+     &\hbox{{\normalfont(4a)}} &\quad \nu_\i &= \lambda' * \lambda &\quad \qquad
+               &\hbox{{\normalfont(4b)}} &\quad \nu'_\i &= \lambda * \lambda'.      \\
+\end{alignedat}
+\]
+\end{theorem}
+
+\begin{proof}  Begin with the equations
+\[
+     (*) \ \ \nu_k = \mu_{k,m} * \nu_m \hbox{ and }
+     (**) \ \ \nu'_k = \mu_{k,m} * \nu'_m.
+\]
+Then letting $m = r_i$ in equation $(*)$ and letting $m = n_i$ in
+equation $(**)$ we get equations (1a) and (1b).
+\qed
+\end{proof}
+
+\runinhead{Homework.}  Derive (2a) through (4b).
+
+Consider the equation $\nu_k = \nu'_k * \lambda$.  
+From the derivation it is clear that $(\nu_k)$ and $(\nu'_k)$ were completely arbitrary.  
+Thus for any two sequences of limits points $(\nu_k),(\nu'_k)$ there exist tail limits $\lambda,\lambda'$ such that $\lambda$ transforms $(\nu'_k)$ into $(\nu_k)$ and $\lambda'$ transforms $(\nu_k)$ into $(\nu'_k)$.
+
+Look at the equations from an algebraic perspective.
+
+Take, for example,
+\[
+     \nu_k = \nu'_k * \lambda.
+\]
+Now $\nu'_\i$ is a left identity for $\lambda$ and $\nu_\i$ is a right
+identity for $\lambda$.  Thus the above equation can be written
+\[
+     \nu_k = \nu'_k * (\nu'_\i * \lambda * \nu_\i).
+\]
+
+Now suppose conditions could be found such that $\nu'_\i * \lambda *
+\nu_\i = \nu'_\i$.  Then the following derivation would be possible
+\[
+\begin{aligned}
+       \nu_k &= \nu'_k * \lambda                                   \\
+       &= \nu'_k * (\nu'_\i * \lambda * \nu_\i)                    \\
+       &= \nu'_k * \nu'_\i                                     \\
+       &= \nu'_k
+\end{aligned}
+\]
+since $\nu'_\i$ is a right identity for $\nu'_k$.
+
+Now this is true for all $k$, (under the above assumption) that
+$(\mu_{k,ni})$ and $(\mu_{k,r_i})$ were arbitrary subsequences of
+$(\mu_{k,n})$ and they each converge to $(\nu_k)$ for all $k$.  
+Thus $\mu_{k,n} \to \nu_k$ for all $K$.
+
+Thus we have the following general theorem.
+
+
+\begin{theorem}		\label{thm:3.7}
+  Let $(\mu_n) \ub \Prob(S)$, where $S$ is a locally
+compact topological semigroup.  Let $\lambda$ be an arbitrary tail limit
+of $(\mu_n)$.  Then $\mu_{k,n}$ converges for all $k$ weakly if{f}
+there exist ``appropriate'' tail idempotents $\nu'_\i, \nu_\i$ such
+that
+\[
+     \nu'_\i = \nu'_\i * \lambda * \nu_\i.
+\]
+\end{theorem}
+
+     Recall that when $\mu_{k,n}$ converges, the set of tail limits
+form a right zero semigroup.  Then if $\nu'_\i,\lambda,\nu_\i$ are tail
+limits
+\[
+     \nu'_\i = \nu'_\i * \lambda * \nu_\i.
+\]
+Just a note of clarification.  When $\nu_{k,n}$ does not converge then
+the set of tail limits, $\F$, must be defined in the following way
+\[
+\begin{aligned}
+     \F = \{ \lambda \mid \lambda
+               &\hbox{ is a limit point of some } (\nu_k)      \\
+     &\quad \hbox{where } \mu_{k,n_i} \to \nu_k
+               \hbox{ for some } (n_i) \}
+\end{aligned}
+\]
+Suppose $S$ is abelian.  Then for any measurable set $B$,
+\[
+     Bx^{-1} = \{ y \mid yx \in B \} = \{ y \mid xy \in B \}
+             = x^{-1}B.
+\]
+Thus for all $B$
+\[
+\begin{aligned}
+       \mu_1 * \mu_2(B) &= \int \mu_1 (Bx^{-1}) \mu_2(dx)      \\
+       &= \int \mu_1 (x^{-1} B) \mu_2(dx)                      \\
+       &= \mu_2 * \mu_1(B).
+\end{aligned}
+\]
+Thus $\Prob(S)$ is an abelian semigroup.
+
+     Notice, however, that $\nu_\i,\nu'_\i$ in the convolution
+equations were arbitrary with
+\[
+     \nu_\i = \lambda' * \lambda \quad \nu'_\i = \lambda * \lambda'.
+\]
+But if $S$ is abelian $\nu_\i = \lambda' * \lambda = \lambda * \lambda' = \nu'_\i$ and each sequence $(\mu_n)$ has a unique tail limit.
+
+\begin{theorem}		\label{thm:3.8}  
+Let $S$ be a locally compact abelian semigroup and
+$(\mu_n) \ub \Prob(S)$.  Let $\F$ be the set of tail limits of
+$(\mu_n)$ and $G = \langle \overline{\F} \rangle$ be the closed
+semigroup generated by $\F$.  Then $G$ is a group.
+\end{theorem}
+
+\begin{proof}  Midterm assignment.
+\qed
+\end{proof}
+
+\begin{theorem}		\label{thm:3.9}  
+Suppose $S$ is a locally compact abelian semigroup and $(\mu_n) \ub \Prob(S)$.  Suppose there exists an $x \in S$ such that for all $k \ge k_0$ and some $\dl > 0$
+\[
+     \liminf_{n \to \i} \mu_{k,n} (N(x)) > \dl
+\]
+Then $\mu_{k,n} \to \nu_k$ for all $k$ as $n \to \i$.
+\end{theorem}
+
+\begin{proof} We will prove the theorem in the case when $S$ is
+discrete.  
+Let $x$ be such that $\liminf\limits_{n\to\i} \mu_{k,n}(x) \ge \dl > 0$ for all $k \ge k_0$.
+%
+\begin{enumerate}  \item[]
+\begin{enumerate}
+\item[Step 1] Suppose $(\nu_k)$ is such that $\mu_{k,n_i} \to \nu_k$ for all $k$.  
+Then $\mu_{k,n_i}(x) \to \nu_k(x)$.
+
+Suppose $\nu_k(x) < \dl$.  
+Then there exists an $I \ni i \ge I$, $\mu_{k,n_i}(x) < \dl$.  
+Thus the sequence of numbers $(\mu_{k,n_i}(x))$ has a limit point $r$ where $r \le \dl$.
+\[
+\begin{aligned}
+       &\Rightarrow \quad \liminf_n \mu_{k,n}(x) \le \dl   \\
+       &\Rightarrow \quad \nu_k(x) \ge \dl \hbox{ for all }
+               k \ge k_0.
+\end{aligned}
+\]
+Now let $\lambda$ be any limit point of $(\nu_k)$.  Since
+$\nu_k(x) \ge \dl$ for all $k \ge k_0$, $\lambda(x) > 0$.  Thus we have
+shown that $x \le S(\lambda)$ for {\sl every} tail limit of $\lambda$ of
+$(\mu_n)$.
+
+\item[Step 2] Now consider $S(\nu_\i)$.  
+Since $\nu_\i$ is idempotent, $S(\nu_\i)$ is a completely simple semigroup.  
+Let $X \times G \times Y$ be a Rees product for $S(\nu_\i)$.
+
+Let $e_1 \cong (x_1,(y_1x_1)^{-1},y_1)$, $e_2 \cong (x_2,(y_2x_2)^{-1},y_2)$ be two idempotents of $S\nu_\i \cong X \times G \times Y$.  
+Then
+\[
+\begin{aligned}
+       e_1e_2 &\cong (x_1,(y_1x_1)^{-1},y_1)(x_2,(y_2x_2)^{-1}y_2) \\
+       e_2e_1 &\cong (x_2,(y_2x_2)^{-1},y_2)(x_1,(y_1x_1)^{-1}y_1)
+\end{aligned}
+\]
+Then if $e_1e_2 = e_2e_1$ it is clear that $x_1 = y_2$, $y_1 = y_2$.
+But then $e_1 = e_2 = e$ (say).  
+Then $eS(\nu_\i)e = S\nu_\i$ and $S(\nu_\i)$ is a group.  
+Thus an abelian completely simple semigroup is a group.  
+But if $\nu_\i$ is an idempotent measure supported on a group, then it is the Haar measure on that group.
+
+\item[Step 3]  Now recall the convolution equations.
+\[
+     \lambda * \lambda' = \nu_\i
+\]
+Now $x \in S(\lambda')$.  
+Thus $S(\lambda *L \dl_x) = S_\lambda * x \ub S_{(\lambda)} \cdot S_{(\lambda)} = S(\nu_\i)$.  
+Therefore if we call $S(\nu_\i) = H$, $H$ a group, then the probability measure $\lambda * \dl_x \in \Prob(H)$.
+But $\nu_\i = w_H$ from Step 2, and since $w_H$ acts like a zero on
+$\Prob(H)$
+\[
+     (\lambda * \dl_x) * w_H = w_H.
+\]
+Finally,
+\[
+\begin{aligned}
+       \nu_k &= \nu'_k * \lambda = \nu'_k * \lambda * w_H  \\
+       &= \nu_k' * \lambda * (\dl_x * w_H)             \\
+       &= \nu'_k * (\lambda * \dl_x) * w_H             \\
+       &= \nu'_k * w_H = \nu'_k
+\end{aligned}
+\]
+and we get convergence.
+\qed
+\end{enumerate}
+\end{enumerate}
+%
+\end{proof}

@@ -1,0 +1,224 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{The Semigroup $\F_X$}
+\label{2.4}
+
+As before, let $X = \{ x_1,x_2,\ldots,x_n\}$ be any finite set, and let $\F_X = \{ \F \mid f: x \to x\}$ with
+\[
+  x(f \circ g) = \big( (x)f \big) g.
+\]
+Now, for $f \in \F_X$, $R(f) = \{ y \in X \mid f(x) = y \hbox{ for some } x \in X\}$.  
+$R(f)$ is the range of $f$.
+$\pi(f) = \{ (y)f^{-1} \mid y \in R(f)\}$ or $x_1 \equiv x_2$ if{f} $f(x_1) = f(x_2) = y$ where $(y)f^{-1} = \{ x \in X \mid (x)f = y \}$.
+Then $\pi(f)$ is a partition of $X$ and the cardinality of $\pi(f)$, $|\pi(f)| = |R(f)|$ is called the rank of $f$.
+
+Now suppose $x_1 \equiv x_2$ under $\pi(f)$.  Then
+\[
+\begin{aligned}
+           &(x_1)f = (x_2)f                        \\
+       \Rightarrow \quad &(x_1f)g = (x_2f)g                \\
+       \Rightarrow \quad &x_1 \equiv x_2 \hbox{ under }
+               \pi(f \circ g)                      \\
+       \Rightarrow \quad &\pi(f) \ub \pi(f \circ g).
+     \end{aligned}
+\]
+Thus we have the following.
+
+\begin{proposition} 	\label{prp:2.2}
+Let $\pi_0$ be an arbitrary partition of $X$.
+     Let $R(\pi_0) = \{ f \in \F_X \mid \pi_0 \ub \pi(f) \}$.  Then
+     $R(\pi_0) $ is a right ideal of $\F_X$.
+\end{proposition}
+
+     Now, perhaps the most important elements in a semigroup are its
+idempotents.
+
+\begin{proposition} 	\label{prp:2.3}
+Let $f \in \F_X$.  
+Then $f$ is idempotent if{f} $f$ is the identity map on $R(f)$.
+\end{proposition}
+
+\begin{proof} Suppose $f^2 = f$ and let $y \in R(f)$.  Then for
+     some $x \in X$, $(x)f = y$.
+
+Now,
+\[
+\begin{alignedat}{2}
+     & &\quad &f^2 = f     \\
+     &\Rightarrow &\quad (x)&f^2 = (x)f                      \\
+     &\Rightarrow &\quad (xf)&f = (x)f                       \\
+     &\Rightarrow &\quad(y)&f = y.
+     \end{alignedat}
+\]
+Thus $f$ is the identity on $R(f)$.
+
+Now suppose $f$ is the identity on its range and let $x \in X$.
+Then
+\[
+  (x)f \in R(f)
+\]
+and
+\[
+     \big( (x)f \big)f = (x)f
+\]
+since $f$ is the identity on $R(f)$
+\[
+     \Rightarrow \quad f^2 = f.
+\]
+Thus if $f \in K'$,
+\[
+\begin{aligned}
+       \rank(f \circ g) &= \rank(f)                \\
+       \rank(g \circ f) &= \rank(f)
+\end{aligned}
+\]
+by minimality.  Thus $K'$ is an ideal of $S$.  Now it suffices to show
+that $K' < K$.
+
+     Let $f \in K'$, $h \in K$.  Then $fhf \in K' \cap K$.  Notice
+$\range(fhf) = \range(f)$, by minimality, since $\range(fhf) \ub
+\range(f)$.
+
+     Now $K$ is a completely simple semigroup.  Let $e$ be the local
+identity of the group containing $fhf$.  Then $\range(fhf) =
+\range(fhfe) \ub \range(e)$.  Also, there is a local inverse element
+$g \ni gfhf = e$.  Thus $\range(e) = \range(gfhf) \ub \range(fhf)$.
+Thus $\range(e) = \range(f)$.  But for all $x \in X$, $(x)f = (xf)e$
+since $e$ is the identity on its range.
+\[
+     \Rightarrow \quad f = fe \in K
+\]
+since $e \in K$
+\[
+     \Rightarrow \quad K' \ub K
+\]
+and we are done.  \qed
+
+     Now let $K$ be the kernel of some subsemigroup $S$ of $\F_X$.
+Then since $K$ is a completely simple set of functions it is a union
+of isomorphic groups.  Can we describe those groups?  Of course.
+\[
+\begin{aligned}
+       \R &= \{ R_j \mid R(f) = R_j \hbox{ for some } f \in K \} \\
+       \prod &= \{ \pi_i \mid \pi(f) = \pi
+                   \hbox{ for some } f \in K \}
+\end{aligned}
+\]
+Now for $f \in K$, $f \in H$ for some subgroup $H$.  In fact, $H \ub
+H(\pi(f),R(f)) \cong S_r$, $r = |\pi(f)| = |R(f)|$ where $S_r$ is the
+symmetric group on $r$ elements.  Now if $\pi_i \in \prod$, $R_j \in
+\R$ there exists $f$ with $\pi(f) = \pi_i$, $g$ with $R(g) = R_j$.
+Then consider $f \circ g$.  Clearly
+\[
+     \begin{gathered}
+       \pi(f \circ g) = \pi(f) = \pi_i \qquad
+          R(f \circ g) = R(g) = R_j                \\
+       \Rightarrow \quad f \circ g \in H(\pi_i,R_j).
+     \end{gathered}
+\]
+Thus for every pair $(\pi_i,R_j)$ there exists some function belonging
+to it from $K$.  Thus every pair $(\pi_i,R_j)$ is compatible.
+
+\runinhead{Homework.}
+\begin{enumerate}
+\item[(a)] Show that for each pair $(\pi_i,R_j) \exists f \in K \ni
+     f \in H(\pi_i,R_j)$.
+\item[(b)] Show that each pair $(\pi_i,R_j)$ is compatible.
+\end{enumerate}
+
+     Thus
+\[
+     K = \underset{R_j \in R}{\bigcup_{\pi_i \in \prod}}
+          K(\pi_i,R_j) \ub
+          \underset{R_j \in R}{\bigcup_{\pi_i \in \prod}}
+          H(\pi_i,R_j)
+\]
+where $K(\pi_i,R_j)$ is some subgroup contained in $H(\pi_i,R_j) \cong
+S_r$, $r = |\pi_i| = |R_j|$.
+
+     Now suppose $\pi,R$ are given with $|\pi| = |R|$.  When is it
+possible to construct an idempotent, $e(\pi,R)$ with the given
+partition and range.  It is possible precisely when
+\[
+     |P \cap R| = 1 \hbox{ for each } P \in \pi.
+\]
+Thus we are led to the following definition.
+\qed
+\end{proof}
+
+\begin{definition}   \label{defn:2.6}
+A partition $\pi$ and range $R$ will be called compatible if{f} $|P \cap R| = 1$ for all $P \in \pi$.
+\end{definition}
+  
+\runinhead{Notation.}  Let $\pi,R$ be such that $|\pi| = |R|$.
+Denote $H(\pi,R) = \{ f \in \F_X \mid \pi(f) = \pi, \ R(f) = R \}$.
+
+\runinhead{Homework.}
+
+\begin{proposition} 	\label{prp:2.4}
+$H(\pi,R)$ is a group if{f} $\pi$ and $R$ are compatible.
+\end{proposition}
+
+\begin{proposition} 	\label{prp:2.5}
+Let $(\pi_1,R_1)$, $(\pi_2,R_2)$ be compatible.    
+If $(\pi_2,R_1)$ are compatible then $\rank(f) = \rank(f \circ g) = \rank(g)$ and $f \circ g \in H(\pi_1,R_2)$.
+\end{proposition}
+
+\begin{proof} 
+Clearly, since $\pi_2,R_1$ are compatible then $\rank(f) = \rank(g)$.  
+Now $R(f \circ g) \ub R(g)$.  
+Thus if we show that $R(f \circ g) = R(g)$ we are done.  
+We must show that $g/R_1$ is one-to-one.  
+Let $R_1 = \{j_1,j_2,\ldots\}$, $R_2 = \{ k_1,k_2,\ldots,k_r\}$, and $\pi_2 = \{ (k_1)g^{-1}, (k_2)g^{-1}, \ldots, (k_r)g^{-1} \}$.  
+Now since $\pi_2,R_1$ are compatible, for each $|R_1 \cap (k_j)g^{-1}| = 1$ let $\{j_i\} = R_1 \cap (k_j)g^{-1}$ but then $j_i$ is the unique element such that $(j_i)g = k_j$ and $g/R_1$ is one-to-one.
+\qed
+\end{proof}
+
+Now we have the very important,
+
+\begin{theorem} 	\label{thm:2.3}
+Let $S$ be a subsemigroup of $\F_X$.  
+Then the kernel of $S$ is precisely the set of elements of $S$ with minimal rank.
+\end{theorem}
+
+\begin{proof} Let $r = \min \{ \rank(f) \mid f \in S \}$.
+
+     Let $K' = \{ f \in S \mid \rank(f) = r \}$.  We wish to show that
+$K'$ is the minimal ideal of $S$.
+
+     Now for any $f,g \in \F_X$ it is true that
+\[
+\begin{aligned}
+       |(X) f \circ g| &\le |(X) f|                \\
+       &\le |(X)g|\quad\qed
+\end{aligned}
+\]
+\end{proof}
+
+\runinhead{Homework.}  
+Let $X = \{ 1,2,3,4\}$.
+\[
+     \aligned
+     \pi_1 &= \{ (1,2),(3,4)\}                          \\
+     \pi_2 &= \{ (1,3),(2,4)\} \qquad
+          S = \underset{j=1,2}{\bigcup_{i=1,2}}
+          H(\pi_i,R_j)                                  \\[4pt]
+     R_1 &= \{ 1,4\}                                    \\
+     R_2 &= \{ 2,3\}
+     \endaligned
+\]
+Determine all possible Rees product structure for $S$.
+
+
+
+
+
+
+
+
+
+
+
+

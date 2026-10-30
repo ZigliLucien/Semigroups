@@ -1,0 +1,140 @@
+
+
+\section{A technique to complete the solution to the generalized road coloring conjecture}  
+\label{sec:4.6}
+
+Using the result from the previous section, a technique suggests itself to solve the general problem.  
+Suppose the graph is periodic of order $p$.  
+Look at the collection of all minimal coloring semigroups.  
+Suppose the kernels are of rank $t$.  
+There are two possibilities.  
+If one of the minimal kernels is a right group, from the previous result, we immediately deduce that $p=t$.  
+If no minimal coloring semigroup has a kernel which is a right group, one must show that some recoloring of one of the minimal semigroups produces a kernel of rank strictly less than $t$.  
+
+Thus, if one can prove the following conjecture, the proof of the generalized road coloring problem would be complete.
+
+\begin{conjecture} 	\label{con:4.2}
+Let $S$ be a coloring semigroup.  
+Suppose the kernel of $S$ is not a right group.  
+Then $S$ is not a minimal coloring semigroup.
+\end{conjecture}
+
+Consider the following example of recoloring in the instance that a kernel is not a right group.
+
+\begin{example}  	\label{exm:4.2}
+Let $G$ be given by the following adjacency matrix which is colored
+as indicated
+\[
+	A = \bmatrix
+	   0 &1 &0 &1 \\
+	   0 &0 &1 &1 \\
+	   1 &1 &0 &0 \\
+	   1 &0 &1 &0 \endbmatrix
+	=
+		\bmatrix
+		0 &0 &0 &1 \\
+		0 &0 &0 &1 \\
+		1 &0 &0 &0 \\
+		1 &0 &0 &0 \endbmatrix
+	+
+		\bmatrix
+		0 &1 &0 &0 \\
+		0 &0 &1 &0 \\
+		0 &1 &0 &0 \\
+		0 &0 &1 &0 \endbmatrix = r_1 + b_1
+\]
+Let $S_1 = \langle r_1,b_1 \rangle$.  Then $S_1$ is, in fact, a completely simple
+semigroup of matrices of rank two.  $S_1$ consists of the following eight matrices.
+\begin{equation*}
+	S_1 = \left \{
+		\begin{aligned}
+		\bmatrix
+		 1 &0 &0 &0 \\
+		 1 &0 &0 &0 \\
+ 		 0 &0 &0 &1 \\
+		 0 &0 &0 &1 \endbmatrix, 
+		\bmatrix
+		 0 &0 &0 &1 \\
+		 0 &0 &0 &1 \\
+		 1 &0 &0 &0 \\
+		 1 &0 &0 &0 \endbmatrix, 
+		\bmatrix
+		 0 &1 &0 &0 \\
+		 0 &1 &0 &0 \\
+		 0 &0 &1 &0 \\
+		 0 &0 &1 &0 \endbmatrix,
+		\bmatrix
+		 0 &0 &1 &0 \\
+		 0 &0 &1 &0 \\
+		 0 &1 &0 &0 \\
+		 0 &1 &0 &0 \endbmatrix	\\
+		\bmatrix
+		1 &0 &0 &0 \\
+		0 &0 &0 &1 \\
+		1 &0 &0 &0 \\
+		0 &0 &0 &1 \endbmatrix,
+		\bmatrix
+		0 &0 &0 &1 \\
+		1 &0 &0 &0 \\
+		0 &0 &0 &1 \\
+		1 &0 &0 &0 \endbmatrix,
+		\bmatrix
+		0 &0 &1 &0 \\
+		0 &1 &0 &0 \\
+		0 &0 &1 &0 \\
+		0 &1 &0 &0 \endbmatrix,
+		\bmatrix
+		0 &1 &0 &0 \\
+		0 &0 &1 &0 \\
+		0 &1 &0 &0 \\
+		0 &0 &1 &0 \endbmatrix
+		\end{aligned} 
+		\right\}
+\end{equation*}
+
+	Since $S_1$ (which is its own kernel), is not a right group, the
+functions within it do not all have the same partition.  There are two
+partitions in this example.
+\[
+	\pi_1 = \left\{ \{1,2\}, \{3,4\} \right\}, \quad
+		\pi_2 = \left\{ \{1,3\}, \{2,4\} \right\}
+\]
+\end{example}
+
+In general there will be many such partitions.  
+There will always be at least one vertex $v$, which is paired with distinct vertices in two of these partitions.  
+(In this example, any vertex would suffice.  
+That is, 1 is paired with 2 in $\pi_1$, but with 3 in $\pi_2$.)  
+Perhaps recoloring at such a vertex $v$ will allow one to reduce the rank.
+Computer experiments offer some hope this is true.
+Certainly, in this case, recoloring at 1 produces the following.
+\[
+	\bmatrix
+	0 &1 &0 &1 \\
+	0 &0 &1 &1 \\
+	1 &1 &0 &0 \\
+	1 &0 &1 &0 \endbmatrix
+	=
+	\bmatrix
+	0 &1 &0 &0 \\
+	0 &0 &0 &1 \\
+	1 &0 &0 &0 \\
+	1 &0 &0 &0 \endbmatrix
+	+
+	\bmatrix
+	0 &0 &0 &1 \\
+	0 &0 &1 &0 \\
+	0 &1 &0 &0 \\
+	0 &0 &1 &0 \endbmatrix
+	= r_2 + b_2
+\]
+A simple computation will show that
+\[
+	r_2b_2r_2 = \bmatrix
+		1 &0 &0 &0 \\
+		1 &0 &0 &0 \\
+		1 &0 &0 &0 \\ 
+		1 &0 &0 &0 \endbmatrix.
+\]
+Thus $S_2 = \langle r_2,b_2 \rangle$ contains a rank one matrix, or
+equivalently, a synchronizing instruction.

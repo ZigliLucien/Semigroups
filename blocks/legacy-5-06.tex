@@ -1,0 +1,53 @@
+
+
+
+%\hed{Coloring and recoloring}
+\section{Coloring and recoloring}
+
+
+The rank condition {\bf not} holding means that for every coloring $\phi$, there is a
+polynomial $p_\phi$, of degree at most $d$, with $p_\phi(0)=0$,
+such that $\Omega p_\phi(\phi\Dl)=0$.
+
+
+
+Introduce variables $\vep_i$, $\vep_i^2=1$. Then generically
+$$\phi=\hbox{diag}(\vep_1,\vep_2,\ldots,\vep_n)=
+  \begin{pmatrix} 
+	\vep_1&0&\cdots&0\cr 0&\vep_2&\cdots&0  \\ %\cr
+          0&0&\ddots&0 \\		%\cr
+          0&0&\cdots&\vep_n
+   \end{pmatrix}	%\cr}
+$$
+
+
+We want the matrices $\{\Om\Delta,\,\Om\Delta^2,\,\ldots, \Om\Delta^d\}$ to be linearly
+independent. Since these are all KROSPS, we form a matrix $H$ whose $i^{\rm th}$ row
+is $\pi(\phi\Dl)^i$. Then the rank of $H$ is $d$ if and only if $\det HH^*\ne0$.
+\bigskip
+
+
+\begin{remark} Note that $\Om$ is always linearly independent of the $\Om\Dl^i$, just apply
+to the all 1's vector. So if $d=n-1$, you can include $\pi$ as the first row of $H$ and get
+an $n\times n$ matrix. Then you only need to check $\det H$.
+\end{remark}
+
+
+
+\subsection*{Procedure}
+
+Initialize $\phi_0=\hbox{diag}(1,1,\ldots,1)$. 
+
+\begin{enumerate}
+\item[1.] Form $HH^*$.
+\item[2.] Calculate $D(\phi)=\det HH^*$.
+\item[3.] If $D(\phi_0)\ne0$, {\bf DONE} else continue.
+\item[4.] Compute $\nabla_\vep D(\phi_0)$.
+\item[5.] If any component of $\nabla_\vep D(\phi_0)$ is nonzero, recolor the corresponding vertex, {\bf DONE} else continue.
+\item[6.] If all components of the gradient are zero, randomly pick a new $\phi_0$. Repeat from Step 3.
+\end{enumerate}
+
+
+
+
+% CC existence criterion added in the development manuscript.

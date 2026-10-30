@@ -1,0 +1,469 @@
+
+
+\section{Convergence of Convolution Powers}
+\label{sec:3.2}
+
+Start with definition of topological semigroup.  
+Given countable discrete example.
+
+Now consider the case when $(X_k)$ is an i.i.d.\ sequence of random variables.  
+Thus $\mu_j = \mu$ (say) for all $j$.
+
+     Suppose
+\[
+     \mu^n \to \nu \hbox{ as } n \to \i.
+\]
+(This is what we mean by stochastic stability.)
+Then $\mu * \mu^n = \mu^{n+1}$, letting $n \to \i$
+\[
+\begin{aligned}
+       &\Rightarrow \quad \mu * \nu = \nu                  \\
+       &\qquad \qquad \hbox{using the continuity of convolution} \\
+       &\Rightarrow \quad \mu^k * \nu = \nu \hbox{ for all } k         \\
+       &\Rightarrow \quad \nu * \nu = \nu.
+\end{aligned}
+\]
+Thus $\nu$ is an idempotent measure.
+
+Thus idempotents will play a key role in our study of the convergence of convolution powers of a probability measure.
+
+One of the most important concepts is that of the support of a
+measure.
+
+\begin{definition}   \label{defn:3.2}
+Let $\mu \in \Prob(S)$.  
+Then $S(\mu) = \{ y \in S \mid \mu(y) > 0 \}$.  
+$S(\mu)$ is called the support of $\mu$.
+\end{definition}
+ 
+\begin{proposition} 	\label{prp:3.1}
+Let $\mu,\nu \in \Prob(S)$.  
+Then
+\[
+     S(\mu * \nu) = S(\mu) \cdot S(\nu).
+\]
+\end{proposition}
+
+\begin{proof}  
+Let $y \in S(\mu * \nu)$
+\[
+     \Rightarrow \quad \mu * \nu(y) > 0
+\]
+but
+\[
+     \mu * \nu(y) = \sum_{s_1s_2 = y} \mu(s_1) \nu(s_2) > 0
+\]
+
+\[
+\begin{aligned}
+       &\Rightarrow \quad \F s_1,s_2 \hbox{ with } \mu(s_1) \nu(s_2) > 0 \\
+       &\Rightarrow \quad s_1 \in S(\mu), \ s_2 \in S(\nu)             \\
+       &\Rightarrow \quad y = s_1 \cdot s_2 \in S(\mu) \cdot S(\nu).
+\end{aligned}
+\]
+\qed
+\end{proof}
+
+\runinhead{Homework.} Prove the converse.
+
+Notice the above proposition.  
+Show that if $\mu^2 = \mu$, $S(\mu) = S(\mu * \mu) = S(\mu) \cdot S(\mu)$.  
+Thus the support of an idempotent measure is a semigroup.
+
+\runinhead{Question.} What kind of semigroup??
+
+Notice the following.  
+Let $f: s \to \BDR$ be any real-valued function defined on $S$ and suppose $\nu = \nu * \mu$.  
+Then for each $z \in S$,
+\[
+     \nu(z) = \sum_{st=z} \nu(s) \mu(t).
+\]
+Thus
+\[
+\begin{aligned}
+       f(z) \nu(z) &= f(z) \sum_{st=z} \nu(s) \mu(t)           \\
+       \sum_{t\in S} f(z) \nu(z) &= \sum_{z\in S}
+               \bigg[ \sum_{st=z} f(z) \nu(s) \mu(t) \bigg]    \\
+       &= \sum_{z\in S}
+               \bigg[ \sum_{st=z} f(st) \nu(s) \mu(t) \bigg]
+\end{aligned}
+\]
+let
+\[
+\begin{gathered}
+     G(z) = \{ (s,t) \mid st = z \} \ub S \times S     \\
+     \bud_{z\in S} G(z) = S \times S.
+\end{gathered}
+\]
+Notice $G(z_1) \cap G(z_2) = \emptyset$, $z_1 \not= z_2$.  But
+$(s_1,s_2) \in S \times S$ then if $s_1s_2 = s$, $(s_1,s_2) \in G(s)$.
+Clearly, $\bud G(z) \ub S \times S$.  Thus,
+\[
+\begin{aligned}
+       \sum_{z\in S} f(z) \nu(z) &= \sum_{z\in S}
+               \bigg[ \sum_{(s,t)\in G(z)} f(st)
+                         \nu(s) \mu(t) \bigg]                  \\
+       &= \sum_{S\in S} \sum_{t\in S} f(st) \nu(s) \mu(t).
+\end{aligned}
+\]
+In fact, this is how convolution is defined in the general case via
+the Riesz representation theorem.
+
+\begin{lemma} 		\label{lem:3.1} 
+Let $\mu,\nu \in \Prob(S)$ such that $\nu = \nu * \mu = \mu * \nu$.  
+Then for any $B \ub S$, $x \in S(\nu)$, $y \in S(\mu)$,
+\[
+\begin{aligned}
+       \nu(Bx^{-1}y^{-1}) &= \nu(Bx^{-1})          \\
+       \nu(y^{-1}x^{-1}B) &= \nu(x^{-1}B).
+\end{aligned}
+\]
+\end{lemma}
+
+\begin{proof} Let $x \in S(\nu)$, $B \ub S$
+\[
+\begin{aligned}
+       &\nu(Bx^{-1}) = a                           \\
+       &A = \{ s \in S \mid \nu(B s^{-1}) \le a \}.
+\end{aligned}
+\]
+Now $x \in A \Rightarrow \nu(A) > 0$.
+
+     Define $g(s) = \max (\nu(Bs^{-1}) - a, 0)$.  Then $\sum\limits_t
+\bigg[ \sum\limits_s g(st) \mu(s) - g(t) \bigg] \nu(t) = 0$.  Now
+\[
+\begin{aligned}
+       \nu(Bt^{-1}) - 1 &= \sum_s \big[
+               \nu(Bt^{-1}s^{-1}) - a \big] \mu(s)             \\
+       &= \sum_j \nu [B(st)^{-1} - a] \mu(s)                   \\
+       &\le \sum_s g(st) \mu(s)
+\end{aligned}
+\]
+but
+\[
+     \sum_s g(st) \mu(s) \ge 0.
+\]
+Thus
+\[
+\begin{gathered}
+       \max \big( \nu(B t^{-1}) - a,0 \big)
+               \le \max \bigg( \sum_s g(st) \mu(s),0 \bigg)    \\
+       \Rightarrow \quad g(t) \le \sum_s g(st) \mu(s).
+\end{gathered}
+\]
+Thus
+\[
+     g(t) = \sum_s g(st) \mu(s), \quad t \in S(\nu).
+\]
+Now for $t \in A$, $g(t) = 0$
+\[
+\begin{aligned}
+       \Rightarrow &\quad g(st) = 0 \hbox{ for } s \in S(\mu), \quad
+                    t \in A \cap S(\nu)                        \\
+       \Rightarrow &\quad \nu \big[ B(t^{-1}) s^{-1} \big]
+               \le a, \quad t \in A \cap S(\nu), \ S \in S(\mu).
+\end{aligned}
+\]
+Now $x \in A \cap S(\nu)$, $\nu(Bx^{-1}) = a$
+\[
+     \Rightarrow \quad \nu(Bx^{-1}s^{-1}) \le \nu(Bx^{-1})
+          \hbox{ for all } s \in S(\mu).
+\]
+Now since $\nu = \nu * \mu$
+\[
+\begin{gathered}
+       \nu(Bx^{-1}) = \sum_{s \in S(\mu)} \nu(Bx^{-1}y^{-1}) \mu(y) \\
+       \sum_y \big[ \nu(Bx^{-1}) - \nu(Bx^{-1}y^{-1}) \big] u(y)
+               = 0 \Rightarrow \nu(Bx^{-1}) = \nu(Bx^{-1}y^{-1}) \quad \qed
+\end{gathered}
+\]
+\end{proof}
+
+Now let $w_G$ be the uniform measure on a finite group $G$,
+$|G| = n$.  Let $x \in G$ and consider the delta measure at $x,\dl_X$
+and let $B \ub G$.  Then
+\[
+\begin{aligned}
+       w_G * \dl_X(B) &= \sum w_G (Bh^{-1}) \dl_X(h)           \\
+       &= w_G(Bx^{-1})                                         \\
+       &= |B| \frac{1}{n}                                      \\
+       &= w_G(B).
+\end{aligned}
+\]
+We want to generalize this notion of translation invariance to
+semigroups.
+
+\begin{definition}   \label{defn:}
+Let $\mu \in \Prob(S)$.  
+Then $\mu$ is called $r^*$-invariant if for $B \ub S$, $\mu = \mu * \dl_X \big[ \mu(B) = \mu(Bx^{-1}) \big]$ if $\mu = \dl_X * \mu$.
+\end{definition}
+
+
+\runinhead{Homework.} Show that if $\mu$ is $r^*$-invariant or $1^*$-invariant, then $\mu^2 = \mu$.
+
+Notice that if $\mu$ is $r^*$-invariant then
+\[
+     S(\mu) = S(\mu * \dl_X) = S(\mu) \cdot x.
+\]
+$1^*$-invariant
+\[
+     S(\mu) = S(\dl_X *\mu) = x \cdot S(\mu) .
+\]
+
+\begin{lemma} 		\label{lem:3.2} 
+If $\mu$ is $r^*$-invariant, then for $x \in S(\mu)$, $x \cdot S(\mu)$ is left cancellative $(zx = zy \Rightarrow x = y)$.
+\end{lemma}
+
+\begin{proof} Let $\mu$ be a $r^*$-invariant measure on $S$.
+Then for any $s \in S(\mu)$, $S(\mu) \cdot s = S(\mu)$.  
+Take arbitrary elements in $x-S(\mu)$, $xy$, $xz$, $xw$.
+
+Suppose $(xy)(xz) = (xy)(xw)$.  Now $S(\mu) \cdot (xyx) = S(\mu)$.  
+Thus $t(xyx) = x$ for some $t \in S(\mu)$.  
+Then,
+\[
+\begin{aligned}
+       t(xyx)z &= t(xyx)w                                      \\
+       \Rightarrow \quad xz &= xw
+\end{aligned}
+\]
+Thus $x \cdot S(\mu)$ is left-cancellative.
+\qed
+\end{proof}
+
+\runinhead{Homework.} Show that if $\mu$ is $1^*$-invariant $S(\mu) \cdot x$ is right-cancellative.
+
+\begin{lemma}		\label{lem:3.3}  
+Let $\mu \in \Prob(S)$ be both $r^*$ and $1^*$-invariant.  
+Then $S(\mu)$ is a group and $\mu$ is the uniform measure on $S(\mu)$.
+\end{lemma}
+
+\begin{proof} Since $\mu = \mu^2$, then $S(\mu) = S(\mu)
+     \cdot S(\mu)$ and $S(\mu)$ is a semigroup.  Now for
+     $x \in S(\mu)$,
+\[
+\begin{aligned}
+       S(\mu) \cdot x = S(\mu) &\hbox{ by } r^*\hbox{-invariance}  \\
+       x \cdot S(\mu) = S(\mu) &\hbox{ by } 1^*\hbox{-invariance}.
+\end{aligned}
+\]
+Thus $S(\mu)$ is both right and left simple and is thus a group.
+
+Let $y,z \in S(\mu)$ and suppose $z \in yx^{-1}$ for $x \in S(\mu)$.  
+Since $\mu = \mu * \dl_X$
+\[
+\begin{aligned}
+       \mu(y) &= \mu * \dl_X(y) = \mu(yx^{-1})     \\
+       &= \mu(yx^{-1} \cap S(\mu) ) = \mu(z)
+\end{aligned}
+\]
+where $\{ z \} = yx^{-1} \cap S(\mu)$ is a single element since
+$S(\mu)$ is a group.
+
+Thus $\mu(y) = \mu(z)$ for any pair $y,z \in S(\mu)$ which show
+$\mu$ is uniform on $S(\mu)$.
+\qed
+\end{proof}
+
+\begin{theorem} 	\label{thm:3.1}
+Suppose for $\mu \in \Prob(S)$, $\mu = \mu^2$.
+Then $S(\mu)$ is a completely simple semigroup of $S$.
+\end{theorem}
+
+\begin{proof}  Now $S(\mu) \cdot S(\mu) = S(\mu)$ (since $\mu * \mu = \mu$). 
+Thus
+\[
+     S(\mu) = \bigcup_{x \in S(\mu)} S(\mu) \cdot x.
+\]
+If we can show that each $S(\mu) \cdot x$ is a minimal left ideal,
+then $S(\mu)$ will be completely simple.
+
+Now, anytime $S \cdot S = S$, $S = \bigcup\limits_{x \in S}
+S \cdot x$.  
+But if $S$ is not completely simple, then for some $x \in S$, $S \cdot x$ is not minimal.
+
+Now, to show that $S(\mu) \cdot x$ is left simple we need to show
+that $(S(\mu) \cdot x) \cdot L = S(\mu) \cdot x$ for all subsets
+$L \ub S(\mu) \cdot x$.  
+Clearly, it is sufficient to show this for each element $z \in S(\mu) \cdot x$.
+
+Call $\mu * \dl_x = \mu_x$ and let $z \in S(\mu) \cdot x$.  
+Then $z = y \cdot x$ for some $y \in S(\mu)$.
+\[
+\begin{aligned}
+       \mu * \dl_x * \dl_2(B) = \mu * \dl_x(Bz^{-1})
+               = \mu_x(Bz^{-1}) &= \mu_x (B(y \cdot x)^{-1})   \\
+       &= \mu_x B(x^{-1}y^{-1})                                \\
+       &= \mu\, B(x^{-1}y^{-1}x^{-1})                           \\
+       &= \mu \big[ Bx^{-1} (y)^{-1} \big]                     \\
+\noalign{by $xy \in S(\mu)$}
+       &= \mu(Bx^{-1}) = \mu_x(B) = \mu * \dl_x(B).
+\end{aligned}
+\]
+Thus
+\[
+\begin{alignedat}{2}
+       & &\quad
+       \mu * \dl_x * \dl_z &= \mu * \dl_x                      \\
+       &\Rightarrow &\quad S(\mu) * \dl_x *\dl_z &= S(\mu * \dl_x)       \\
+       &\Rightarrow &\quad [S(\mu) \cdot x] \cdot z &= S(\mu) \cdot x    \\
+\end{alignedat}
+\]
+for all $z \in S(\mu) \cdot x$
+\[
+  \Rightarrow \quad S(\mu) \cdot x
+	\hbox{ is left simple.} 
+\]
+Thus each $S(\mu) \cdot x$ is a minimal left ideal and
+\[
+     S(\mu) = \bigcup_{x \in S(\mu)} S(\mu) \cdot x
+\]
+is a union of minimal left ideals and is completely simple.
+\qed
+\end{proof}
+
+\begin{theorem} 	\label{thm:3.2}
+Let $\mu^2=\mu$ and let $S(\mu) \cong x \times G \times Y$.
+Then there exists $\mu_1 \in \Prob(X)$, $\mu_2 \in \Prob(G)$, $\mu_3 \in \Prob(Y)$ such that $\mu = \mu_1 * \mu_2 * \mu_3$ where $\mu_2$ is the uniform measure on $G$.  
+Conversely, if $\mu_1,\mu_3 \in \Prob(S)$ and $\mu_2$ is the uniform measure on a subgroup $G$ of $S$, with $S(\mu_3) \cdot S(\mu_1) \ub G$, then $\mu_1 * \mu_2 * \mu_3$ is idempotent.
+\end{theorem}
+
+\begin{proof} Now, by the previous theorem, $S(\mu)$ is completely simple.  Let $e = e^2 \in S(\mu)$.  
+Consider $\dl_e * \mu * \dl_e$.  
+By the previous theorem,
+\[
+     (\dl_e * \mu * \dl_e) * \dl_{ese} = \dl_e * \mu * \dl_e
+\]
+and
+\[
+     \dl_{ese} * (\dl_e * \mu * \dl_e) = \dl_e * \mu * \dl_e.
+\]
+Thus $\dl_e * \mu * \dl_e$ is both $r^*$- and $\ell^*$-invariant, and
+thus is the uniform measure on its support, $e \cdot S(\mu) \cdot e$.
+
+Also, notice that for $B \ub S$,
+\[
+\begin{aligned}
+       \mu * \dl_e * \mu(B) &= \sum \mu * \dl_e (Bx^{-1}) \mu(x) \\
+       &= \sum \mu(Bx^{-1}e^{-1}) \mu(x)                       \\
+       &= \sum \mu(Bx^{-1}) \mu(x)                             \\
+       &= \mu * \mu(B) = \mu(B).
+\end{aligned}
+\]
+Thus $\mu * \dl_e * \mu = \mu$ and $(\mu * \dl_e) * (\dl_e * \mu) =
+\mu$.  
+Now, let $X = E[S(\mu) \cdot e]$, $G = e \cdot S(\mu) \cdot e$,
+$Y = E[e \cdot S(\mu)]$.
+
+Define $\mu_1(A) = \mu * \dl_e \left( \Phi \big[ A \times G \times \{ e \} \big] \right)$.  
+Notice $\mu_1 \in \Prob(X)$ and $\mu_2(B) = \mu * \dl_e \left( \Phi \big[ X \times B \times \{ e \} \big] \right)$.  
+Now $A \ub X = E(S(\mu) \cdot e)$ and $S(\mu) = S(\mu * \dl_e) = S(\mu) \cdot e$.
+Also $B \ub G = eS(\mu)e \ub E [S(\mu) \cdot e] \cdot eS(\mu) e \ub
+S(\mu) \cdot e$.
+
+Thus both $\mu_1,\mu_2$ are $r^*$-invariant, but since $S(\mu_2) = G$, then $\mu_2$ must be the Haar measure on $G$.  
+If $A \ub X$, $B \ub G$,
+\[
+\begin{aligned}
+       \mu_1 * \mu_2(AB) = \mu_1 * \mu_2(A \cdot B \cdot e)
+               &= \sum_{y\in G} \mu_1
+                    \big( \{ ABe \} y^{-1} \big) \mu_2(y)      \\
+       &= \sum_{y\in G} \mu_1 \big[ \{ ABe \} y^{-1} \cap X
+                    \big] \mu_2(y),
+\end{aligned}
+\]
+but $\{ ABe \} y^{-1} = \{ z \mid zy \in ABe, \ y \in G \}$.  
+If $zy \in ABe$, $z \in X$, $y \in G$, then $zye \in ABe$.  However, recall that $\Phi: X \times G \times Y \to X \cdot G \cdot Y$ is an isomorphism.
+Since $zye \in X \cdot G \cdot Y$
+\[
+     \Phi^{-1} (zye) = (z,y,e)
+\]
+and for each $y \in B$, $\big[ \{ ABe \} y^{-1} \big] = A$ and
+otherwise $[ABe] y^{-1} = \emptyset$.  
+Thus
+\[
+\begin{aligned}
+       \mu_1 * \mu_2(AB) &= \sum_{y \in G} \mu_1
+               \big[ \{ ABe \} y^{-1} \big] \mu_2(y)           \\
+       &= \sum_{y \in B} \big[ \mu_1\{ ABe \} y^{-1} \big] \mu_2(y) \\
+       &\qquad + \sum_{y \in G-B}
+               \big( \mu_1\{ ABe \} y^{-1} \big) \mu_2(y)           \\
+       &= \mu_1(A) \sum_{y \in B} \mu_2(y)                     \\
+       &= \mu_1(A) \mu_2(B).
+\end{aligned}
+\]
+
+Similarly, if $\mu_3(C) = \dl_e * \mu \big( \Phi[e \times G \times C]
+\big)$ for $C \ub E[e \cdot S(\mu)] = Y$, $\mu_2 * \mu_3(BC) = \mu_2(B) \mu_3(C)$.
+
+Since $\mu * \dl_e$ is $r^*$-invariant, it is idempotent and $(\mu * \dl_e) * (\mu * \dl_e) = \mu * \dl_e$.  
+Thus if $A,B$ are as above,
+\[
+\begin{aligned}
+       \mu * \dl_e \big( \Phi[A \times B] \big) &= (\mu * \dl_e)
+               * (\mu * \dl_e) \big[ \Phi(A \times B) \big]        \\
+       &= \sum_{x \in S(\mu) \cdot e}
+               \mu * \dl_e \big( x^{-1}
+               \Phi [A \times B \times \{ e \} ] \big) \mu * \dl_e(x).
+\end{aligned}
+\]
+Now
+\[
+     \Phi^{-1} [S(\mu) \cdot e] = \Phi^{-1} [XG(Y \cdot e) \cdot e]
+          = X \times G \times \{ e \}.
+\]
+Thus
+\[
+     x \in S(\mu) \cdot e \Rightarrow \Phi^{-1}(x) \in X \times G \times \{ e \}.
+\]
+Also
+\[
+     X^{-1} \Phi[A \times B \times \{ e \}]
+          = \{ z \mid xz \in \Phi[A \times B \times e] \}
+\]
+\[
+\begin{aligned}
+       &\Rightarrow \quad \Phi^{-1}(xz) \in A \times B \times \{ e \}          \\
+       &\Rightarrow \quad \Phi^{-1}(x) \Phi^{-1}(z) \in A \times B \times \{ e \}  \\
+       &\Rightarrow \quad (x_1,g_1,e)(z_1,z_2,z_3)
+                    \in A \times B \times \{ e \}                      \\
+       &\Rightarrow \quad (x_1,g_1,(ez_1) z_2,z_3)
+                    \in A \times B \times \{ e \}                      \\
+       &\Rightarrow \quad x_1 \in A, \ \ z_2 \in g^{-1}_1 B.
+\end{aligned}
+\]
+
+     Finally,
+\[
+\begin{aligned}
+       \mu * \dl_e \big( \Phi[A \times B] \big)
+          &= \sum_{x \in S(\mu) \cdot e} \mu * \dl_e
+               \big( x^{-1} \Phi[A \times B \times \{ e \}] \big)
+               \mu * \dl_e(x)                                  \\
+          &= \sum_{(x_1,g_1,e) \in A \times G \times \{ e \}}
+               \mu * \dl_e
+               \big( \Phi[ X \times g^{-1}_1B \times \{ e \}] \big)
+               \mu * \dl_e(x) \big[ \Phi(x_1,g_1,e) \big]      \\
+          &= \sum_{(x_1,g_1,e) \in A \times G \times \{ e \}}
+               \mu_2 (g^{-1}_1B) \mu * \dl_e \big[ \Phi
+               (x_1,g_1,e) \big]                               \\
+          &= \mu_2(B) \sum_{(x_1,g_1,e) \in A \times G \times \{ e \}}
+               \mu * \dl_e \big[ \Phi(x_1,g_1,e) \big]         \\
+          &= \mu_1(A) \mu_2(B).
+\end{aligned}
+\]
+
+Now since $\mu_1 * \mu_2(AB) = \mu_1(A) \mu_2(B)$ and $\mu * \dl_e(AB) = \mu_1(A) \mu_2(B)$.  Then $\mu_1 * \mu_2 = \mu * \dl_e$.
+
+Similarly, $\mu_2 * \mu_3 = \dl_e * \mu$.
+\[
+  (\mu_1 * \mu_2 * \mu_3) = (\mu_1 * \mu_2) * (\mu_2 * \mu_3)
+       = (\mu * \dl_3) * (\dl_e * \mu) = \mu.
+\quad \qed
+\]
+\end{proof}
+
+\runinhead{Midterm.}
+\[
+     (\mu_1 * \mu_2 * \mu_3(ABC)) = \mu_1(A) * \mu_2(B) * \mu_3(C)
+\]

@@ -1,0 +1,40 @@
+\section{Inclusion operators and normalized compatible fields}
+\label{organized:inclusion-fields}
+Write $\alpha$ for the kernel partition distribution and $\beta$ for its
+range distribution. A subset is split by a partition if its vertices lie
+in different blocks. For $1\le\ell\le r$, define
+\[
+ u_\ell(I)=\Pr_\alpha\{I\text{ is split}\},\qquad
+ \eta_\ell(I)=\binom r\ell^{-1}\Pr_\beta\{I\subseteq\mathcal R\}.
+\]
+Thus $\eta_\ell$ is a probability row, with $\eta_r=\beta$. For adjacent
+levels the normalized range marginal is
+\[
+ \eta_\ell(I)=\frac1{\ell+1}
+ \sum_{j\notin I}\eta_{\ell+1}(I\cup\{j\}).
+\]
+Indeed every $(\ell+1)$-set contributes to exactly $\ell+1$ of its
+$\ell$-subsets. Equivalently, count the $r-\ell$ extensions inside a
+fixed range and use the binomial coefficients.
+
+Equipartition gives the exact right-field normalization
+\[
+ u_\ell(I)=\frac r{r-\ell}
+ \sum_{j\notin I}\pi_j u_{\ell+1}(I\cup\{j\}),\qquad\ell<r.
+\]
+For a fixed kernel partition, an already split $I$ occupies $\ell$ blocks;
+the union of the unoccupied blocks has stationary mass $(r-\ell)/r$.
+If $I$ is not split, no extension is split. Average this identity over
+$\alpha$ to obtain the formula.
+
+The incidence matrix $E_{\ell+1,\ell}(J,I)=\mathbf1_{I\subset J}$
+expresses the first recurrence in operator form. The common-letter lift
+maps each kernel range injectively to another range, so its top stationary
+range law descends to stationary $\eta_\ell$ at every level.
+The right field is $u_\ell=\Omega_\ell\mathbf1$, with the Abel projection
+$\Omega_\ell$. One must not infer that every intermediate projection has
+rank one, or identify a normalized row $\mathbf1^{\mathsf T}\Omega_\ell$
+with the chosen top-range marginal without an argument.
+The full inclusion-compatibility identities and their proofs have their
+primary source in \texttt{kernelHierarchy.tex}; this section fixes the
+normalizations used in the organized edition.

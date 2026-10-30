@@ -1,0 +1,133 @@
+
+
+\section{Weak Convergence of Probability Measures}
+\label{organized:weak-convergence}
+
+Recall that we said a sequence of measures $(\mu_n)$ converges to
+a measure $\nu$ if{f} $\mu_n(x) \to \nu(x)$ for each $x \in S$.  
+This notion is completely clear in the case when $S$ is finite.  What about when $S$ is discrete, but countably infinite?
+
+\begin{definition}   \label{defn:3.4}
+A set in $\BDR^n$ is called compact if it is closed and bounded.  
+A set is locally compact if every point is contained in some compact set.
+\end{definition}
+
+\begin{definition}   \label{defn:3.5}
+Let $(\mu_n)$ be a sequence of measures on a locally compact space.  
+Then $\mu_n \to \nu$ weakly if
+\[
+     \int f\, d\mu_n \to \int f\, d\nu
+\]
+For every bounded continuous function $f$.  If
+\[
+     \int F\, \mu_n \to \int f\, d\nu
+\]
+for every continuous function with compact support, then we say $\mu_n \to \nu$ vaguely or in the weak$^*$-topology.
+\end{definition}
+
+A topology, in some sense, is characterized by the convergence
+properties of sequences of elements within the space.  
+Let us consider a few examples of sequences of measures and their convergence properties.
+
+Some facts about integration:
+\begin{enumerate}
+\item[(1)] If you integrate the function that is identically 1 with
+     respect to a measure, then you simply get the measure of the set
+     you are integrating over.  That is,
+\[
+     \int_B 1\, d\mu = \int_B d\mu = \mu(B).
+\]
+
+\item[(2)] If you integrate a function with respect to a delta measure, then you get the value of the function on the support of the measure.  
+That is,
+\[
+     \int f\, d(\dl_x) = f(x).
+\]
+\end{enumerate}
+
+Now, some basic results about weak and weak$^*$ convergence.  
+We will use some very basic topological space in an attempt to eliminate technical details.
+
+\begin{proposition}		\label{prp:3.2} 
+Let $(\mu_n) \ub \Prob(S)$ where $S$ is a locally compact, second countable space.  
+Suppose $\mu_n \to \nu$ weakly.  
+Then $\nu \in \Prob(S)$.
+\end{proposition}
+
+\begin{proof} We simply need to show that $\nu(S) = 1$.  
+But since $\int f\, d\mu_n \to \int f\, d\nu$ for every bounded continuous function, simply pick $f \ni f(x) = 1$ for all $x$.  
+Then $\int\limits_S f\, \mu_n = \mu_n(S) = 1$ for all $n$.
+\[
+\begin{aligned}
+       &\Rightarrow \quad \mu_n(S) \to \int f\, d\nu = \nu (S)          \\
+       &\Rightarrow \quad \nu(S) = 1 \quad \qed
+\end{aligned}
+\]
+\end{proof}
+
+\begin{example}	\label{exm:3.4}
+Notice Prop. \ref{prp:3.1} does \textsl{not} hold for vague convergence.
+\end{example}
+ 
+In fact, let $S = \BDR^+$.  
+Then $S$ is a locally compact semigroup.  
+Let $\mu_n = \dl_n$, $n = 1,2,\ldots$ .  
+Then $\mu_n \buildrel w^* \over \rightarrow z$ where $z$ is the zero measure.
+That is, $z(i) = 0$ for all $i$.
+
+To see this, let $f$ be any continuous function with compact
+support.  
+Let $\supp(f) = K$.  
+Then $K$ is closed and bounded and is contained in some interval of the form $[0,M]$.  
+Then
+\[
+\begin{aligned}
+       \int f\, d\mu_n &= \int_K f\, d\mu_n        \\
+       &= \int_M f\, d\mu_n                        \\
+       &= \begin{cases}
+          f(n)   &n \le M                          \\
+          0      &\text{otherwise.}
+          \end{cases}
+\end{aligned}
+\]
+
+Thus for all continuous $f$ with compact support,
+\[
+\begin{gathered}
+       \int f\, d\mu_n \to 0                      \\
+     \Rightarrow \quad \mu_n \to z.
+\end{gathered}
+\]
+Now, I can think of $(\mu_n)$ living on the positive integers $\BDZ^+$ (a perfectly good semigroup) and can visualize them as elements of
+$\BDR^\i$.  
+That is,
+\[
+     \mu \cong \overline \mu = (\mu(1),\mu(2),\mu_(3),\ldots).
+\]
+Then
+\[
+\begin{aligned}
+       \mu_1 &= \dl_1 \cong \overline \dl_1 = (1,0,0,\ldots)   \\
+       \mu_2 &\cong \overline \mu_2 = (0,1,0,\ldots)           \\
+       \vdots \ \ &                                            \\
+       \mu_n &\cong \overline \mu_n = (0,0,0,\ldots,1,\ldots).
+\end{aligned}
+\]
+Thus we have shown that the above sequence converges to 
+$(0,0,0,\ldots)$ in the topology of vague or weak$^*$ convergence on
+measures.  
+Also, notice that $(\mu_n)$ can not converge weakly to $z$ by Proposition \ref{prp:3.1}.
+
+\runinhead{Midterm.} 
+Let $S$ be a countable discrete space and $(\mu_n) \ub \Prob(S)$.  Suppose $\mu_n \to \nu$ weakly.  
+Show that for every subset $B \ub S$
+\[
+     \mu_n(B) \to \nu(B).
+\]
+
+\begin{example}	\label{exm:}
+Pointwise and uniform convergence of functions.
+\[
+     f_n(x) = x^n \hbox{ on } [0,1].
+\]
+\end{example}

@@ -1,0 +1,213 @@
+% use \chaptermark{}
+% to alter or adjust the chapter heading in the running head
+
+
+
+\section{Introduction to Semigroup Theory}
+\label{sec:2.1}
+
+For our initial purposes, the definition of a semigroup will be
+very straightforward.  No topological notions will be included.
+
+\begin{definition}   \label{defn:2.1}
+ A set of elements $S$ equipped with a binary operation
+     $*$ will be called a semigroup if
+\begin{enumerate}
+\item[(a)] for all $s,t \in S$, $s * t \in S$ (closure);
+
+\item[(b)] for all $s,t,u \in S$, $(s * t) * u = s * (t*u)$
+     (associativity);
+\end{enumerate}
+\end{definition}
+
+\noindent
+(we will usually drop the $*$ notation and write $s*t = st$).
+
+We will be utilizing certain canonical examples.
+
+\begin{example}	\label{exm:2.1}
+Let $X$ be a set and let $\F_X$ be the set of all functions on the set $X$ with the operation composition.  
+We will write composition in the following way
+\[
+  f,g \in \F_X.
+\]
+Then,
+\[
+  (x)f \circ g = ((x)\F)g.
+\]
+Note this is opposite the standard direction for $\F \circ g$ and is done due to the matrix representation of $\F_X$, when $X$ is finite.
+(See Example \ref{exm:2.2}.)
+\end{example}
+
+\runinhead{Note.}  $X = \{1,2,3\}$
+\[
+  \begin{matrix}
+         &&f           &&   &&g           &&  \\
+      1  &&\rightarrow &&1  &&\rightarrow &&1 \\
+      2  &&\searrow    &&2  &&\rightarrow &&2 \\
+      3  &&\rightarrow &&3  &&\nearrow    &&3 \\
+     \end{matrix} \qquad \qquad \qquad
+     \begin{matrix}
+         &&f \circ g   &&  \\
+      1  &&\rightarrow &&1 \\
+      2  &&\rightarrow &&2 \\
+      3  &&\nearrow    &&3 \\
+     \end{matrix}
+\]
+
+     An extremely useful concept in all of algebra is that of a
+representation.  
+Due to the usefulness of matrices, it is often preferable to find an algebraically equivalent matrix semigroup to work with.
+
+\begin{definition}   \label{defn:2.2}
+Let $S$ be a semigroup.  
+Then a semigroup of matrices $M$ is called a representation of $S$, if there exists a homomorphism $T: S \to M$.  
+If $T$ is an isomorphism, then the representation $M$ is called \textsl{faithful}.
+\end{definition}
+
+\begin{example}	\label{exm:2.2}
+Let $X = \{1,2,\ldots,n\}$ and let $S = \F_X$.
+
+For $f \in \F_X$ define
+\[
+  [T(f)]_{ij} = \begin{cases}
+                    1  &(i)f = j \\
+                    0  &\text{otherwise.}
+                    \end{cases}
+\]
+Let $M = \{T(f) \,|\, f \in \F_X\}$.
+\end{example}
+
+\runinhead{Homework.}  
+Show that $T: S \to M$ is a semigroup
+isomorphism.  That is, show that $M$ is a faithful representation of
+$S$.
+
+Let $X = \{1,2\}$.
+\[
+\begin{aligned}
+     &\hbox{card}(\F_X) = 4                       \\
+%    \vspace{2\jot}
+     &\F_1 \ \begin{matrix}
+             1 &\rightarrow &1 \\
+             2 &\rightarrow &2
+             \end{matrix} \qquad \qquad
+      \F_2 \ \begin{matrix}
+             1 &\searrow &1 \\
+             2 &\nearrow &2
+             \end{matrix} \qquad \qquad
+      \F_3 \ \begin{matrix}
+             1 &\rightarrow &1 \\
+             2 &\nearrow    &2
+             \end{matrix} \qquad \qquad
+      \F_4 \ \begin{matrix}
+             1 &\searrow    &1 \\
+             2 &\rightarrow &2
+             \end{matrix}                           \\
+%    \vspace{2\jot}
+     &T(\F_1) = \begin{bmatrix}
+                1  &0  \\  0  &1  \end{bmatrix} \qquad
+      T(\F_2) = \begin{bmatrix}
+                0  &1  \\  1  &0  \end{bmatrix} \qquad
+      T(\F_3) = \begin{bmatrix}
+                1  &0  \\  1  &0  \end{bmatrix} \qquad
+      T(\F_4) = \begin{bmatrix}
+                0  &1  \\  0  &1  \end{bmatrix}
+     \end{aligned}
+\]
+
+\runinhead{Note.}  The set of matrices $M$ in the above example are also binary (i.e., 0,1) stochastic matrices.  
+Their row sums are trivially 1.
+
+\runinhead{Some notation.}  
+If $s \in S$, and $A,B$ are subsets of $S$ then
+\begin{enumerate}
+\item[(1)] $sA = \{sa \,|\, a \in A \}$
+\item[(2)] $AB = \{ab \,|\, a \in A, \ a \in B\}$
+\end{enumerate}
+
+\begin{definition}   \label{defn:2.3}
+\begin{enumerate}
+\item[(1)] $T \subset S$ is a subsemigroup of $S$ if
+     $T \cdot T \subset T$.  If $T$ is a group, we will call
+     $T$ a subsgroup of $S$.
+
+\item[(2)] A subset $L$ of $S$ is called a left ideal, if
+     $SL \subset L$.  Right ideals are similarly defined
+     ($RS \subset R$).  Note that $L,R$ are necessarily subsemigroups
+     of $S$.
+
+\item[(3)] A subset $I$ of $S$ is a (two-sided) ideal if it is both a
+     right ideal and a left ideal.
+
+\item[(4)] $S$ is said to be left (right) simple if it contains no
+     proper left (right) ideals.  If $S$ contains no proper ideal,
+     then $S$ is said to be simple.  ($S$ is trivially an ideal.)
+\end{enumerate}
+\end{definition}
+
+\runinhead{Homework.}  If $I_1$, $I_2$ are ideals, show that
+     $I_1 \cap I_2$ is an ideal.  (In particular, it is not empty.)
+
+\runinhead{Homework.}  Show that $S$ is left simple iff for any
+     $a,b \in S$ there exists $s \in S$ such that $sa = b$.
+     (Hint: Note that for any $a \in S$, $Sa$ is a left ideal of $S$.)
+
+\begin{enumerate}
+\item[(5)] A left ideal is called principal if it is of the form
+     $\{a\} \cup Sa$ for some $a \in S$.
+
+\item[(6)] An element $u \in S$ is idempotent if $a^2 = a$.  If an
+     idempotent $e$ is such that $es = s$ ($se = s$) then $e$ is
+     called a left (right) identity.  If $e$ is both a left and right
+     identity, then it is called the identity of $S$.  It is easy to 
+     see that an identity must be unique.
+
+\item[(7)] An element $z$ is called a left (right) zero if $zs = z$
+     ($sz = z$) for all $s \in S$.  $z$ is a zero, if it is both a left
+     and right zero.
+\end{enumerate}
+
+\runinhead{Homework.}  Show that a semigroup $S$ is a group iff it is
+     both left simple and right simple.
+
+\begin{example}	\label{exm:2.3}
+Let $S = \left\{ \begin{bmatrix} a &b \\ b &a
+     \end{bmatrix} \, \big| \, a,b \in GF(q), \ a \not= b, \ q = p^n
+     \right\}$.  Then $S$ is an abelian semigroup.  (Show this.)
+\[
+     S = \left\{
+         \begin{bmatrix} 1 &0 \\ 0 &1 \end{bmatrix}, \
+         \begin{bmatrix} 2 &0 \\ 0 &2 \end{bmatrix}, \
+         \begin{bmatrix} 0 &1 \\ 1 &0 \end{bmatrix}, \
+         \begin{bmatrix} 0 &2 \\ 2 &0 \end{bmatrix}, \
+         \begin{bmatrix} 2 &1 \\ 1 &2 \end{bmatrix}, \
+         \begin{bmatrix} 1 &2 \\ 2 &1 \end{bmatrix} \right\}
+\]
+Notice
+\[
+\begin{aligned}
+     &\det \begin{bmatrix} 2 &1 \\ 1 &2 \end{bmatrix}
+            = 3 \equiv 0 \hbox{ mod } 3               \\
+     &\det \begin{bmatrix} 1 &2 \\ 2 &1 \end{bmatrix}
+            = 0 \hbox{ mod } 3                        \\
+     \end{aligned}
+\]
+In fact, both matrices are rank 1, mod 3.  
+Notice also, that $G = \left\{ \begin{bmatrix} 2 &1 \\ 1 &2 \end{bmatrix}, \
+\begin{bmatrix} 1 &2 \\ 2 &1 \end{bmatrix} \right\}$ forms an ideal in $S$, has
+no ideals within it ($G$ is a minimal ideal) and in fact, $G$ is a group.
+\end{example}
+
+\begin{example}		\label{exm:2.4}  
+{\bf This example will be of paramount importance!!}
+
+Let $X,Y$ be sets and $G$ a group with $\phi: Y \times X \to G$ any
+function.  Let $S = X \times G \times Y = \{(x,g,y)\}$ define
+\[
+  (x_1,g_1,y_1)(x_2,g_2,y_2) = (x_1,g_1 \phi(y_1,x_2) g_2,y_2).
+\]
+Then $S$ becomes a semigroup under this product.
+\end{example}
+
+We will begin our next lecture by discussing this example at length.

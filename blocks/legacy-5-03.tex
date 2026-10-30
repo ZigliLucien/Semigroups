@@ -1,0 +1,71 @@
+
+
+\section{The matrix $\Delta$ annihilates only rank one kernels}  %III
+
+
+Denote the all 1's (column) vector by $\bu$. 
+We say that a word in $S$ has ``length $n$'' if it can be written as a product of $n$ $R$'s and $B$'s.
+
+
+\begin{lemma} 		\label{lem:5.1}
+Let the vector $\by$ satisfy $\Delta w\by=0$ for all words  $w \in S$.
+Then $\by$ is a constant vector, i.e., a multiple of $\bu$.
+\end{lemma}
+
+
+\begin{proof}    Notice that  $\Dl\by=0$, implies that $R\by=B\by$. 
+Thus,  $T\by = \frac{1}{2}(R+B)\by = R\by = B\by$.  
+Inductively, assume that any word $w_n$  of length $n$ satisfies  $w_n\by=T^n\by$.  Now $Rw_n\by = Bw_n\by = Tw_n\by = T^{n+1}\by$  implies that any word $w_{n+1}$  of length $n+1$  satisfies  $w_{n+1}\by = T^{n+1}\by$.
+
+
+Now let $e$ be an idempotent in the kernel, of length $l$. Then
+\[
+  e\by = T^l \by = e^2 \by = T^{2l} \by = \cdots = T^{nl} \by
+\]
+for all positive integers $n$. Letting  $n\to\i$ we get $\Om\by = c\bu$, where the constant  $c = \pi \cdot \by$.  
+In other words, for every $i$ in the range of $e$, $y_i = c$. 
+Since every $i$ occurs in the range of some idempotent in the kernel (this follows from strong connectivity), we get $\by = c\bu$.      
+\qed
+\end{proof}
+
+
+\begin{corollary} 	\label{cor:5.1}
+Let the vector $\by$ satisfy $\Dl T^n \by=0$  for all integer  $n \ge 0$.  
+Then $\by$ is a constant vector, i.e., a multiple of $\bu$.
+\end{corollary}
+
+
+\begin{proof}    As above, from $\Dl \by = 0$, we get  $R\by = B\by = T\by$. 
+Proceeding inductively as in the above proof $w_n\by = T^n\by$  for all words of length $n$ implies that $\Dl w_n \by = 0$  or 
+\[
+  Rw_n \by = Bw_n \by = Tw_n \by = T^{n+1} \by.
+\]
+Hence, $\Dl w\by = 0$ for all words $w$ and by the preceding Lemma, $\by$ is constant.
+\qed
+\end{proof}
+
+
+\begin{corollary}   	\label{cor:5.2}
+$\Dl k = 0$ for all $k \in K$  if and only if $K$  is rank one.
+\end{corollary}
+
+
+\begin{proof}     Suppose $\Dl k = 0$ for all $k \in K$.  
+Let $e$ be an idempotent in $K$. 
+Then for all words $w$,  $we \in K$, so that  $\Dl we = 0$,  for all $w$.  
+By the Lemma, the columns of $e$ are constant vectors.  
+Since any row has exactly one nonzero entry, one column is all ones and the rest are all zeros.  
+The converse is immediate.
+\qed
+\end{proof}
+
+
+\begin{corollary}   	\label{cor:5.3}
+$\Dl e = 0$ for all idempotents in $K$ if and only if $K$ is rank one.
+\end{corollary}
+
+
+\begin{proof}     For any $k \in K$, since $K$ is completely simple and, therefore, a union of isomorphic groups, there is an idempotent such that  $k = ek$. 
+Hence $\Dl k = \Dl ek = 0$ and by the previous Corollary, $K$ is rank one. 
+\qed
+\end{proof}

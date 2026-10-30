@@ -1,0 +1,46 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%    The following text comes from (Feinsilver)
+%%%    Kernel Hierarchy (PF-kernelHierarchy.tex)
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Levels}
+\label{sec:7.2}  %old 6.11
+
+Let $\pi$ be the invariant measure for $A=\half\,(R+B)$. Denote the components of 
+$\pi$ by $(p_1,\ldots,p_n)$.
+
+$r$ always denotes the rank of the kernel, $\cK$, of the semigroup $S=\avg R,B.$.\par
+Indices, even though denoted as $\kappa$-tuples are {\it sets\/}, i.e., unordered, distinct elements,
+denoted using capitals. [Note: read $\kappa$ as ``kay".] 
+
+{\bf All vectors are row vectors. } Transposes will be denoted by superscript plus, so
+that a typical column vector is $v^+$. We use roman type for the identity matrix.
+
+
+For $1\le \kappa \le r$, let $R_1=R$, $R_\kappa$ denotes the mapping on $\kappa$-tuples induced
+by $R$. 
+I.e., for $\kappa$-tuples $\rI=(i_1,\ldots,i_\kappa)$, $\rJ=(j_1,\ldots,j_\kappa)$,
+$$
+  R_\kappa(\rI,\rJ)=\begin{cases} 
+	1,& \text{ if } R \text{ maps the set of vertices } 
+			\rI  \text{ to the set } \rJ \cr
+        0, & \text{otherwise}\cr \end{cases}
+$$
+
+Similarly for $B_\kappa$. 
+Then, we have 
+$$ 
+  A_\kappa=\half\,(R_\kappa+B_\kappa)\,,\qquad \Delta_\kappa
+	=\half\,(R_\kappa-B_\kappa)
+$$
+For each $\kappa$, $R_\kappa$, $B_\kappa$, and $A_\kappa$ are substochastic matrices.
+
+Note that $r\le \min(\rk(R),\rk(B))$ and is the maximal index $\kappa$ such that the semigroup $S_\kappa=\avg R_\kappa,B_\kappa.$ does not contain the zero matrix.
+
+Generally, denoting by $w_\kappa$ the action of $w\in S$ induced on $\kappa$-tuples, we have, for any two words,
+$w,w'\in S$, $(ww')_\kappa=w_\kappa w_\kappa'$, i.e., the map $w\to w_\kappa$ is a homomorphism of semigroups
+$S\to S_\kappa$.

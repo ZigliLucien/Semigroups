@@ -1,0 +1,362 @@
+
+\section{Convolution Powers}
+\label{sec:3.5}
+
+\runinhead{Prelim}  Convolution powers, $S_0$, algebra of measures.
+
+\begin{theorem}		\label{thm:3.10} 
+Let $\mu \in P(S)$ where $S$ is a compact semigroup.  
+(Suppose $\{ \mu^n \mid n \ge 1 \}$ is tight.)  
+Let $K = \{ \lambda \mid \lambda$ is a weak limit point of $(\mu^n) \}$ and
+\[
+\begin{aligned}
+       S_0 &= U\{ S(\lambda) \mid \lambda \in K \}         \\
+       S_1 &= \overline S_0 \hbox{ in general})
+\end{aligned}
+\]
+Then the following are true:
+%
+\begin{enumerate}
+\item[{\normalfont(a)}] The sequence $\frac{1}{n} \sum\limits^n_{k=1} \mu^k$ converges to $\nu \in P(s)$ with $\nu = \nu \times \nu = \mu \times \nu
+ = \nu * \mu$.
+
+\item[{\normalfont(b)}] The set $K$ is a group with respect to convolution.
+
+\item[{\normalfont(c)}] $S(\nu) = S_0$.
+
+\item[{\normalfont(d)}] If $\eta$ is the identity of $K$, then $S(\eta) \ub S_0$ and $S_0 = X \times H \times Y$, $S(\eta) = X \times H_1 \times Y$, $H_1 \Delta H$.
+
+\item[{\normalfont(e)}] The sequence $\mu^n$ converges weakly if{f} there does not exist a closed normal subgroup $H_0$ of $H$ such that
+\[
+     S(\mu) \cdot (X \times H_0 \times Y) \ub S \times gH_0 \times Y
+\]
+for some $g \in H - H_0$.
+
+\item[{\normalfont(f)}] The sequence $\mu^n$ converges weakly if{f} there does not exist a closed normal subgroup $H_0$ of $H$ such that $YX \ub H_0$ and $eS(\mu)e \ub gH_0$ for some $g \in H-H_0$ where $e$ is the identity of $H$.
+\end{enumerate}
+%
+\end{theorem}
+
+\begin{proof} (a) For a finite measure $\nu$
+\[
+     \| \nu \| = \underset{f \in C_k(S)}{\sup_{\|f\| \le 1}}
+          \int f\, d\nu \hbox{ if }
+          \nu \in \Prob(S), \ \ \| \nu\| = 1.
+\]
+
+Now notice that
+\[
+\begin{aligned}
+       \mu * \mu_n &= \mu * \bigg[ \frac{1}{n}
+          \sum^n_{k=1} \mu^k \bigg]                            \\
+       &= \frac{1}{n} \sum^n_{k=1} \mu^{k+1}                   \\
+       &= \frac{1}{n} [\mu^2 + \mu^3 + \ldots
+               + \mu^{n+1}]
+\end{aligned}
+\]
+thus $\mu_n = \mu * \mu_n + \frac{1}{n} [\mu - \mu^{n+1}]$ and
+$\|\mu_n - \mu*\mu_n \| = \frac{1}{n} \|\mu-\mu^{n+1}\|$
+\[
+\begin{aligned}
+       \Rightarrow \quad \lim_{n\to\i}
+          \|\mu_n - \mu*\mu_n\| &= \lim_{n\to\i} \frac{1}{n}
+               \|\mu-\mu^{n+1}\|                               \\
+       &\le \lim_{n\to\i} \frac{1}{n} \big[
+               \|\mu\| + \|\mu^{n+1}\| \big]                   \\
+       &= 0.
+\end{aligned}
+\]
+Thus let $\nu$ be any limit point of $(\mu_n)$
+\[
+     \mu_{n_i} \to \nu \left[ \mu_{n_i}(x)
+          = \mu*\mu_{n_i}(x) + \frac{1}{n}
+          [\mu(x) - \mu^{n+1}(x)] \right].
+\]
+Then
+\[
+\begin{aligned}
+       &\nu = \mu * \nu                            \\
+       \Rightarrow \quad &\mu * \nu = \mu^2 * \nu = \nu    \\
+       \hbox{and} \quad &\nu = \mu^k * \nu = \nu * \mu^k.
+\end{aligned}
+\]
+Then
+\[
+\begin{aligned}
+       \mu_n * \nu &= \left( \frac{1}{n} \sum^n_{k=1}
+               \mu^k \right) * \nu                             \\
+       &= \frac{1}{n} \sum^n_{k=1}
+               \mu^k * \nu                                     \\
+       &= \frac{1}{n} (n\nu) = \nu.
+\end{aligned}
+\]
+Suppose $(\mu_n)$ had two limit points $\g_1,\nu_2$, $\g_1 \not=
+\nu_2$; $\mu_{n_i} \to \nu_1$, $\mu_{m_i} \to \nu_2$.
+\[
+\begin{aligned}
+       \nu_1 = \mu_n * \nu_1 \Rightarrow &\nu_1 = \mu_{m_i} * \nu_1  \\
+             &\nu_1 = \nu_2 * \nu_1
+\end{aligned}
+\]
+but
+\[
+\begin{aligned}
+       \nu_2 = \nu_2 * \mu_n \Rightarrow &\nu_2 = \nu_2 * \mu_{n_i} \\
+       \Rightarrow &\nu_2 = \nu_2 * \nu_1                            \\
+       \Rightarrow &\nu_2 = \nu_1 \ \  (= \nu \hbox{ say}).
+\end{aligned}
+\]
+
+Also, it is clear that $\nu * \nu = \nu$.  
+Thus the support of $\nu$ is a completely simple semigroup $X \times G \times Y$.
+
+Notice that $G$ must be finite, in the discrete case, since $\nu = \a * w_G * \bt$ where $w_G$ is uniform on a discrete group $G$.
+\[
+\begin{aligned}
+       &w_G(Bx^{-1}) = w_{\mathbb{B}}(B)                     \\
+     \Rightarrow \quad &w_G(x) = w_G(y) \hbox{ for all }
+          x,y \in G                                \\
+     \Rightarrow \quad &\hbox{if } w_G(x) = k
+\end{aligned}
+\]
+then if $|\mathbb{G}| = \i$, $w_G(G) = \i$.  \ $\otimes$
+
+Now recall $S = \bigcup\limits^\i_{n=1} (S(\mu))^n$ then
+\[
+\begin{aligned}
+       S \cdot S(\nu) &= \bigcup^\i_{n=1} (S(\mu))^n
+               \cdot S(\nu)                                    \\
+       &= S(\nu) = S(\nu) \cdot S.
+\end{aligned}
+\]
+Thus $S(\nu)$ is an ideal of $S$ and by simplicity is the minimal
+ideal of $S$.
+
+Now assume $S$ is discrete.  
+Then for $B \ub S$
+\[
+     \mu_n(B) \to \nu(B).
+\]
+Thus
+\[
+     \frac{1}{n} \sum^n_{k=1} \mu^k(S(\nu)) \to 1.
+\]
+Thus, given $\e > 0$, there exists $m$ such that $\mu^m(S(\nu)) > 1-\e$.
+
+Suppose not.  
+Then for some $\e > 0$, $\mu^m(S(\nu)) \le 1 - \e$ for all $m \ge 1$.  Then
+\[
+\begin{aligned}
+       \frac{1}{n} &\sum^n_{k=1} \mu^k(S(\nu))     \\
+       &\le \frac{1}{n} n(1-\e)                    \\
+       &= 1-\e
+\end{aligned}
+\]
+for each $n$
+\[
+     \Rightarrow \quad \nu(S(\nu)) \le 1-\e. \ \ \otimes
+\]
+Now since $S(\nu)$ is an ideal of $S$
+\[
+     S(\nu) \up S \cdot S(\nu)
+\]
+and for all $n$
+\[
+\begin{aligned}
+       \mu^{n+m}(S(\nu)) &\ge \mu^{n+m}(S \cdot S(\nu))        \\
+       &\ge \mu^n(S) \cdot \mu^m(S(\nu))                       \\
+       &> 1-\e
+\end{aligned}
+\]
+\[
+\begin{aligned}
+       &\Rightarrow \quad \liminf_n \mu^n (S(\nu)) = 1     \\
+       &\Rightarrow \quad \lim \mu^n (S(\nu)) = 1. \quad \qed
+\end{aligned}
+\]
+\end{proof}
+
+\runinhead{Homework.} Thus if $\lambda$ is a weak limit point of $(\mu^n)$ then $S(\lambda) \ub S(\nu)$.
+
+Thus $S_0 = \bigcup\limits_{\lambda\in K} S(\lambda) \ub S(\nu)$.
+
+Now the set of limit points of $(\mu^n)$ is an ideal of $(\overline{\mu^n})$.  Thus $S_0$ is an ideal of $S$, since $\mu^k * \lambda$ is also a limit point of $(\mu^n)$.  
+(Thus $S(\mu^k * \lambda) \ub S_0$.)  
+Recall
+\[
+     S = \bigcup^\i_{k=1} S(\mu^k).
+\]
+But, since $\nu$ is idempotent, $S(\nu)$ is completely simple, which
+implies that $S_0 = S(\nu)$.
+
+     (d)  Now let $\eta$ be the identity of $K$ where $K$ is the set
+of limit points of $(\mu^n)$.  Since $S(\eta) \ub S(\nu)$ and both
+$S(\eta)$ and $S(\nu)$ are completely simple, choose $e \in S(\eta)$
+and construct the Rees product structure with respect to $e$ of both
+sets
+\[
+\begin{aligned}
+       S(\eta) &= X_1 \times H_1 \times Y_1                 \\
+       S(\nu) &= X \times H \times Y.
+\end{aligned}
+\]
+But for each $(x',g',y') \in S(\lambda^{-1})$
+\[
+\begin{gathered}
+       (X \times U_{\lambda} \times Y)(X \times H_1g' \times Y) \ub X \times H_1 \times Y  \\
+       \Rightarrow \quad (H_1 g)(H_1 g') \ub H_1
+               \hbox{ for each } H_1 g \ub U_\lambda
+\end{gathered}
+\]
+in particular
+\[
+\begin{aligned}
+       H_1 geg' &\ub H_1                           \\
+       H_1 gg' &\ub H_1                            \\
+       H_1 g &\ub H_1 g'
+\end{aligned}
+\]
+thus $U_\lambda$ consists of a single coset of $H_1$.  Thus $S(\lambda) = X \times
+H_1 g \times Y$.
+
+\runinhead{Homework.} Show that $S(\lambda) = X \times gH_1 \times Y$.  
+Thus whenever $(x,g,y) \in S(\lambda)$, $\lambda \in K$
+\[
+     gH_1 = H_1 g.
+\]
+But since $S(\nu) = \bigcup\limits_{\lambda\in K} S(\lambda) = X \times H \times Y$.
+Then for all $g \in H$, $gH_1 = H_1 g$ which shows that $H_1$ is
+normal in $H$.
+
+Now $S(\nu) = \bigcup\limits_{\lambda\in K} S(\lambda)$ and for each $\lambda \in K \ \exists\ \lambda^{-1} \in K$ such that
+\[
+     \lambda * \lambda^{-1} = \eta.
+\]
+Now let $(x,g,y) \in S(\nu) \Rightarrow (x,g,y) \in S(\lambda)$ for some $\lambda$.
+Then $(x,g,y) \cdot (x',g',y') \in S(\eta)$ for each $(x',g',y') \in
+S(\lambda^{-1})$.  
+Thus $x \in X$.  Similarly since $(x',g',y') \cdot (x,g,y) \in S(\eta)$, $y \in Y_1$, thus $X_1 = X$, $Y_1 = Y$.
+
+Notice that since $\eta * \lambda = \lambda = \lambda * \eta$, for $(x,g,y) \in S(\lambda)$.
+\[
+\begin{aligned}
+       &(X \times H_1 \times Y)(x,g,y) \ub S(\lambda) \hbox{ but } YX \ub H_1 \\
+       \Rightarrow \quad &X \times H_1 g \times \{ y \} \ub S_\lambda              \\
+       \hbox{and } \ &(X \times H_1 g \times \{ y \})
+          \cdot \{ x \} \times \{ (yx)^{-1} \} \times Y \ub S_\lambda      \\
+       \Rightarrow \quad &X \times H_1 g \times Y \ub S_\lambda                    \\
+       \Rightarrow \quad &X \times U_\lambda \times Y \ub S_\lambda                    \\
+       \hbox{where } \ &U_\lambda = \bigcup H_1 g.
+\end{aligned}
+\]
+Then we have shown that the supports of all the limits measures of
+$(\mu^n)$ are on either $X \times H_1 \times Y$ or $X_1 \times H_1 g \times Y$.
+
+Now suppose $\lambda^2 \not= \lambda$.  Can $\lambda$ be supported on $X \times H_1 \times Y$.  
+Suppose it was.  
+Recall $\lambda * \eta = \lambda = \eta * \lambda$.
+Thus for $u \in S(\lambda)$, $v \in S(\eta)$
+\[
+     \lambda(Bu^{-1}v^{-1}) = \lambda(Bu^{-1}).
+\]
+But we are supposing that $S(\eta) = S(\lambda)$.  
+Thus,
+\[
+\begin{aligned}
+       \lambda^2(Bu^{-1}) &= \int \lambda(Bu^{-1}v^{-1}) \lambda(dv)       \\
+       &= \lambda(Bu^{-1}) \int \lambda(dv)                            \\
+       &= \lambda(Bu^{-1}).
+\end{aligned}
+\]
+Thus
+\[
+\begin{aligned}
+       \lambda^2(B) &= \int \lambda^2(Bu^{-1}) \eta(du)                \\
+       &= \int \lambda(Bu^{-1}) \eta(du)                           \\
+       &= \lambda * \eta(B) = \lambda(B).
+\end{aligned}
+\]
+But this is true for all Borel sets $B$
+\[
+     \Rightarrow \quad \lambda^2 = \lambda \Rightarrow \lambda = \eta.
+\]
+
+Now for part (e) and (f) of the theorem.  
+If $\mu * \eta = \eta$, where $\eta$ is  the identity of $K$ then $\mu^n * \eta = \eta$ for all $n \ge 1$.  
+Then by the continuity of convolution, $\lambda * \eta = \eta$ for all $\lambda \in K$.  
+But since $K$ is a group, and $\eta$ the identity, then $\lambda = \eta$.  
+Thus $K = \{ \eta \}$ and $(\mu^n)$ converges.
+
+We showed earlier that $K$ is an ideal of $(\mu^n)$. 
+Thus if $(\mu^n)$ does not converge, then $\mu * \eta = \lambda \not= \eta$, $S(\mu) \cdot S(\eta) = X \times H_1 g \times Y$.  
+That is, $S(\mu) \cdot (X \times H_1 \times Y) = X \times H_1 g \times Y$.
+
+Now suppose there exists a closed normal subgroup $H_1$ of $H$ such that $YX \ub H_1$ and $S(\mu) \cdot X \times H_1 \times Y \ub X \times H_1 g \times Y$, $g \in H-H_1$.  
+Then
+\[
+\begin{aligned}
+       S(\mu^2) &\cdot X \times H_1 \times Y \ub (S(\mu))^2
+               \cdot X \times H_1 \times Y                             \\
+       &\ub S(\mu) [X \times H_1 g \times Y]                           \\
+       &= S(\mu) (X \times H_1 \times Y)(X \times H_1 g \times Y)              \\
+       &\ub (X \times H_1 g \times Y)(X \times H_1 g \times Y)                 \\
+       &= X \times H_1 g^2 \times Y
+\end{aligned}
+\]
+and in general,
+\[
+     S(\mu^n) \cdot (X \times H_1 \times Y) \ub X \times H_1 g^n \times Y
+\]
+$\{ H_1 g^n \mid n \ge 1 \}$ has a finite number of elements.  
+This is true, since we are assuming discreteness and $S(\nu) = X \times H \times Y$, $\nu = \a * w_H * \bt$ but it is a fact that the Haar measure is only supported on compact sets and (compact, discrete) $\equiv$ (finite).
+Thus $\{ H_1g^n \}$ forms a finite cyclic group and for infinitely
+many $n$, say $(n_i)$
+\[
+     H_1 g^{n_i} = H_1
+\]
+and
+\[
+     H_1 g^{m_i} = H_1 g
+\]
+for some $(m_i)$.  
+Thus if $\bt$ is any probability measure on $X \times H_1 \times Y$,
+\[
+\begin{aligned}
+       S(\mu^{n_i} * \bt) &\ub X \times H_1 g^{n_i} \times Y           \\
+       &= X \times H_1 \times Y
+\end{aligned}
+\]
+and
+\[
+\begin{aligned}
+       S(\mu^{m_i} * \bt) &\ub X \times H_1 g^{m_i} \times Y           \\
+       &= X \times H_1 g \times Y.
+\end{aligned}
+\]
+But
+\[
+     (X \times H_1 \times Y) \cap (X \times H_1 g \times Y) = \emptyset
+\]
+\[
+\begin{aligned}
+       \Rightarrow &\quad (\mu^n * \bt) \hbox{ does not converge}      \\
+       \Rightarrow &\quad (\mu^n) \hbox{ does not converge.}
+\end{aligned}
+\]
+
+\runinhead{Homework.} Show part (f).
+
+\begin{corollary} 	\label{cor:3.1}
+Let $G$ be a finite group and $u \in \Prob(G)$.
+Suppose $e \in S(\mu)$.  Then $(\mu^n)$ converges.
+\end{corollary}
+
+\begin{proof}  Let $H$ be any normal subgroup of $G$ then
+\[
+     S(\mu) \cdot H = \bigcup_{g \in S(\mu)} gH \up eH = H.
+\]
+Thus $(\mu^n)$ converges.
+\qed
+\end{proof}
+
+\runinhead{Application.} Convergence of doubly stochastic matrices.

@@ -1,0 +1,68 @@
+\documentclass[graybox,envcountchap]{svmono}
+\usepackage{amsmath,amssymb,graphicx,pstricks,makeidx}
+\usepackage{mathptmx,helvet,courier,type1cm}
+\makeindex
+\input{AMAT-Defs.tex}
+\begin{document}
+\author{Gregory Budzban and Philip Feinsilver}
+\title{Algebraic Methods in Automata Theory}
+\subtitle{Discussion Draft for Colleague Review -- 2026-10-22}
+\maketitle
+\frontmatter
+\input{Standing_Assumptions}
+\chapter*{Note to readers}
+This is a provisional discussion draft, version 2026-10-22, circulated for
+comments on mathematical content, organization, hypotheses, and exposition.
+It assembles the current working material in a dependency-ordered form;
+it is not a publication-ready manuscript and has not been compilation-tested.
+
+The main development concerns algebraic and probabilistic methods for
+transformation semigroups. The road coloring theorem provides background;
+a complete exposition of Trahtman's proof is not included. The partial
+circulant family serves as a running laboratory and a synthesis chapter.
+
+Readers should distinguish inherited exposition, recently added material,
+and explicitly marked research questions. The older expectation-operator
+blocks retain their original notation, with a printed crosswalk to the newer
+convention. Some historical prose and cross-references still need revision.
+The Lie-constant converse and the general description of opposite-letter
+kernel coordinates are not asserted as proved results.
+
+The thirteen chapters have differing levels of development. Chapters on
+permanental Markov chains and graph lifts presently provide a core treatment,
+not a complete transfer of their source papers. Appendices B and C are
+scope notes rather than finished appendices. Appendix D preserves alternative
+proofs and historical strategies for critical review.
+
+Comments are especially welcome on prerequisites, redundant proofs, missing
+hypotheses, operator conventions, the balance between theory and examples,
+and the scope of the specialty topics. Please identify comments by chapter,
+section title, and theorem label where possible; numbering may change.
+
+\tableofcontents
+\mainmatter
+\part{Foundations}
+\include{chapter-01}
+\include{chapter-02}
+\include{chapter-03}
+\part{Kernel geometry and coloring}
+\include{chapter-04}
+\include{chapter-05}
+\include{chapter-06}
+\include{chapter-07}
+\part{Higher representations and constructions}
+\include{chapter-08}
+\include{chapter-09}
+\include{chapter-10}
+\include{chapter-11}
+\part{Synthesis}
+\include{chapter-12}
+\include{chapter-13}
+\appendix
+\include{appendix-A}
+\include{appendix-B}
+\include{appendix-C}
+\include{appendix-D}
+\backmatter
+\input{References}
+\end{document}

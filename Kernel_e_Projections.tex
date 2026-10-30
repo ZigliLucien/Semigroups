@@ -1,0 +1,91 @@
+\section{Basic observables and the kernel $e$-projections}
+\label{eproj:section}
+Let $K$ be the minimum-rank ideal of a finite transformation semigroup,
+with rank $r$, and let $\lambda$ be its limiting kernel measure. Denote
+its partition and range marginals by $\alpha_i$ and $\beta_j$. Write
+$e_{ij}$ for the idempotent with partition $\mathcal P_i$ and range
+$\mathcal R_j$. Each range is a transversal of every kernel partition.
+All matrices below use right-action conventions.
+
+\subsection{The two basic expectation operators}
+Our convention is
+\[
+ \boxed{N=\mathbb E_\lambda[KK^{\mathsf T}],\qquad
+ M=\mathbb E_\lambda[K^{\mathsf T}JK].}
+\]
+Here the $K$ inside the expectation denotes a random kernel transformation,
+and $J=\mathbf1\mathbf1^{\mathsf T}$.
+Set $C_i=e_{ij}e_{ij}^{\mathsf T}$, independently of $j$. Its entries are
+one precisely when their indices lie in the same block of $\mathcal P_i$.
+Then
+\[
+ N=\sum_i\alpha_i C_i,\qquad N_{xy}=\Pr\{xK=yK\}.
+\]
+For $b(K)=\mathbf1^{\mathsf T}K$, the entries of this row are the fiber
+sizes at the image vertices, and
+\[
+ M=\mathbb E[b(K)^{\mathsf T}b(K)].
+\]
+Thus $N$ describes partitions and $M$ describes weighted range data.
+Both are symmetric positive semidefinite, but neither is generally a
+projection. The pair-survival matrix is $J-N$, not another operator
+named $N$. The rank of the average $N$ need not equal the kernel rank $r$.
+
+\subsection{Column projections: hold the range fixed}
+Put $\rho_j=\operatorname{diag}(\mathbf1_{\mathcal R_j})$ and define
+\[
+ P_j=\sum_i\alpha_i e_{ij}.
+\]
+Idempotents in a fixed kernel column form a left-zero semigroup:
+$e_{ij}e_{\ell j}=e_{ij}$. Therefore
+\[
+ P_j^2=\sum_{i,\ell}\alpha_i\alpha_\ell e_{ij}=P_j.
+\]
+Since $C_i\rho_j=e_{ij}$, we obtain the useful reconstruction formula
+\[
+ \boxed{P_j=N\rho_j.}
+\]
+On row vectors, $P_j$ projects onto vectors supported on $\mathcal R_j$:
+its output is supported there and it fixes every coordinate row on that
+range. In particular, $\operatorname{rank}P_j=r$.
+
+\subsection{Row projections: hold the partition fixed}
+Define
+\[
+ Q_i=\sum_j\beta_j e_{ij}.
+\]
+Idempotents in a fixed kernel row form a right-zero semigroup:
+$e_{ij}e_{i\ell}=e_{i\ell}$, so $Q_i^2=Q_i$.
+For formulas involving the stationary row, assume the range-marginal
+identity supplied by equipartition in the irreducible stochastic setting:
+\[
+ \sum_j\beta_j\rho_j=r\omega,\qquad
+ \omega=\operatorname{diag}(\pi).
+\]
+This is a stated probabilistic hypothesis here, not a blanket assumption
+on all finite semigroups. The PtC application must justify it in its own
+setting when using these formulas. Averaging $C_i\rho_j=e_{ij}$ gives
+\[
+ \boxed{Q_i=rC_i\omega=r e_i e_i^{\mathsf T}\omega,}
+\]
+where $e_i$ is any idempotent with partition $\mathcal P_i$.
+On column functions, $Q_i$ projects onto functions constant on each block:
+\[
+ (Q_i f)_x=r\sum_{y\in C}\pi_y f_y\quad(x\in C\in\mathcal P_i).
+\]
+Equipartition gives $\pi(C)=1/r$, making this a weighted block average.
+It is not generally the Euclidean block-average projection. These
+partition projections and the range projections above should also be
+kept distinct from the higher-level limiting projections $\Omega_k$.
+
+\subsection{The average idempotent}
+Averaging the distinguished idempotents with the product marginal law gives
+\[
+ \boxed{\overline e=\sum_{i,j}\alpha_i\beta_j e_{ij}
+ =\sum_i\alpha_iQ_i=\sum_j\beta_jP_j=rN\omega.}
+\]
+Although every $P_j$ and $Q_i$ is idempotent, this double average is not
+asserted to be idempotent in general. These identities retain the actual
+kernel $e$-projections; they are not replacements by unrelated orthogonal
+projections.
+

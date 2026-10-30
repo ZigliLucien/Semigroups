@@ -1,0 +1,179 @@
+
+
+\section{Semigroup Algebras}
+\label{sec:3.6}
+
+Let $S = \{ s_1,s_2,\ldots,s_n \}$ be a finite semigroup.  
+Let $A(S) = \{ a_1s_1 + a_2s_2 + \cdots + a_ns_n \mid a_i \in \mathbb{F} \}$
+where $\mathbb{F}$ is some field of scalars (usually $\mathbb{F} = \BDR$ or $\BDC$).  
+Then define the following operations.  
+Let
+\[
+\begin{aligned}
+       v_1 &= a_1s_1 + \cdots + a_ns_n             \\
+       v_2 &= b_1s_1 + \cdots + b_ns_n.
+\end{aligned}
+\]
+Then
+%
+\begin{enumerate}
+\item[(1)] $v_1 + v_2 = (a_1+b_1)s_1 + \cdots + (a_n+b_n)s_n$.
+\item[(2)] for $c \in \mathbb{F}$, $cv_1 = (ca_1)s_1 + (ca_2)s_2 \cdots
+(ca_n)s_n$.
+\item[(3)] $v_1 \cdot v_2 = (a_1s_1 \cdots a_ns_n)(b_1s_1 + \cdots +
+b_ns_n)$
+\[
+     = \sum^n_{i,j=1} a_ib_j (s_i \cdot s_j)
+\]
+where $s_i \cdot s_j$ occurs in the semigroup.  
+Notice
+\[
+\begin{aligned}
+       v_1 \cdot v_2 &= \sum^n_{i,j=1} a_ib_j(s_i \cdot s_j)   \\
+       &= \sum^n_{k=1} c_ks_k
+\end{aligned}
+\]
+where
+\[
+     c_k = \underset{s_i\cdot s_j=s_k}{\sum_{i,j}} a_ib_j.
+\]
+\end{enumerate}
+%
+
+\begin{example}		\label{exm:3.6} 
+Let $G = \{ e,g_1,g_2 \}$ with $g^2_1 = g_2$, $g^3_1 = e$ be the three element cyclic group.  
+Then $A(G) = \{ a_0e + a_1g_1 + a_2g_2 \}$.
+\[
+\begin{aligned}
+       v_1 &= a_0e + a_1g_1 + a_2g_2               \\
+       v_2 &= a_0e + b_1g_1 + b_2g_2
+\end{aligned}
+\]
+\[
+\begin{aligned}
+       v_1 \cdot v_2 &= a_0b_0e^2 + a_0b_1eg_1 + a_0b_2eg_2    \\
+       &\qquad + a_1b_0g_1e + a_1b_1g^2_1 + a_1b_2g_1g_2       \\
+       &\qquad + a_2b_0g_2e + a_2b_1g_2g_1 + a_2b_2g^2_2       \\
+       &= (a_0b_0 + a_1b_2 + a_2b_1)e + \ldots
+\end{aligned}
+\]
+
+     Now let $P \ub A(S)$ be defined by
+\[
+     P = \bigg\{ a_1s_1 + \cdots + a_ns_n \mid
+               \sum^n_{i=1} a_i = 1 \bigg\} .
+\]
+Notice if $v_1 = a_1s_1 + \cdots + a_ns_n$, $v_2 = b_1s_1 + \cdots +
+b_ns_n$ are elements of $P$ then since
+\[
+     v_1 \cdot v_2 = \sum^n_{i,j=1} a_ib_j (s_i \cdot s_j)
+\]
+then $v_1 \cdot v_2 \in P$ because
+\[
+     \sum^n_{i,j=1} a_ib_j = \bigg( \sum^n_{i=1} a_i \bigg)
+          \bigg( \sum^n_{j=1} b_j \bigg) = 1 \cdot 1 = 1.
+\]
+Now let $\psi: \Prob(S) \to A(S)$
+\[
+\begin{aligned}
+       \mu &\mapsto \mu(s_1)s_1 + \mu(s_2)s_2 +\cdots + \mu(s_n)s_n \\
+       &\qquad \quad \mu(e) = \frac{1}{2}\,, \ \
+               \mu(g_1) = \frac{1}{4}\,,\ \
+               \mu(g_2) = \frac{1}{4}                          \\
+       \mu &\mapsto \frac{1}{2} \, e + \frac{1}{4}\, g_1
+               + \frac{1}{4} \, g_2.
+\end{aligned}
+\]
+If $\mu_1 \not= \mu_2$ then for some $s_i$, $\mu_i(s_i) \not=
+\mu_2(s-i)$
+\[
+     \Rightarrow \quad \psi(\mu_1) \not= \psi(\mu_2)
+\]
+Thus $\psi$ is one to one.  Let $v \in P$, $v = a_1s_1 + \cdots +
+a_ns_n$, $\sum\limits^n_{i=1} a_i = 1$.  Then if $\mu(s_1) = a_1
+\ldots \mu(s_n) = a_n$, $\mu \in \Prob(S)$ and $\psi(\mu) = v$.  Thus
+$\psi$ is a one to one and onto $P$.
+
+     Now since $\mu_1,\mu_2 \in \Prob(S)$ and
+\[
+     \mu_1 * \mu_2(S) = \sum_{s_is_j=S} \mu_1(s_i) \mu_2(s_j)
+\]
+then
+\[
+\begin{aligned}
+       \psi(\mu_1 * \mu_2) &= [\mu_1 * \mu_2(s_1)] s_1
+               + [\mu_1 * \mu_2(s_2)] s_2          \\
+       & \qquad + \cdots + [\mu_1 * \mu_2(s_n)]s_n.
+\end{aligned}
+\]
+
+     Now let $B = [B_{ij}]$ be an $n \times n$ matrix.  Then $\hat T'(B)$
+is the set of {\sl decompositions} of $B$ in the semigroup algebra.
+We will also call the formal sum,
+\[
+     a_1T(s_1) + \cdots + a_nT(s_n)
+\]
+a decomposition of $B$, when $T : A(S) \to M[n]$ a representation.
+\end{example}
+
+     The following Theorems are relevant:
+
+\begin{theorem}[Birkoff]	\label{thm:3.11}
+Let $B$ be an $n \times n$ doubly stochastic matrix.  
+Then there exists a \textsl{unique} convex decomposition of $B$ into permutation matrices.
+\end{theorem}
+
+\begin{theorem}		\label{thm:3.12} 
+Let $B$ be a stochastic matrix.  
+Then there exists a convex decomposition of $B$ into binary stochastic matrices.
+
+Now if $T: S \to M[n]$ is a semigroup representation of $S$ by $n \times n$ matrices.
+
+Then for $v \in A(S)$, $v = a_1s_1 + \cdots + a_ns_n$, define $\hat T$ by $\hat T: A(S) \to M[n]$
+\[
+     \hat T(v) = a_1T(s_1) + \cdots + a_nT(s_n).
+\]
+Then $\hat T[\psi(\mu)]$ is an $n \times n $ matrix.
+\end{theorem}
+
+\runinhead{Homework.} However, even if $T$ is a semigroup isomorphism,
+$\hat T$ may not be an algebra isomorphism.  
+$\hat T$, however, is always a homomorphism.
+
+\begin{example}		\label{exm:3.7}
+\[
+\begin{aligned}
+       S &= \F_X \quad X = \{ 1,2 \} \\
+       S &= \{ f_1,f_2,f_3,f_4 \}
+\end{aligned}
+     \qquad \quad
+\begin{matrix}
+       &\quad f_1   &            &\qquad &   &\quad f_2       &     \\
+    1  &\quad \to   &\quad 1     &       &1  &\quad \searrow  &\quad 1    \\
+    2  &\quad \to   &\quad 2     &       &2  &\quad \nearrow  &\quad 2    \\
+ \quad    \\
+    1  &\quad \to   &\quad 1     &       &1  &\quad \searrow  &\quad 1    \\
+    2  &\quad \nearrow &\quad 2  &       &2  &\quad \to       &\quad 2    \\
+       &\quad f_3   &            &       &   &\quad f_4
+\end{matrix}
+\]
+Then $T: S \to M[2]$.
+\[
+\begin{aligned}
+       v_1 &= \frac{1}{2} f_1 + \frac{1}{2} f_2    \\
+       v_2 &= \frac{1}{2} f_3 + \frac{1}{2} f_4
+\end{aligned}
+\]
+\[
+\begin{aligned}
+       \hat T(v_1) &= \frac{1}{2} T(f_1) + \frac{1}{2} T(f_2)  \\
+       \vspace{2\jot}
+       &= \frac{1}{2} \bmatrix
+                    1 &0 \\ 0 &1 \endbmatrix
+               + \frac{1}{2} \bmatrix
+                    0 &1 \\ 1 &0 \endbmatrix
+\end{aligned}
+\]
+etc.
+\end{example}
+

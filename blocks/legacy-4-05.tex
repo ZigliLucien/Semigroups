@@ -1,0 +1,215 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%  Semigroups and the Generalized Road Coloring Problem
+%%%	Pgs 4-...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Main Result}
+\label{sec:4.5}
+
+In the remainder of the paper we will make the assumption that the graph $G$ is 2-out.  This assumption simply allows us to minimize notation.  
+The argument can be extended to the $d$-out case.
+
+\begin{theorem}		\label{thm:4.12}
+	Let $A$ be the adjacency matrix of a strongly connected, 2-out digraph.
+Suppose $\mathcal{S} = \lr r,b \rlr$, where $A = r+b$, is a minimal coloring semigroup
+with kernel $K$.  Suppose $K = G \times Y$ is a right group, where rank $(K)=t$.  
+Then $A$ is periodic of order $t$.
+\end{theorem}
+
+\begin{proof}	
+Since $K$ is a right group, for any two idempotents $e_1,e_2$, both $e_1e_2=e_2$ and $e_2e_1 = e_1$.  
+From this it follows that the partition of each function in $K$ is constant.  
+That is, for all $k_1,k_2 \in K$,
+\[
+	\pi_{k_1} = \pi_{k_2} = \pi_K \hbox{ where}
+\]
+\[
+	\pi_K = \{ Q_1,\ldots,Q_t \}
+\]
+and
+\[
+	Q_i = k^{-1}(v_i), \qquad v_i \in \hbox{Range(k)}, \quad i = 1,\ldots,t.
+\]
+
+Now $A$ is periodic of some order, say $p$.  
+Thus, there is a partition of the vertices $\{ P_1,\ldots,P_p \}$ such that the graph can be written as in Figure \ref{fig:4.1}.
+That is, an edge goes from vertex $v$ to $w$ iff $v \in P_i$ and $w \in P_{i+1}$ ($P_{p+1} \equiv P_1$).  
+The partition $\pi_k$ is a refinement of $\{P_1,\ldots,P_p\}$.  
+That is, for each $i$, $Q_i \subset P_j$ for some $j$.
+This is clear, since if $k \in K$, $Q_ik = \{v\}$.  
+Thus, there is a path connecting every vertex of $Q_i$ to vertex $v$.  
+Thus, $Q_i \subset P_j$, for some $j$.
+
+\begin{figure}[h]
+\vbox to .6in{}
+$$
+	\special{eps:AMAT-Fig1.eps x=3in y=1.2in}
+	\hbox to 3.2in{}
+	%\figone
+$$
+\caption{The periodic partition of $A$.}
+\label{fig:4.1}
+\end{figure}
+
+	
+Next we show that both $r,b$ are 1 to 1 functions on the sets $\{Q_i: i = 1,\ldots,t\}$.
+
+Suppose not.  
+Then for some $v_1 \in Q_{i_1}$, $v_2 \in Q_{i_2}$,
+%
+\begin{align*}
+	v_1r &\in Q_j \\
+	v_2r &\in Q_j,
+\end{align*}
+%
+but then if $k \in K$,
+%
+\begin{align*}
+	v_1rk &\in Q_jk \\
+	v_2rk &\in Q_jk,
+\end{align*}
+%
+but since $k$ is an element of the kernel, $Q_jk$ is a single vertex.  
+Since $v_1,v_2$ get mapped to the same vertex by $rk$ (also a member of the kernel), they must have started from the same element in the partition.  
+Thus $Q_{i_1} = Q_{i_2}$ and $r$ is a one-to-one set function.  
+Of course, the same argument is valid for $b$.
+
+Notice that this shows that there must be exactly the same number of the $Q_i$'s in each of the periodic classes $P_1,\ldots,P_p$.  
+This is true, since if there are  $n$  of the $Q_i$'s in $P_1$, $Q_1,\ldots,Q_n$, then each of these are mapped by $r$ into the $n$ $Q$-classes in $P_2$.  
+Then $n$ $Q$-classes in $P_3$ are then images of these, etc. 
+(See Figure \ref{fig:4.2}.) 
+Observe, the above argument shows $p|t$. 
+Also in Figure 2, we have renumbered the $Q$-classes, $Q_{ij}$, $i = 1,\ldots,p$, $j = 1,\ldots,n$ with 
+$$
+  (Q_{ij}) r \subset Q_{i+1,j}.
+$$
+
+\begin{figure}[t]
+\vbox to .8in{}
+$$
+	\special{eps:AMAT-Fig2.eps x=3.4in y=1.2in}
+	\hbox to 3.2in{}
+	%\figtwo
+$$
+\caption{The graph of the function $r$.}
+\label{fig:4.2}
+\end{figure}
+
+
+\noindent
+Since we  have fixed the order of the $Q$-classes in $P_1$, the mapping from $P_p$ to $P_1$ is some arbitrary permutation, $\sigma$, that is
+\[
+	(Q_{p,1})r \subset Q_{1,\sigma(1)}
+\]
+
+Next we show that if $r=b$ as set functions, then $p=t$.
+
+Suppose $r=b$.  
+Choose $Q_{11}$ as the ``initial state'' and consider the cycle induced by powers of $r,b$
+%
+\begin{align*}
+	Q_{11}r &\subset Q_{21} \quad \hbox{(also, } 
+			Q_{11}b \subset Q_{21})	\\
+	Q_{21}r &\subset Q_{31}, \quad \hbox{etc.}
+\end{align*}
+%
+Suppose the above cycle is of length $\ell < t$.  
+Then since $r,b$ are permutations (as set functions on the $Q$-classes) they are the product
+of disjoint cycles.
+In this case the graph would be disconnected, producing a contradiction. 
+Thus, $\ell=t$. 
+
+Clearly, if $c$ is any simple cycle within the graph, then $|c| = mt$ for some integer $m$.  
+But since, if $c_1,\ldots,c_j$ is the set of all simple cycles, and
+\[
+	p = \gcd\{ |c_1|, |c_2|, \ldots, |c_j| \},
+\]
+then $t \le p$.  
+Thus we have shown that if $r=b$, then the graph is periodic of order $t$.
+
+
+Now suppose that $r \neq b$.  We must have the following.  (WLOG)
+
+%        Picture 3
+$$
+\begin{picture}(300,27)(0,0)
+    \thicklines
+	\put(125,25){\vector(1,0){50}}
+	\put(125,25){\vector(3,-2){50}}
+	\put(125,-10){\vector(1,0){50}}
+	\put(100,24){$Q_{11}$}
+	\put(100,-11){$Q_{12}$}
+	\put(185,23){$Q_{21}$}
+	\put(185,-12.5){$Q_{22}$}
+	\put(150,30){$r$}
+	\put(160,7){$b$}
+	\put(150,-20){$r$}
+    \end{picture}
+$$
+
+\medskip
+\noindent
+Now recolor in the following way.
+
+%        Picture 4
+$$
+\begin{picture}(300,27)(0,0)
+    \thicklines
+	\put(125,25){\vector(1,0){50}}
+	\put(125,25){\vector(3,-2){50}}
+	\put(125,-10){\vector(1,0){50}}
+	\put(100,24){$Q_{11}$}
+	\put(100,-11){$Q_{12}$}
+	\put(185,23){$Q_{21}$}
+	\put(185,-12.5){$Q_{22}$}
+	\put(150,30){$b_2$}
+	\put(160,7){$r_2$}
+	\put(150,-20){$r_2$}
+    \end{picture}
+$$
+
+\bigskip
+\noindent
+For all other edges, $r_2=r$, $b_2=b$.
+
+Let $e = g_1 \cdot g_2 \cdot \ldots \cdot g_n$ be any idempotent in $K$, where $g_i = r$ or $b$.
+Then for some $v_{11} \in Q_{11}$, $Q_{11} e = v_{11}$.
+
+Form $g^1_1 \cdot g^1_2 \cdot \ldots \cdot g^1_n \in S_2 = \lr r_2,b_2 \rlr$ in the following way.
+If $g_1 = r$, then $g^1_1 = b_2$ and if $g_1 = b$, then $g^1_1 = r_2$.
+For $2 \le i \le n$,
+\[
+  g^1_i = \begin{cases}
+	r_2 &\text{if } g_i = r \text{ and } Q_{11} g^1_1 
+		\cdot \ldots \cdot g^1_{i-1} \not\in Q_{11}  \\
+	b_2 &\text{if } g_i = b \text{ and } Q_{11} g^1_1 
+		\cdot \ldots \cdot g^1_{i-1} \not\in Q_{11}  \\
+	r_2 &\text{if } g_i = b \text{ and } Q_{11} g^1_1 
+		\cdot \ldots \cdot g^1_{i-1} \in Q_{11}  \\
+	b_2 &\text{if } g_i = r \text{ and } Q_{11} g^1_1 
+		\cdot \ldots \cdot g^1_{i-1} \in Q_{11}  \\
+  \end{cases}
+\]
+Thus, as in the second diagram above, change the color only after mapping into $Q_{11}$.
+Then $Q_{11} g^1_1 \cdot g^1_2 \cdot \ldots \cdot g^1_n = v_{11}$ and we have collapsed the set $Q_{11}$ to a single vertex.
+
+Now $Q_{12} g^1_1 \cdot g^1_2 \cdot \ldots \cdot g^1_n \subset Q_{1j}$ for some $j$.
+Then $Q_{1j} e = v_{1j} \in Q_{1j}$.
+As above, construct $g^2_1 \cdot \ldots \cdot g^2_n$ from $e$ by recoloring it if $Q_{1j}$ is mapped into $Q_{11}$.
+Now $Q_{12} g^1_1 \cdot g^1_2 \cdot \ldots \cdot g^1_n \cdot g^2_1 \cdot \ldots \cdot g^2_n = v_{1j}$ and we have collapsed all of $Q_{12}$ to a single vertex.
+
+Continue in this manner for each element $Q_{ij}$ of the partition, each time recoloring $e$ after mapping into $Q_{11}$, if this occurs.
+Since $e$ collapses each element in the partition to a single vertex, at the end of this process we have constructed a function $h = g^1_1 \cdot \ldots \cdot g^1_n \cdot g^2_1 \cdot \ldots \cdot g^2_n \cdot \ldots \cdot g^t_1 \cdot \ldots \cdot g^t_n$ such that rank$(h) \le t$.
+
+Suppose rank$(h) = t$.  
+Then either each vertex in the range of $h$ is in a distinct $Q$ class or not.  
+If there is a $Q$-class with more than one vertex from the range of $h$, then appending $e$ to $h$, once again recoloring as before, will collapse these vertices into a single vertex and reduce the rank to below $t$, thus contradicting minimality.  
+If each $Q$-class has a single vertex in the range of $h$, appending first $r_2$ then $e$ (appropriately recolored) to $h$ will reduce the rank below $t$.
+
+Thus, we have shown that $r$ must equal $b$ as set functions, and therefore the graph is periodic of order $t$.
+\qed
+\end{proof}

@@ -1,0 +1,136 @@
+\section{A potential operator and changes of letter probabilities}
+\label{potential:section}
+Let $R,B$ be stochastic matrices and suppose $A=(R+B)/2$ is irreducible
+and aperiodic, with $\Omega=\mathbf1\pi$. Set
+\[
+ \Delta=(R-B)/2,\qquad Z=(I-A+\Omega)^{-1},\qquad V=\Delta Z.
+\]
+Since $\Delta\mathbf1=0$, we have $V\mathbf1=0$, $V\Omega=0$, and
+\[
+ V=\lim_{N\to\infty}\Delta\sum_{j=0}^N A^j.
+\]
+Indeed $\rho(A-\Omega)<1$ and $\Delta\Omega=0$. For an irreducible
+periodic $A$, retain the algebraic definition and the Abel limit
+$V=\lim_{t\uparrow1}\Delta(I-tA)^{-1}$, rather than this spectral-gap argument.
+
+\begin{proposition}[Real-parameter invertibility]\label{potential:real-invertibility}
+Under the standing hypotheses,
+\[
+ I-tV\text{ is invertible for every }t\in\mathbb R\text{ with }|t|<1.
+\]
+This is the replacement for Proposition 4.2 of \texttt{V-Operator.pdf};
+no bound on the moduli of the nonreal eigenvalues of $V$ is asserted.
+\end{proposition}
+\begin{proof}
+Put $A_t=A+t\Delta$. For real $|t|<1$, this is an irreducible stochastic
+matrix, since its positive entries have the same support as those of $A$.
+Suppose a row $x$ satisfies $x(I-tV)=0$. Since $V\mathbf1=0$,
+we have $x\mathbf1=0$, hence $x\Omega=0$. Multiplying by
+$Z^{-1}=I-A+\Omega$ gives
+\[
+ x(I-A+\Omega)=t x\Delta,
+\]
+so $xA_t=x$. The stationary row space of $A_t$ is one-dimensional;
+its normalized stationary row has sum one. Therefore its only zero-sum
+member is zero, and $x=0$. Thus $I-tV$ is invertible.
+\end{proof}
+
+\begin{theorem}\label{potential:interpolation}
+For real $-1<\tau<1$, put $A_\tau=A+\tau\Delta$. Then
+\[
+ \Omega_\tau=\Omega(I-\tau V)^{-1},\qquad
+ \pi_\tau=\pi(I-\tau V)^{-1}.
+\]
+At $\tau=1$, $I-V$ is invertible exactly when $R$ has a unique stationary
+distribution. At $\tau=-1$, $I+V$ is invertible exactly when $B$ does.
+In these cases the corresponding formula holds at the endpoint, using
+the Cesaro projection of the endpoint matrix.
+\end{theorem}
+\begin{proof}
+For interior real $\tau$, $A_\tau$ has the same support as $A$, hence a
+unique stationary distribution. Also
+\[
+ (I-\tau V)Z^{-1}=I-A_\tau+\Omega.
+\]
+If a row $x$ annihilates the matrix on the right, multiplying by
+$\mathbf1$ gives $x\mathbf1=0$, after which $xA_\tau=x$ forces $x=0$.
+Thus the matrices are invertible. The stationary equations give
+$\pi_\tau-\pi=\tau\pi_\tau V$, proving the formula.
+At an endpoint, the same argument works precisely when the stationary
+row space has dimension one. If it has higher dimension it contains a
+nonzero zero-sum row, which gives a left nullvector of $I-A_\tau+\Omega$.
+\end{proof}
+
+\subsection{A necessary correction concerning the complex spectrum}
+Invertibility for real $|\tau|<1$ does not imply $\rho(V)\le1$.
+The spectral-radius assertion in Proposition 4.2 of the supplied
+\texttt{V-Operator.pdf} must not be used as stated. For
+\[
+ R=[23451],\qquad B=[51234],
+\]
+$A$ is irreducible and aperiodic, while exact calculation gives
+\[
+ \det(\lambda I-V)=\frac{\lambda}{5}
+ (5\lambda^4+10\lambda^2+1),\qquad
+ \rho(V)=\cot(\pi/5)>1.
+\]
+The proof in the source uses stochastic uniqueness and therefore applies
+to real parameters only. A Neumann series in $\tau V$ is justified locally
+for $|\tau|\rho(V)<1$, not on the entire unit disk in general.
+Nevertheless Theorem~\ref{potential:interpolation} holds throughout the
+real interval. In particular,
+\[
+ \left.\frac{d^k\pi_\tau}{d\tau^k}\right|_{\tau=0}=k!\pi V^k.
+\]
+
+\subsection{Endpoint cycle measures and a wave operator}
+If $R$ has a unique stationary distribution, define
+\[
+ U=(I+V)(I-V)^{-1}.
+\]
+Then
+\[
+ \Omega_B U=\Omega_R,\qquad U(I-R)=I-B.
+\]
+The endpoint identity $\Omega_B(I+V)=\Omega$ holds even when $B$ has
+more than one recurrent class, so the first formula does not require
+uniqueness for $B$.
+For a deterministic generator with one limiting cycle $C$, its Cesaro
+projection is $\Omega_R=\mathbf1\chi_C/|C|$. For any $k$ in the kernel,
+$k\Omega_R=\Omega_R$, and the Cesaro averages of $kR^j$ belong to the
+convex hull of the finite kernel. Thus $\Omega_R$ belongs to that convex
+hull, hence to its linear span. The equal intersection counts
+$|C\cap F|=|C|/r$ for kernel blocks $F$ connect this construction to the
+cycle-divisibility results already developed in this chapter.
+
+\subsection{An explicit partial-circulant potential}
+For distinct indices $a,b$, take $R=M_a$, $B=M_b$ and use the unique
+recurrent core. The potential has rank one and satisfies
+\[
+ V^2=\lambda V,\qquad \lambda=\frac{b-a}{a+b}.
+\]
+Consequently
+\[
+ (I-\tau V)^{-1}=I+\frac{\tau}{1-\tau\lambda}V,
+ \qquad U=I+\frac{2}{1-\lambda}V.
+\]
+To see the scalar, write $V=e_1w$, so $V^2=w_1V$. The ladder formula gives
+\[
+ \pi_\tau(j)=
+ \frac{(1+\tau)\mathbf1_{j\le a}+(1-\tau)\mathbf1_{j\le b}}
+ {(1+\tau)a+(1-\tau)b}.
+\]
+On the other hand the rank-one inverse gives
+$\pi_\tau(1)=\pi(1)/(1-\tau w_1)$. Comparing denominators yields
+$w_1=(b-a)/(a+b)$. The formula is zero beyond $\max(a,b)$; transient
+states are included in the operator but carry no stationary mass.
+For periodic cores use the algebraic or Abel version of the potential.
+
+\subsection{Adjugate and notation qualifications}
+The adjugate identity in the source requires eigenvalue 1 to be
+\emph{algebraically simple}, not merely to have a one-dimensional
+eigenspace. Under that hypothesis, if $p(t)=\det(I-tX)$ and $P_X$ is the
+spectral projection, then $\operatorname{adj}(I-X)=-p'(1)P_X$.
+For a stochastic matrix with a unique stationary distribution the
+hypothesis holds. The source's final $N_0=\mathbb E[EE^{\mathsf T}]$
+is the collision operator denoted $N$ in our present convention.

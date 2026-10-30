@@ -1,0 +1,56 @@
+\section{Definitions and statement}
+Let $\mathcal N=\{1,\ldots,n\}$. For $1\le i\le n$, define
+\[
+ xM_i=\begin{cases}i,&x=1,\\x-1,&x>1.\end{cases}
+\]
+We use right actions: $x(fg)=(xf)g$. Equivalently, transformation matrices
+have a $1$ in position $(x,xf)$, and composition agrees with ordinary
+matrix multiplication. Their matrix rank is the cardinality of their image.
+
+Fix a nonempty set $I\subseteq\{1,\ldots,n\}$ and write
+\[
+ S=\langle M_i:i\in I\rangle,\qquad
+ m=\max I,\qquad d=\gcd\{i:i\in I\},\qquad C=\{1,\ldots,m\}.
+\]
+Here $S$ consists of nonempty words in the generators. The \emph{kernel}
+of a finite semigroup means its unique minimal nonempty two-sided ideal;
+it is not to be confused with the fiber partition of a transformation.
+
+For $r\in\mathbb{Z}/d\mathbb{Z}$, put
+\[
+ P_r=\{x\in\mathcal N:x\equiv r\pmod d\},\qquad C_r=P_r\cap C,
+\]
+and let
+\[
+ \mathcal A=\{A\subseteq C:|A\cap C_r|=1\text{ for every }r\in\mathbb{Z}/d\mathbb{Z}\}.
+\]
+For $A\in\mathcal A$, denote its unique point in $C_r$ by $a_r$. Define
+\[
+ xk_{A,t}=a_{[x]-t}\qquad(x\in\mathcal N,\ t\in\mathbb{Z}/d\mathbb{Z}),
+\]
+where $[x]$ denotes the residue class of $x$ modulo $d$.
+
+\begin{theorem}\label{ptc-kernel:thm:main}
+The following statements hold.
+\begin{enumerate}
+\item The minimum rank of an element of $S$ is $d$.
+\item The kernel of $S$ is exactly
+\[
+ K=\{s\in S:\rank(s)=d\}
+   =\{k_{A,t}:A\in\mathcal A,\ t\in\mathbb{Z}/d\mathbb{Z}\}.
+\]
+\item Every element of $K$ has fiber partition $\{P_r:r\in\mathbb{Z}/d\mathbb{Z}\}$.
+Its possible ranges are exactly the members of $\mathcal A$.
+\item Multiplication is given by
+\[
+ k_{A,t}k_{B,u}=k_{B,t+u}.
+\]
+Consequently $K\cong C_d\times R_{\mathcal A}$, where $C_d$ is the cyclic
+group of order $d$ and $R_{\mathcal A}$ is the right-zero semigroup
+on $\mathcal A$, with product $AB=B$. In particular, $K$ is a right group.
+\item The number of ranges and the cardinality of the kernel are
+\[
+ |\mathcal A|=(m/d)^d,\qquad |K|=d(m/d)^d.
+\]
+\end{enumerate}
+\end{theorem}

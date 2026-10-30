@@ -1,0 +1,310 @@
+
+
+\section{The Rees-Sushkewitch Theorem}
+\label{sec:2.3}
+
+\begin{lemma}  	\label{lem:2.1}
+Let $S$ be a simple semigroup.
+
+     If $e \in S$ is a primitive idempotent, then $Se,\ eS$ are
+minimal left and right ideals respectively and the set $eSe$ is a
+group.  In addition, $eSe = eS \cap Se$.
+\end{lemma}
+
+\begin{proof}  
+Consider $eS$.  
+Clearly it is a right ideal.
+Suppose $I \subset eS$ is a right ideal.  
+Let $a \in I$.
+
+-- Notice that for $a \in eS$, $e$ acts like left identity.
+\[
+     a \in eS \Rightarrow a = es_1 \Rightarrow ea
+          = ea = e^2s_1 = es_1 = a.
+\]
+Now $SaS = S$ since $S$ is simple.  Thus $xay = e$ for some $x,y \in
+S$.  Notice $(exe)(ea)(ye) = e$.  Let $exe = x'$, $ye = y'$, and
+$z' = ay'x'$.  Then
+\[
+     \aligned
+     z'z' &= ay'x' ay'x'                                \\
+     &= ay'(exe)(ea)(ye)x'                              \\
+     &= ay'ex'                                          \\
+     &= ay'x' = z'.
+     \endaligned
+\]
+Thus $z'$ is an idempotent.  
+Also
+\[
+     \gathered
+     z'e = (ay'x')e = ay'x' = z'                        \\
+     ez' = eay'x' = ay'x' = z'.
+     \endgathered
+\]
+But $e$ was assumed to be primitive, thus $e = z'$.  
+But $e = ay'x' \in aS \subset IS \subset I$, thus
+\[
+     \gathered
+     eS \subset IS \subset I                            \\
+     \Rightarrow eS = I
+     \endgathered
+\]
+and $eS$ is minimal.
+\qed
+\end{proof}
+
+\runinhead{Homework.}  
+Show that $Se$ is a minimal left ideal.
+
+     Now let $G = eSe$, and $g \in G$.
+Then
+\[
+     \aligned
+     G g = G(ese) &= (eSe)(ese)                    \\
+     &= e(Sese)                                         \\
+     &= eSe = G \quad \hbox{by minimality}              \\
+     gG = (ese)G &= (eseS)e = eSe = G.
+     \endaligned
+\]
+Thus $G$ is a group, since it is left simple and right simple.
+
+\runinhead{Homework.} Show that $eSe = eS \cap Se$.
+
+\medskip
+     In fact, we have the following.
+
+\begin{theorem}  	\label{thm:2.1}
+Let $S$ be a finite semigroup, with $R$ a minimal right ideal and $L$ a minimal left ideal.  
+Then $RL$ is a group.
+\end{theorem}
+
+\begin{proof}  
+Let $RL = G$, $g \in G$.  
+Then
+\[
+     \aligned
+     gG &= rlRL                                         \\
+     &= RL
+     \endaligned
+\]
+since $(rl)R \subset R$ and is a right ideal.  Similarly,
+\[
+     \aligned
+     Gg &= RLrl \qquad rl \in L                         \\
+     &= RL.
+     \endaligned
+\]
+Thus $RL$ is both left and right simple and thus is a group.
+\qed
+\end{proof}
+
+\begin{lemma}    	\label{lem:2.2}
+Let $L$ be a minimal left ideal in a semigroup $S$.  
+Then $Lc$ is a minimal left ideal for all $c \in S$.
+\end{lemma}
+
+\begin{proof}  
+Suppose not.  
+Let $A \subsetneq Lc$ be a left ideal.  
+Let $B = \{ x \in L : xc \in A\} \subset L$.  
+By definition, $Bc \subset A \subsetneq Lc$.  
+Notice that if $a \in A$, $a = lc$ for some $l \in L \Rightarrow l \in B \Rightarrow lc = a \in Bc \Rightarrow Bc = A$.
+
+Now let $b \in B$, $s \in S$.  
+Then,
+\[
+     (sb)c \subset sA \subset A
+               \qquad (A \hbox{ is a left ideal)}
+\]
+Also,
+\[
+     sb \subset sL \subset L.
+\]
+Thus
+\[
+     \alignedat{2}
+     &(sb)c \in A &\qquad &\hbox{where } sb \in L     \\
+     \Rightarrow \quad
+          &(sb) \in B &\qquad &\hbox{for all } s \in S     \\
+     \Rightarrow \quad
+          &B &\qquad &\hbox{is a left ideal}              \\
+     \Rightarrow \quad
+          &B = L &\qquad &\hbox{by minimality}            \\
+     \Rightarrow \quad
+          &Bc = Lc = A. &\quad & \qquad\otimes
+     \endalignedat
+\]
+Thus
+\[
+     Lc \hbox{ is minimal}. \quad \qed
+\]
+\end{proof}
+
+\runinhead{Homework.}  
+Prove the analogous result for right ideals
+
+\begin{lemma}    	\label{lem:2.3}
+Let $S$ be completely simple.  
+Then $S = \bigcup\limits_i L_i = \bigcup\limits_j R_j$ where $\{ L_i\}$,
+$\{ R_j\}$ are the set of all minimal left and right ideals,
+respectively.
+\end{lemma}
+
+\begin{proof}  
+Notice that the union of two left ideals is a left
+ideal.  (Homework)
+\end{proof}
+
+Let $A = \bigcup\limits_i L_i$ where each $L_i$ is a minimal left ideal.  We will show $A$ is a right ideal as well.  
+Now
+\[
+     \aligned
+     &a \in L_i \qquad \hbox{for some } i               \\
+     \hbox{and} \qquad
+          &as \in L_is \subset A,
+     \endaligned
+\]
+since $L_i s$ is a minimal left ideal by Lemma 2.  
+Thus
+\[
+     as \in A \quad \hbox{for all} \quad s \in S.
+\]
+Thus $A$ is a right ideal, therefore an ideal.  But $S$ is simple
+$\Rightarrow A = S$.
+
+\runinhead{Notation.}  
+For any subset $T \subset S$, $E(T)$ will be the set of idempotents of $T$.  
+Consider $E(L)$ where $L$ is a minimal left ideal and let $e \in E(L)$.  
+Then since $e \in L$,
+\[
+     Se \subset SL \subset L
+\]
+and $Se$ is a left ideal $\Rightarrow Se = L$.  
+(In fact, every minimal left ideal is of the form $Ss$ for some $s$.)
+
+Now let $l \in L$.  
+Then $l = se$ for some $s$ and $le = (se)e = se = l$.  
+Thus {\it each} idempotent of $L$ acts like a right identity of $L$.  Take $e_1,e_2 \in E(L)$.  
+Suppose
+\[
+     \gathered
+     e_1e_2 = e_2e_1                                    \\
+     \Rightarrow e_1 = e_2.
+     \endgathered
+\]
+Thus {\it all} idempotents are primitive.  (Since $S = \bigcup L_i$,
+every idempotent is in some $L$.)
+
+\runinhead{Note.}  
+$E(L)$ is a left zero semigroup.  
+Similarly, $E(R)$ is a right zero semigroup.
+
+\runinhead{Rees-Sushkewitch Theorem.}  
+A semigroup is completely simple
+iff there exist sets $X,$ $Y$, and a group $G$ such that $S \cong X \times G \times Y$, where $X \times G \times Y$ is a Rees product semigroup.
+
+\begin{proof}  Let $S$ be completely simple and $e \in E(s)$.
+Let $X = E(Se)$, $Y = E(eS)$, $G = eSe$.  
+Recall we have shown that $G$ is a  group.  
+Then from the previous discussion $X = E(Se)$.
+$Y = E(eS)$ are left zero and right zero semigroups respectively.
+
+     Define $\psi: X \times G \times Y \to S \qquad (x,g,y) \mapsto xgy$.
+Suppose that $\psi(x_1,g_1,y_1) = \psi(x_2,g_2,y_2)$.
+\[
+     \alignedat{2}
+     \hbox{Then}& &\quad
+          x_1g_1y_1 &= x_2g_2y_2                        \\
+     \hbox{and}& &\quad
+          ex_1g_1y_1e &= ex_2g_2y_2e                    \\
+     y_ie = e, \ ex_i = e& &
+          eg_1e &= eg_2e                                \\
+     \Rightarrow& &\quad
+          g_1 &= g_2.
+     \endalignedat
+\]
+Also
+\[
+     \alignedat{2}
+     & &\quad x_1gy_1 &= x_2gy_2                        \\
+     &\Rightarrow &\quad
+          x_1gy_1eg^{-1} &= x_2gy_2eg^{-1}              \\
+     &\Rightarrow &\quad
+          x_1e &= x_2e                                  \\
+     &\Rightarrow &\quad
+          x_1 &= x_2.
+     \endalignedat
+\]
+Similarly, $y_1 = y_2$.  
+Thus, $\psi$ is one-to-one.
+
+     Now let $s \in S$.  
+Associate with $s$ the following element in $X \times G \times Y$
+\[
+     \aligned
+     \a: &s \to X \times G \times Y                             \\
+     &s \mapsto \bigl[ E(sSe),\, ese,\, E(eSs) \bigr]   \\
+     &\qquad = (e_1,\, ese,\, e_2)
+     \endaligned
+\]
+(well defined since $E(sSe)$, $E(eSs)$ are unique).  Notice that
+$[(s)\a]\psi$ is the identity since
+\[
+     \aligned
+     e_1(ese)e_2 &= e_1se_2 = s                         \\
+     \hbox{since} \quad e_1 &\in E(sS)
+          \qquad \hbox{and acts like a left identity}   \\
+     e_2 &\in E(Ss) \qquad
+          \hbox{and acts like a left identity}.
+     \endaligned
+\]
+Thus, $\psi$ is one-to-one and onto.  
+\qed
+\end{proof}
+
+Now, let $S$ be any finite semigroup and let
+$I = \{ I_1,I_2,\ldots,I_n\}$ be the set of all ideals of $S$.  
+Let $K = \bigcap\limits^n_{j=1} I_j$.  
+Then $K$ is the unique minimal ideal of $S$.  
+By construction $K$ is a simple semigroup.  
+To show $K$ is completely simple we must show it contains a primitive idempotent.
+Now $K$ is also a semigroup, and in particular is a left ideal, and a
+right ideal.  
+Since there are only a finite number of left ideals possible, if we order them by inclusion there must exist minimal elements.  
+Similarly, minimal right ideals exist.  
+
+%\begin{lemma}    	\label{lem:2.4.} 
+%Let $R$ be a minimal right ideal and $L$ a minimal left ideal.  
+%Then $RL$ is a group and its idempotent is primitive.
+%\end{lemma}
+
+%\begin{proof}  
+%Let $G = RL$.  Then $G \cdot G = RLRL \subset RL = G$.  
+%Thus $G$ is closed.
+%
+%Notice that $rlR = R$ by minimality.  
+%Similarly, $Lrl = L$.  
+%Thus if $g = rl$
+%\[
+%     \aligned
+%     Gg &= (RL)(rl) = RL = G                            \\
+%     \hbox{and} \qquad
+%          gG &= (rl)RL = RL = G.
+%     \endaligned
+%\]
+%Thus $G$ is a group.
+%\qed
+%\end{proof}
+
+\runinhead{Homework.}  
+Show that $RL = R \cap L$.  
+Let $e$ be the identity of $RL$.  
+Suppose $f = f^2$ is such that $ef = fe = f \Rightarrow \F \in R \cap L \Rightarrow e = f$ by uniqueness.
+
+Combining the lemma with the previous discussion we have:
+
+\begin{theorem}  	\label{thm:2.2}
+Let $S$ be a finite semigroup.  
+Then $S$ has a minimal ideal $K$ and $K$ is a completely simple semigroup.  
+$K$ is often referred to as the kernel of $S$.
+\end{theorem}
